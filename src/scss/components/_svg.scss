@@ -1,0 +1,85 @@
+.svg {
+  display: inline-block;
+  width: 3.2em;
+  height: 3.2em;
+  fill: $blue;
+  &-search {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 1;
+    @include d(991) {
+      left: 10px;
+    }
+  }
+  &-notepad {
+    width: 3.2em;
+    height: 3.2em;
+  }
+
+  &-money {
+    width: 3.6em;
+    height: 3.6em;
+  }
+
+  &-team {
+    width: 4em;
+    height: 4em;
+  }
+
+  &-cities {
+    width: 3.3em;
+    height: 3.3em;
+  }
+
+  &-sign {
+    width: 4.2em;
+    height: 4.2em;
+  }
+
+  &-browser {
+    width: 4.1em;
+    height: 4.1em;
+  }
+
+  &-apply {
+    width: 3.3em;
+    height: 3.3em;
+    @include d(1100) {
+      width: 2.6em;
+    }
+  }
+
+  &-sand {
+    width: 3.3em;
+    height: 3.3em;
+    @include d(1100) {
+      width: 2.6em;
+    }
+  }
+
+  &-paid {
+    width: 4em;
+    height: 4em;
+    @include d(1100) {
+      width: 3em;
+    }
+  }
+
+  &-arrow_left {
+    fill: $gray;
+    transform: scale(-1);
+    width: 2em;
+    height: 2em;
+    position: relative;
+    right: 0;
+  }
+
+  &-footer {
+    width: 1em;
+    height: 1em;
+  }
+}

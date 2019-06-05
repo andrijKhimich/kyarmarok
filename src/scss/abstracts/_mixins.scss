@@ -1,0 +1,194 @@
+//mixins
+@mixin cover-before {
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #1f2d40;
+    opacity: 0.6;
+    z-index: 0;
+  }
+}
+
+@mixin transition {
+  transition-timing-function: ease-out;
+  transition: all 0.3s;
+}
+
+//Media queries
+
+//width
+@mixin d($width) {
+  @media only screen and (max-width: $width + "px") {
+    @content;
+  }
+
+}
+
+
+
+
+@mixin m($width) {
+  @media only screen and (min-width: $width + "px") {
+    @content;
+  }
+}
+
+
+
+
+//height
+@mixin dh($height) {
+  @media only screen and (max-height: $height + "px") {
+    @content;
+  }
+}
+
+
+
+
+
+@mixin mh($height) {
+  @media only screen and (min-height: $height + "px") {
+    @content;
+  }
+}
+
+
+
+
+//width min-max
+@mixin mdw($width-min, $width-max) {
+  @media only screen and (min-width: $width-min + "px") and (max-width: $width-max + "px") {
+    @content;
+  }
+}
+
+
+
+//height min-max
+@mixin mdh($height-min, $height-max) {
+  @media only screen and (min-height: $height-min + "px") and (max-height: $height-max + "px") {
+    @content;
+  }
+}
+
+
+
+
+//retina
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
+    @content;
+  }
+}
+
+
+
+
+
+//iPhone landscape
+@mixin iphone {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: landscape) {
+    @content;
+  }
+
+}
+
+
+
+
+//iPhoneX landscape
+@mixin iphoneX {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+    @content;
+  }
+}
+
+
+
+
+//iPad Pro portrait
+@mixin ipadproport {
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (orientation: portrait) {
+    @content;
+  }
+}
+
+
+
+
+//middle
+@mixin md {
+  @include r(1023) {
+    @content;
+  }
+}
+
+
+
+
+//small
+@mixin sm {
+  @include r(767) {
+    @content;
+  }
+}
+
+
+
+
+//xsmall
+@mixin xs {
+  @include r(599) {
+    @content;
+  }
+}
+
+
+//clearfix
+@mixin clear {
+  &:after {
+    content: " ";
+    display: table;
+    clear: both;
+  }
+}
+
+
+
+//Images
+@mixin img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+//performance
+@mixin gpu {
+  transform: translate3d(0, 0, 0);
+}
+
+
+
+//scroll fix
+@mixin smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// box shadow
+@mixin btn-shadow {
+  box-shadow: 0px 2px 6px #a1cbdc;
+}
+
+@mixin box-shadow {
+  box-shadow: 2px 2px 6px #d0d0d06e;
+}
+// border radius 
+@mixin border-radius {
+  border-radius: 5px;
+}

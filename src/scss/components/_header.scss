@@ -1,0 +1,513 @@
+.header {
+
+  // display: none;
+  &-top {
+    padding: 15px 0;
+  }
+
+  &-logo {
+    max-width: 200px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+
+    @include d(1100) {
+      max-width: 140px;
+    }
+
+    @include d(991) {
+      display: block;
+      max-width: 160px;
+      margin: 0 auto;
+    }
+  }
+
+  &-login {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    p {
+      color: $blue;
+      font-size: 14px;
+
+      @include d(1100) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .button {
+    margin-left: 20px;
+
+    &:hover {
+      background-color: $blue;
+    }
+  }
+
+  &-nav {
+    background-color: $gray-lighter;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+
+    @include d(991) {
+      width: 50vw;
+      background-color: $white;
+      box-shadow: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      // width: 100%;
+      z-index: 2;
+      overflow: hidden;
+      transform: translateX(-20%);
+      opacity: 0;
+      transition: transform .6s, opacity .6s;
+      z-index: -1;
+      height: 100vh;
+
+      &_active {
+        transform: translateX(0);
+        opacity: 1;
+        z-index: 1;
+      }
+    }
+    @include d(600) {
+      width: 100vw;
+    }
+  }
+}
+
+.humburger {
+  width: 30px;
+  height: 15px;
+  background-color: $white;
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  z-index: 1;
+  transform: translateY(-50%);
+  display: none;
+
+  @include d(991) {
+    display: block;
+    cursor: pointer;
+  }
+
+  span {
+    width: 100%;
+    height: 2px;
+    background-color: $gray;
+    border-radius: 2px;
+    position: absolute;
+    left: 0;
+    transition: all .4s;
+    &:first-child {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+      opacity: 1;
+      transform: translateY(-50%);
+    }
+
+    &:last-child {
+      bottom: 0;
+    }
+  }
+
+  &_open {
+    span {
+      &:first-child {
+        transform: rotate(45deg);
+        transform-origin: 4px;
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+        transform-origin: 8px;
+      }
+    }
+
+  }
+}
+
+// navigation menu
+.nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  // max-width: 1440px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+
+  @include m(768) {
+    max-width: 100%;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  @include m(991) {
+    max-width: 960px;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: visible;
+  }
+
+  @include m(1200) {
+    max-width: 1140px;
+  }
+
+  @include m(1500) {
+    max-width: 1440px;
+  }
+
+  &-item_mob {
+    display: none;
+
+    @include d(991) {
+      display: block;
+    }
+  }
+
+  &-more {
+    &:after {
+      content: "";
+      height: 8px;
+      width: 8px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: -15px;
+      margin-top: -2px;
+      border-right: 1px solid $blue;
+      border-bottom: 1px solid $blue;
+      transform: translateY(-50%) rotate(45deg);
+
+      @include d(1100) {
+        left: -8px;
+        width: 5px;
+        height: 5px;
+        margin-top: -1px;
+      }
+
+      @include d(991) {
+        display: none;
+      }
+    }
+
+    &>a {
+      @include d(991) {
+        display: none;
+      }
+    }
+
+  }
+
+  &-main {
+    display: flex;
+    justify-content: space-between;
+
+    @include d(991) {
+      flex-direction: column;
+      border-top: 1px solid $gray-light;
+    }
+
+    &>li {
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        @include d(991) {
+          border-bottom: 1px solid $gray-light;
+        }
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width .4s;
+
+        @include d(991) {
+          display: none;
+        }
+      }
+
+      &>a {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $black;
+        transition: color .4s;
+
+        @include d(1400) {
+          font-size: 12px;
+        }
+
+        @include d(991) {
+          font-size: 14px;
+          padding: 10px 0;
+          text-align: left;
+        }
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+
+      &:hover>a {
+        color: $blue;
+      }
+
+      &.no-border {
+        &:before {
+          display: none;
+
+          @include d(991) {
+            display: block;
+            content: "";
+            width: 8px;
+            height: 8px;
+            background-color: $white;
+            border-left: 1px solid $gray;
+            border-bottom: 1px solid $gray;
+            top: 10px;
+            transform: rotate(-45deg);
+            right: 0;
+            left: auto;
+          }
+        }
+
+        @include d(991) {
+          // border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &-browse {
+    display: flex;
+    justify-content: space-between;
+    min-width: 1140px;
+    position: relative;
+
+    @include d(1500) {
+      min-width: 960px;
+    }
+
+    @include d(1400) {
+      min-width: 940px;
+    }
+
+    @include d(1199) {
+      min-width: 830px;
+    }
+
+    @include d(1100) {
+      min-width: 810px;
+    }
+
+    @include d(991) {
+      flex-direction: column;
+      min-width: 100%;
+      background-color: #fbfbfc;
+      border-top: 1px solid $gray-light;
+      // overflow: hidden;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-color: #fbfbfc;
+      border-top: 1px solid $gray-light;
+      top: -1px;
+      display: none;
+
+      @include d(991) {
+        display: block;
+      }
+    }
+
+    &:before {
+      left: 100%;
+    }
+
+    &:after {
+      right: 100%;
+    }
+
+
+
+    &>li {
+      position: relative;
+
+      @include d(991) {
+        text-align: left;
+      }
+
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $blue;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: width .4s;
+
+        @include d(991) {
+          display: none;
+        }
+      }
+
+      a {
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $black;
+        transition: color .4s;
+        letter-spacing: 1px;
+
+        @include d(1400) {
+          font-size: 12px;
+        }
+
+        @include d(991) {
+          text-transform: capitalize;
+          font-size: 12px;
+          padding: 12px 5px 12px 0;
+          display: flex;
+          align-items: center;
+
+        }
+      }
+
+      svg {
+        display: none;
+
+        @include d(991) {
+          display: inline-block;
+          height: 2em;
+        }
+      }
+
+      &:hover:before {
+        width: 100%;
+      }
+
+      &:hover>a {
+        color: $blue;
+      }
+    }
+  }
+
+  &-sub {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    min-width: 150px;
+    padding: 10px;
+    @include box-shadow;
+    background-color: $white;
+    z-index: 1;
+    visibility: hidden;
+    transform: translateY(-20px);
+    opacity: 0;
+    transition: transform .2s, opacity .2s;
+
+    @include d(991) {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      position: static;
+      box-shadow: none;
+      padding-left: 0;
+      padding-top: 0;
+    }
+
+    li {
+      text-align: left;
+      line-height: 2em;
+
+      @include d(1400) {
+        line-height: 1.5em;
+      }
+
+      @include d(991) {
+        border-bottom: 1px solid $gray-light;
+        line-height: 1.15;
+      }
+
+      &:hover>a {
+        color: $blue;
+
+        &:before {
+          width: 100%;
+        }
+      }
+
+      a {
+        position: relative;
+
+        @include d(1400) {
+          font-size: 12px;
+        }
+
+        @include d(991) {
+          text-transform: uppercase;
+          font-size: 14px;
+          letter-spacing: 1px;
+          padding: 10px 0;
+          text-align: left;
+        }
+
+        &:before {
+          content: "";
+          display: block;
+          width: 0;
+          height: 1px;
+          background-color: $blue;
+          position: absolute;
+          bottom: 2px;
+          left: 0;
+          transition: width .4s;
+
+          @include d(991) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &_active {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  &-home {
+    @include d(991) {
+      display: none;
+    }
+  }
+}
