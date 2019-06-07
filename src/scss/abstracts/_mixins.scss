@@ -185,10 +185,18 @@
   box-shadow: 0px 2px 6px #a1cbdc;
 }
 
+
+
 @mixin box-shadow {
-  box-shadow: 2px 2px 6px #d0d0d06e;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16)
+}
+@mixin box-shadow-active {
+  box-shadow: 0 16px 16px 0 rgba(0, 0, 0, 0.24)
+}
+@mixin box-shadow-container {
+  box-shadow: 0 -4px 8px 0 rgba(0, 0, 0, 0.24);
 }
 // border radius 
 @mixin border-radius {
-  border-radius: 5px;
+  border-radius: 10px;
 }

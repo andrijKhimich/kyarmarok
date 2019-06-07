@@ -6,9 +6,9 @@
 // libs using in projects, uncoment what you need
 @import '../libs/slick_1.9.0/slick/slick.scss';
 @import '../libs/slick_1.9.0/slick/slick-theme.scss';
-@import '../libs/odometer/themes/odometer-theme-default.css';
-@import '../libs/select2/dist/css/select2.min.css';
-@import '../libs/bootstrap/scss/grid/bootstrap-grid.scss';
+// @import '../libs/odometer/themes/odometer-theme-default.css';
+// @import '../libs/select2/dist/css/select2.min.css';
+// @import '../libs/bootstrap/scss/grid/bootstrap-grid.scss';
 
 // base styles for ech project
 @import "base/fonts";
@@ -17,13 +17,12 @@
 
 
 // project components
+@import "components/svg";
 @import "components/header";
 @import "components/footer";
 // @import "components/modal";
 // @import "components/sidebar";
-@import "components/job";
-@import "components/pagination";
-@import "components/svg";
+
 
 // project pages
 @import "pages/index";
