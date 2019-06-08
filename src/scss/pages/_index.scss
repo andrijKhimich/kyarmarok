@@ -1,0 +1,23 @@
+.main {
+  padding-top: 96px;
+  margin-bottom: 112px;
+  &-slider {
+    position: relative;
+    @include border-radius;
+    max-width: 992px;
+    &__navigation {
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%);
+      width: 100%;
+    }
+  }
+}
+.main-slider__btn {
+  width: 40px;
+  height: 40px;
+  display: block;
+  border-radius: 50%;
+  position: relative;
+  background-color: $gray-bg;
+}
