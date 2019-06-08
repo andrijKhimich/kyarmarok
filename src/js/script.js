@@ -23,12 +23,27 @@ $(window).resize(function () {
 // });
 
 
-$('.fade').slick({
+$('.js-slider').slick({
   dots: true,
+  dotsClass: 'main-slider__pagination',
   infinite: true,
   speed: 500,
   fade: true,
-  cssEase: 'linear'
+  // appendDots: 'main-slider__pagination',
+  pauseOnDotsHover: true,
+  cssEase: 'linear',
+  arrows: true,
+  prevArrow: $('.js-prev'),
+  nextArrow: $('.js-next'),
+  // customPaging: function(slider, i) {
+  //   // this example would render "tabs" with titles
+  //   return '<li class="pager"></li>';
+  // },
+  // customPaging: function(slider, i) { 
+  //   return '<li class="pager">' + $(slider.$slides[i]).attr('title') + '</li>';
+// },
+
+  
 });
 // Load SVG-sprite for all browsers
 svg4everybody({});

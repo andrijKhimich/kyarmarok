@@ -1,23 +1,108 @@
 .main {
   padding-top: 96px;
   margin-bottom: 112px;
+
+  &-banner {
+    display: flex;
+  }
+
   &-slider {
     position: relative;
     @include border-radius;
     max-width: 992px;
+    max-height: 480px;
+    flex: 0 0 992px;
+
     &__navigation {
       position: absolute;
       top: 50%;
-      transform: translate(-50%);
+      transform: translateY(-50%);
       width: 100%;
+      z-index: 1;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
+    &__pagination {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: space-between;
+      max-width: 74px;
+      width: 100%;
+      z-index: 1;
+      li {
+        width: 16px;
+        height: 16px;
+        display: block;
+        background-color: rgba($white, .8);
+        border-radius: 50%;
+        transition: .2s;
+        button {
+          width: 0;
+          height: 0;
+          opacity: 0;
+        }
+      }
+      .slick-active {
+        background-color: $red;
+      }
+    }
+
+    &__item {
+      picture {
+        img {
+          @include border-radius;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
+
 .main-slider__btn {
   width: 40px;
   height: 40px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   position: relative;
-  background-color: $gray-bg;
+  background-color: rgba($gray-bg, .8);
+  transition: background-color .2s;
+  .svg {
+    fill: $black;
+    transition: fill .2s;
+  }
+  &:hover {
+    background-color: $gray-bg;
+    .svg {
+      fill: $red;
+    }
+  }
+}
+.link-box__wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-left: 16px;
+}
+.link-box {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include border-radius;
+  padding: 24px 32px;
+  width: 100%;
+  height: 232px;
+  .svg {
+    align-self: flex-end;
+  }
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
 }
