@@ -1,6 +1,6 @@
 .main {
   padding-top: 96px;
-  margin-bottom: 112px;
+  // margin-bottom: 112px;
 
   &-banner {
     display: flex;
@@ -193,6 +193,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
     &-item {
       flex: 0 0 25%;
       max-width: 25%;
@@ -280,6 +281,7 @@
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 0 -15px;
+
     &-item {
       height: 72px;
       flex: 0 0 33.33333%;
@@ -332,6 +334,7 @@
     flex-wrap: wrap;
     margin-left: -15px;
     margin-right: -15px;
+
     &-item {
       flex: 0 0 25%;
       max-width: 25%;
@@ -395,6 +398,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
     &-item {
       flex-basis: 0;
       flex-grow: 1;
@@ -439,6 +443,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+
     &-item {
       flex-basis: 0;
       flex-grow: 1;
@@ -513,6 +518,7 @@
       position: relative;
       width: 100%;
       transition: box-shadow .2s;
+
       &:before {
         content: "";
         position: absolute;
@@ -528,6 +534,7 @@
 
       &:hover {
         @include box-shadow-active;
+
         &:before {
           background-color: rgba($black, 0.24);
         }
@@ -561,15 +568,18 @@
 
 .partners {
   padding: 60px 0;
+
   h2 {
     text-align: center;
     margin-bottom: 95px;
   }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     &-item {
       max-width: 260px;
       width: 100%;
@@ -577,6 +587,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       img {
         width: auto;
         filter: grayscale(1);
@@ -587,19 +598,106 @@
 
 .photo {
   padding-top: 80px;
-  padding-bottom: 50px;
+  padding-bottom: 45px;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 95px;
+    padding: 0 400px;
+    line-height: 1.25em;
+  }
+
   &__content {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
   }
+
   &-box {
     display: flex;
     flex-direction: column;
     text-align: center;
+    width: 33.333%;
+    padding: 0 30px;
+
     .svg {
-      margin: 0 auto;
+      margin: 0 auto 50px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.33em;
+    }
+  }
+}
+
+.messengers {
+  padding-top: 45px;
+  padding-bottom: 185px;
+
+  &__list {
+    display: flex;
+
+    &-item {
+      flex-basis: 0;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 15px;
+    }
+
+    &-link {
+      @include border-radius;
+      @include box-shadow;
+      background-color: $white;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: safe;
+      height: 88px;
+      transition:  box-shadow .2s;
+      &:hover {
+        @include box-shadow-active;
+      }
+    }
+  }
+
+  &-content {
+    span {
+      color: $gray-light;
+    }
+  }
+
+  &-img {
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+}
+
+.gallery {
+  &__list {
+    display: flex;
+    position: relative;
+    top: -50%;
+    transform: translateY(-50%);
+
+    &-item {
+      flex-basis: 0;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 100%;
+      padding: 0 15px;
+
+      img {
+        @include border-radius;
+        @include box-shadow;
+        background-color: $white;
+        display: flex;
+        align-items: center;
+        justify-content: safe;
+        height: 230px;
+      }
     }
   }
 }

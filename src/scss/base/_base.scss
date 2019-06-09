@@ -114,13 +114,18 @@ section {
 .red {
   color: $red;
 }
-
+.telegram {
+  background-image: linear-gradient(to right, #41BCE7, #22A6DC);
+  border-radius: 50%;
+}
 .bg-gray {
   background-color: #f5f5f5;
 }
-
+.bg-gray-light {
+  background-color: #f4f3f0;
+}
 .bg-pink {
-  background-color: #ffe2c0;
+  background-color: rgba(#ffe2c0, 0.24);
 }
 
 .gray-light {
