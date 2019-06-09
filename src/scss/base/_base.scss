@@ -22,11 +22,13 @@ body {
 
 .main-wrapper {
   width: 100%;
+
   @include d(1919) {
     max-width: 1440px;
     margin: 0 auto;
   }
 }
+
 .container {
   max-width: 1310px;
   margin: 0 auto;
@@ -43,15 +45,9 @@ a {
   font-size: 16px;
   line-height: 1.5;
 
-  &:visited {
-    text-decoration: none;
-    color: inherit;
-  }
-
   &:active,
   &:focus {
     outline: none;
-    text-decoration: none;
   }
 
   @include d(1499) {
@@ -90,6 +86,7 @@ h4,
 h5,
 h6 {
   font-weight: 500;
+  margin: 0;
 }
 
 h2 {
@@ -114,10 +111,68 @@ section {
 .black {
   color: $black;
 }
+.red {
+  color: $red;
+}
 
 .bg-gray {
   background-color: #f5f5f5;
 }
+
+.bg-pink {
+  background-color: #ffe2c0;
+}
+
+.gray-light {
+  color: $gray-light;
+}
+
+.brown-light {
+  color: $brown-light;
+}
+
+.brown-dark {
+  color: $brown-dark;
+}
+
+.yellow-light {
+  color: $yellow-light;
+}
+
+.red-dark {
+  color: $red-dark;
+}
+
+.blue-light {
+  color: $blue-light;
+}
+
+.blue-dark {
+  color: $blue-dark;
+}
+
+.bg-gray-black {
+  background-image: linear-gradient(to right, $gray-light, $black);
+}
+.bg-white-brown {
+  background-image: linear-gradient(to right, $white, $brown-light);
+}
+.bg-brown-light-dark {
+  background-image: linear-gradient(to right, $brown-light, $brown-dark);
+}
+
+.bg-yellow-red-dark {
+  background-image: linear-gradient(to right, $yellow-light, $red-dark);
+}
+
+.bg-blue-light-dark {
+  background-image: linear-gradient(to right, $blue-light, $blue-dark);
+}
+
+.bg-multy {
+  background-image: linear-gradient(to right, #f23838, #f3b027 26%, #e13131 69%, #ebcd22);
+}
+
 
 input {
   font-size: 16px;

@@ -21,7 +21,7 @@ gulp.task('browser-sync', function () {
     server: {
       baseDir: path
     },
-    notify: true,
+    notify: false,
     open: true,
     // tunnel: true,
     // tunnel: "projectname", //Demonstration page: http://projectname.localtunnel.me
