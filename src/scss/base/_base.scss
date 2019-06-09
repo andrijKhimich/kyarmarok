@@ -304,3 +304,10 @@ input[type="search"] {
 textarea {
   resize: none;
 }
+
+.abstract-circle {
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #ddd8d2;
+  position: absolute;
+}
