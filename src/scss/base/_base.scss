@@ -87,6 +87,7 @@ h5,
 h6 {
   font-weight: 500;
   margin: 0;
+  line-height: 1.25em;
 }
 
 h2 {
@@ -124,8 +125,11 @@ section {
 .bg-gray-light {
   background-color: #f4f3f0;
 }
-.bg-pink {
+.bg-yellow {
   background-color: rgba(#ffe2c0, 0.24);
+}
+.bg-pink {
+  background-color: #EAD0CF;
 }
 
 .gray-light {

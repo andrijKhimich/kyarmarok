@@ -574,6 +574,7 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+
     &:before {
       content: "";
       position: absolute;
@@ -589,7 +590,7 @@
     img {
       border-radius: 50%;
       transform: scale(1);
-      transition: transform .4s;
+      transition: transform 2s;
     }
   }
 }
@@ -704,6 +705,72 @@
           @include border-radius;
           object-fit: cover;
         }
+      }
+    }
+  }
+}
+
+.user-gallery {
+  margin-top: 110px;
+  margin-bottom: 50px;
+  &:before {
+    content: "";
+    background-color:  #EAD0CF;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+  }
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  &-box {
+    flex-basis: 0;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    padding: 0 15px;
+    &:nth-child(3) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    h2 {
+      margin-top: 135px;
+      max-width: 300px;
+      margin-bottom: 45px;
+
+    }
+    &>img {
+      margin-top: 85px;
+      height: auto;
+      max-width: 250px;
+    }
+  }
+  &-item {
+    @include border-radius;
+    overflow: hidden;
+    height: 230px;
+    img {
+      @include border-radius;
+      // object-fit: cover;
+      transform: scale(1.2);
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+    &_top {
+      position: relative;
+      top: -45px;
+      left: -20px;
+      img {
+        transform: scale(1);
+        height: auto;
       }
     }
   }
