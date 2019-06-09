@@ -10,7 +10,7 @@
     position: relative;
     @include border-radius;
     max-width: 992px;
-    // max-height: 480px;
+    max-height: 480px;
     flex: 0 0 992px;
 
     &__navigation {
@@ -58,9 +58,11 @@
 
     &__item {
       picture {
+        height: 100%;
         img {
           @include border-radius;
           object-fit: cover;
+          height: 480px;
         }
       }
     }
@@ -235,7 +237,7 @@
       height: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
-      padding: 24px;
+      // padding: 24px;
       height: 150px;
       position: relative;
       box-shadow: 0 0 0 transparent;
@@ -414,7 +416,7 @@
       height: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
-      padding: 24px;
+      // padding: 24px;
       height: 150px;
       position: relative;
       box-shadow: 0 0 0 transparent;

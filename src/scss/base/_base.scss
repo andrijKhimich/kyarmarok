@@ -21,12 +21,13 @@ body {
 }
 
 .main-wrapper {
-  width: 100%;
+  // width: 100%;
 
   @include d(1919) {
     max-width: 1440px;
     margin: 0 auto;
   }
+  @include d()
 }
 
 .container {
