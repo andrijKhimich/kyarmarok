@@ -14,5 +14,9 @@
   &-lg {
     width: 5em;
     height: 5em;
+    @include d(1199) {
+      width: 4em;
+      height: 4em;
+    }
   }
 }

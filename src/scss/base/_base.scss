@@ -27,12 +27,20 @@ body {
     max-width: 1440px;
     margin: 0 auto;
   }
-  @include d()
+  // @include d()
 }
 
 .container {
   max-width: 1310px;
+  width: 100%;
   margin: 0 auto;
+  @include d(1499) {
+    max-width: 1280px;
+  }
+  @include d(1199) {
+    max-width: 1140px;
+    padding: 0 15px;
+  }
 }
 
 .body_fixed {
@@ -94,6 +102,9 @@ h6 {
 h2 {
   font-size: 32px;
   line-height: 1em;
+  @include d(1199){
+    font-size: 30px;
+  }
 }
 
 h3 {

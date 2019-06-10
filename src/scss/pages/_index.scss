@@ -1,9 +1,16 @@
 .main {
   padding-top: 96px;
+
   // margin-bottom: 112px;
+  @include d(1199) {
+    padding-top: 60px;
+  }
 
   &-banner {
     display: flex;
+    @include d(991) {
+      flex-direction: column;
+    }
   }
 
   &-slider {
@@ -13,6 +20,16 @@
     max-height: 480px;
     flex: 0 0 992px;
 
+    @include d(1199) {
+      flex: 0 0 75%;
+      max-width: 75%;
+      max-height: 400px;
+    }
+    @include d(991) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
     &__navigation {
       position: absolute;
       top: 50%;
@@ -59,10 +76,16 @@
     &__item {
       picture {
         height: 100%;
+
         img {
           @include border-radius;
           object-fit: cover;
           height: 480px;
+
+          @include d(1199) {
+            max-height: 400px;
+            height: 100%;
+          }
         }
       }
     }
@@ -99,6 +122,19 @@
   flex-direction: column;
   width: 100%;
   margin-left: 16px;
+
+  @include d(1199) {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-right: 15px;
+  }
+  @include d(991) {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 0;
+    flex-direction: row;
+    margin-left: 0;
+  }
 }
 
 .link-box {
@@ -111,6 +147,26 @@
   width: 100%;
   height: 232px;
 
+  @include d(1199) {
+    padding: 20px;
+    max-height: 192px;
+    height: 100%;
+  }
+  @include d(991) {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  &:first-child {
+    @include d(991) {
+      margin-right: 7.5px;
+    }
+  }
+  &:last-child {
+    @include d(991) {
+      margin-left: 7.5px;
+    }
+  }
   .svg {
     align-self: flex-end;
   }
@@ -124,19 +180,38 @@
   padding-top: 100px;
   padding-bottom: 100px;
 
+  @include d(1199) {
+    padding: 60px 0;
+  }
+
   h2 {
     text-align: center;
     margin-bottom: 90px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__content {
     display: flex;
+    justify-content: space-between;
+
+    @include d(1199) {
+      padding: 0 15px;
+    }
   }
 
   &-img {
     flex: 0 0 312px;
     margin-right: 80px;
     position: relative;
+
+    @include d(1199) {
+      margin-right: 40px;
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
 
     picture {
       position: relative;
@@ -175,6 +250,13 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @include d(1199) {
+      flex: 0 0 75%;
+      max-width: 75%;
+      padding-right: 15px;
+      margin: 0;
+    }
+
     &-item {
       width: 100%;
       max-width: 33.33333%;
@@ -194,7 +276,12 @@
       padding: 24px;
       font-weight: 400;
       transition: box-shadow .2s, font-weight .2s, color .2s;
-
+      @include d(1199) {
+        padding: 16px;
+      }
+      @include d(991) {
+        padding: 10px;
+      }
       &:hover {
         @include box-shadow-active;
         color: $red;
@@ -204,6 +291,11 @@
       .svg {
         width: 4.5em;
         height: 4.5em;
+
+        @include d(1199) {
+          width: 3.5em;
+          height: 3.5em;
+        }
       }
     }
   }
@@ -218,6 +310,10 @@
   h2 {
     margin-bottom: 95px;
     text-align: center;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -230,15 +326,22 @@
       max-width: 25%;
       margin-bottom: 30px;
       padding: 0 15px;
+      height: 150px;
+      // height: 100%;
+      @include d(1199) {
+        height: 130px;
+      }
+      @include d(991) {
+        height: 100px;
+      }
     }
 
     &-link {
       width: 100%;
-      height: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
       // padding: 24px;
-      height: 150px;
+      height: 100%;
       position: relative;
       box-shadow: 0 0 0 transparent;
       transform: scaleY(1);
@@ -316,6 +419,10 @@
   h2 {
     text-align: center;
     margin-bottom: 95px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__content {
@@ -335,6 +442,9 @@
       flex: 0 0 33.33333%;
       padding: 0 15px;
       margin-bottom: 32px;
+      @include d(1199) {
+        height: 62px;
+      }
     }
 
     &-link {
@@ -396,6 +506,10 @@
   h2 {
     text-align: center;
     margin-bottom: 95px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -409,6 +523,14 @@
       max-width: 25%;
       margin-bottom: 30px;
       padding: 0 15px;
+      height: 150px;
+      // height: 100%;
+      @include d(1199) {
+        height: 130px;
+      }
+      @include d(991) {
+        height: 100px;
+      }
     }
 
     &-link {
@@ -416,8 +538,6 @@
       height: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
-      // padding: 24px;
-      height: 150px;
       position: relative;
       box-shadow: 0 0 0 transparent;
       transform: scaleY(1);
@@ -438,16 +558,22 @@
       &:hover {
         @include box-shadow-active;
         transform: scaleY(1.1);
-
+        @include d(991) {
+          transform: none;
+        }
         &:before {
           background-color: rgba($black, .2);
         }
 
         span {
-          transform: scale(0.9);
           left: 50%;
           bottom: 50%;
-          transform: translate(-50%, 50%);
+          transform: translate(-50%, -50%) scale(0.9);
+          @include d(991) {
+            left: auto;
+            // bottom: auto;
+            // transform: none;
+          }
         }
 
       }
@@ -469,10 +595,16 @@
         left: 24px;
         transform: scale(1);
         transition: left .2s, bottom .2s, transform .2s;
+        @include d(991) {
+          font-size: 18px;
+          transform: translate(-50%, -50%);
+          top: 50%;
+          left: 50%;
+          line-height: 1.2em;
+        }
       }
     }
   }
-
 }
 
 .colors {
@@ -481,6 +613,10 @@
   h2 {
     text-align: center;
     margin-bottom: 95px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -509,6 +645,10 @@
         &:hover {
           @include box-shadow-active;
         }
+        @include d(1199) {
+          height: 62px;
+          margin-bottom: 16px;
+        }
       }
 
       p {
@@ -526,6 +666,10 @@
   h2 {
     margin-bottom: 95px;
     text-align: center;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -539,6 +683,7 @@
       width: 100%;
       max-width: 100%;
       padding: 0 15px;
+      
     }
 
     &-link {
@@ -551,7 +696,13 @@
       align-items: center;
       padding: 24px;
       transition: box-shadow .2s;
-
+      @include d(1199) {
+        height: 100px;
+        padding: 16px;
+      }
+      @include d(991) {
+        padding: 10px;
+      }
       &:hover {
         @include box-shadow-active;
 
@@ -576,7 +727,10 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
-
+    @include d(1199) {
+      width: 70px;
+      height: 70px;
+    }
     &:before {
       content: "";
       position: absolute;
@@ -603,11 +757,14 @@
   h2 {
     text-align: center;
     margin-bottom: 95px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__content {
     position: relative;
-    // display: flex;
   }
 
   &__img {
@@ -664,7 +821,9 @@
       position: relative;
       width: 100%;
       transition: box-shadow .2s;
-
+      @include d(1199) {
+        height: 112px;
+      }
       &:before {
         content: "";
         position: absolute;
@@ -696,6 +855,9 @@
         z-index: 2;
         font-weight: 500;
         font-size: 26px;
+        @include d(1199) {
+          font-size: 24px;
+        }
       }
 
       picture {
@@ -715,9 +877,12 @@
 .user-gallery {
   margin-top: 110px;
   margin-bottom: 50px;
+  @include d(991) {
+    margin-top: 0;
+  }
   &:before {
     content: "";
-    background-color:  #EAD0CF;
+    background-color: #EAD0CF;
     position: absolute;
     width: 100%;
     top: 50px;
@@ -726,50 +891,67 @@
     right: 0;
     z-index: -1;
   }
+
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
   }
+
   &-box {
     flex-basis: 0;
     flex-grow: 1;
     width: 100%;
     max-width: 100%;
     padding: 0 15px;
+
     &:nth-child(3) {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
+
     h2 {
       margin-top: 135px;
       max-width: 300px;
       margin-bottom: 45px;
 
     }
+
     &>img {
       margin-top: 85px;
       height: auto;
       max-width: 250px;
+      @include d(1199) {
+        margin-top: 25px;
+        max-width: 180px;
+      }
     }
   }
+
   &-item {
     @include border-radius;
     overflow: hidden;
     height: 230px;
+    @include d(1199) {
+      height: 180px;
+    }
     img {
       @include border-radius;
-      // object-fit: cover;
       transform: scale(1.2);
     }
+
     &:not(:last-child) {
       margin-bottom: 30px;
     }
+
     &_top {
       position: relative;
       top: -45px;
       left: -20px;
+      @include d(1199) {
+        top: -15px;
+      }
       img {
         transform: scale(1);
         height: auto;
@@ -784,6 +966,10 @@
   h2 {
     text-align: center;
     margin-bottom: 95px;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+    }
   }
 
   &__list {
@@ -799,7 +985,9 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
+      @include d(1199) {
+        margin: 20px;
+      }
       img {
         width: auto;
         filter: grayscale(1);
@@ -811,12 +999,20 @@
 .photo {
   padding-top: 80px;
   padding-bottom: 45px;
-
+  @include d(1199) {
+    padding-top: 60px;
+    padding-bottom: 30px;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
     padding: 0 400px;
     line-height: 1.25em;
+
+    @include d(1199) {
+      margin-bottom: 60px;
+      padding: 0 260px;
+    }
   }
 
   &__content {
@@ -832,14 +1028,22 @@
     text-align: center;
     width: 33.333%;
     padding: 0 30px;
-
+    @include d(991) {
+      padding: 0 15px;
+    }
     .svg {
       margin: 0 auto 50px;
+      @include d(1199) {
+        margin: 0 auto 30px;
+      }
     }
 
     p {
       font-size: 18px;
       line-height: 1.33em;
+      @include d(991) {
+        font-size: 16px;
+      }
     }
   }
 }
@@ -847,7 +1051,9 @@
 .messengers {
   padding-top: 45px;
   padding-bottom: 185px;
-
+  @include d(1199) {
+    padding-top: 30px;
+  }
   &__list {
     display: flex;
 
@@ -867,9 +1073,15 @@
       display: flex;
       align-items: center;
       justify-content: safe;
-      height: 88px;
+      // height: 88px;
       transition: box-shadow .2s;
-
+      @include d(1199) {
+        padding: 16px;
+        height: auto;
+      }
+      @include d(991) {
+        padding: 10px;
+      }
       &:hover {
         @include box-shadow-active;
       }
@@ -910,6 +1122,9 @@
         align-items: center;
         justify-content: safe;
         height: 230px;
+        @include d(1199) {
+          height: 180px;
+        }
       }
     }
   }
