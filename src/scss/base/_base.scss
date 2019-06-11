@@ -21,25 +21,26 @@ body {
 }
 
 .main-wrapper {
-  // width: 100%;
 
   @include d(1919) {
     max-width: 1440px;
     margin: 0 auto;
   }
-  // @include d()
 }
 
 .container {
-  max-width: 1310px;
+  max-width: 1344px;
+  padding: 0 16px;
   width: 100%;
   margin: 0 auto;
   @include d(1499) {
     max-width: 1280px;
   }
-  @include d(1199) {
+  @include d(1299) {
     max-width: 1140px;
-    padding: 0 15px;
+  }
+  @include d(1199) {
+    max-width: 960px;
   }
 }
 
@@ -103,7 +104,7 @@ h2 {
   font-size: 32px;
   line-height: 1em;
   @include d(1199){
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 

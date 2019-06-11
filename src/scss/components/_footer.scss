@@ -3,25 +3,54 @@
   padding-top: 55px;
   padding-bottom: 50px;
   font-size: 14px;
+  @include d(767) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   &__content {
     max-width: 60%;
     margin: 0 auto;
+    @include d(991) {
+      max-width: 100%;
+      padding: 0 15px;
+    }
   }
 
   &-top {
     display: flex;
     justify-content: space-between;
     margin-bottom: 50px;
+    flex-wrap: wrap;
+    @include d(767) {
+      margin-bottom: 30px;
+    }
+    @include d(580) {
+      margin-bottom: 0;
+    }
   }
 
   &__list {
+    @include d(580) {
+      flex: 0 0 100%;
+      @include d(767) {
+        margin-bottom: 30px;
+      }
+      @include d(580) {
+        margin-bottom: 20px;
+      }
+    }
     &-item {
       &:first-child {
         color: $black;
         position: relative;
         margin-bottom: 50px;
-
+        @include d(767) {
+          margin-bottom: 30px;
+        }
+        @include d(580) {
+          margin-bottom: 20px;
+        }
         &:before {
           content: "";
           position: absolute;
@@ -47,6 +76,12 @@
     p {
       color: $gray-light;
       font-size: 14px;
+      @include d(767) {
+        font-size: 12px;
+      }
+      @include d(580) {
+        font-size: 10px;
+      }
     }
   }
 }

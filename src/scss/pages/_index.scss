@@ -8,6 +8,7 @@
 
   &-banner {
     display: flex;
+
     @include d(991) {
       flex-direction: column;
     }
@@ -16,20 +17,22 @@
   &-slider {
     position: relative;
     @include border-radius;
-    max-width: 992px;
+    flex: 0 0 75%;
+    max-width: 75%;
     max-height: 480px;
-    flex: 0 0 992px;
+    flex: 0 0 75%;
 
     @include d(1199) {
-      flex: 0 0 75%;
-      max-width: 75%;
+
       max-height: 400px;
     }
+
     @include d(991) {
       flex: 0 0 100%;
       max-width: 100%;
       margin-bottom: 15px;
     }
+
     &__navigation {
       position: absolute;
       top: 50%;
@@ -122,12 +125,15 @@
   flex-direction: column;
   width: 100%;
   margin-left: 16px;
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding-right: 15px;
+
 
   @include d(1199) {
-    flex: 0 0 25%;
-    max-width: 25%;
     padding-right: 15px;
   }
+
   @include d(991) {
     flex: 0 0 100%;
     max-width: 100%;
@@ -152,21 +158,25 @@
     max-height: 192px;
     height: 100%;
   }
+
   @include d(991) {
     flex-basis: 0;
     flex-grow: 1;
     max-width: 100%;
   }
+
   &:first-child {
     @include d(991) {
-      margin-right: 7.5px;
+      margin-right: 15px;
     }
   }
+
   &:last-child {
     @include d(991) {
-      margin-left: 7.5px;
+      margin-left: 15px;
     }
   }
+
   .svg {
     align-self: flex-end;
   }
@@ -183,6 +193,9 @@
   @include d(1199) {
     padding: 60px 0;
   }
+  @include d(767) {
+    padding: 30px 0;
+  }
 
   h2 {
     text-align: center;
@@ -197,21 +210,26 @@
     display: flex;
     justify-content: space-between;
 
-    @include d(1199) {
-      padding: 0 15px;
+    @include d(991) {
+      flex-direction: column-reverse;
     }
   }
 
   &-img {
-    flex: 0 0 312px;
-    margin-right: 80px;
+    flex: 0 0 25%;
+    // margin-right: 80px;
     position: relative;
 
-    @include d(1199) {
-      margin-right: 40px;
-      flex: 0 0 25%;
-      max-width: 25%;
+    // @include d(1199) {
+    //   margin-right: 40px;
+    // }
+
+    @include d(991) {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0 15px;
     }
+
 
     picture {
       position: relative;
@@ -244,17 +262,20 @@
   }
 
   &__list {
-    flex: 0 0 calc(100% - 392px);
+    flex: 0 0 75%;
     display: flex;
     margin: 0 -15px;
     flex-wrap: wrap;
     justify-content: space-between;
 
     @include d(1199) {
-      flex: 0 0 75%;
-      max-width: 75%;
-      padding-right: 15px;
-      margin: 0;
+      // padding-right: 15px;
+      // margin: 0;
+    }
+
+    @include d(991) {
+      flex: 0 0 100%;
+      margin-bottom: 30px;
     }
 
     &-item {
@@ -262,6 +283,15 @@
       max-width: 33.33333%;
       padding: 0 15px;
       margin-bottom: 30px;
+
+      @include d(767) {
+        max-width: 50%;
+        margin-bottom: 15px;
+      }
+
+      @include d(480) {
+        max-width: 100%;
+      }
     }
 
     &-link {
@@ -276,12 +306,15 @@
       padding: 24px;
       font-weight: 400;
       transition: box-shadow .2s, font-weight .2s, color .2s;
+
       @include d(1199) {
         padding: 16px;
       }
+
       @include d(991) {
         padding: 10px;
       }
+
       &:hover {
         @include box-shadow-active;
         color: $red;
@@ -289,12 +322,12 @@
       }
 
       .svg {
-        width: 4.5em;
-        height: 4.5em;
+        width: 72px;
+        height: 72px;
 
         @include d(1199) {
-          width: 3.5em;
-          height: 3.5em;
+          width: 56px;
+          height: 56px;
         }
       }
     }
@@ -306,7 +339,10 @@
   padding-top: 80px;
   padding-bottom: 60px;
   text-align: center;
-
+  @include d(991) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   h2 {
     margin-bottom: 95px;
     text-align: center;
@@ -327,12 +363,21 @@
       margin-bottom: 30px;
       padding: 0 15px;
       height: 150px;
-      // height: 100%;
+      max-height: 150px;
+
       @include d(1199) {
-        height: 130px;
+        height: 110px;
       }
+
       @include d(991) {
         height: 100px;
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
       }
     }
 
@@ -340,7 +385,6 @@
       width: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
-      // padding: 24px;
       height: 100%;
       position: relative;
       box-shadow: 0 0 0 transparent;
@@ -370,10 +414,9 @@
         }
 
         span {
-          transform: scale(0.9);
           left: 50%;
           bottom: 50%;
-          transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%) scaleY(0.9);
         }
       }
 
@@ -389,11 +432,21 @@
       span {
         color: $white;
         font-size: 26px;
+        line-height: 1.1em;
         position: absolute;
+        display: table;
         bottom: 24px;
         left: 24px;
         transform: scale(1);
         transition: left .2s, bottom .2s, transform .2s;
+
+        @include d(1199) {
+          font-size: 20px;
+        }
+
+        @include d(991) {
+          font-size: 18px;
+        }
       }
     }
   }
@@ -406,6 +459,8 @@
   border-radius: 20px;
   color: $red;
   transition: color .2s, background-color .2s;
+  max-width: 144px;
+  text-align: center;
 
   &:hover {
     color: $white;
@@ -415,7 +470,9 @@
 
 .material {
   padding: 60px 0;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -428,6 +485,10 @@
   &__content {
     display: flex;
     align-items: flex-start;
+
+    @include d(991) {
+      flex-direction: column;
+    }
   }
 
   &__list {
@@ -437,13 +498,32 @@
     align-items: flex-start;
     margin: 0 -15px;
 
+    @include d(991) {
+      width: 100%;
+    }
+
+    @include d(480) {
+      margin-bottom: 20px;
+    }
+
     &-item {
       height: 72px;
       flex: 0 0 33.33333%;
       padding: 0 15px;
       margin-bottom: 32px;
+
       @include d(1199) {
         height: 62px;
+      }
+
+      @include d(767) {
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
       }
     }
 
@@ -457,6 +537,7 @@
       align-items: center;
       width: 100%;
       height: 100%;
+      padding: 15px;
 
       &:hover {
         @include box-shadow-active;
@@ -469,6 +550,10 @@
     width: 50%;
     position: relative;
     z-index: 1;
+
+    @include d(991) {
+      width: 100%;
+    }
 
     .abstract-circle {
       &:first-child {
@@ -502,7 +587,9 @@
 .category {
   padding: 60px 0;
   text-align: center;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -524,24 +611,34 @@
       margin-bottom: 30px;
       padding: 0 15px;
       height: 150px;
-      // height: 100%;
+      max-height: 150px;
+
       @include d(1199) {
-        height: 130px;
+        height: 110px;
       }
+
       @include d(991) {
         height: 100px;
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
       }
     }
 
     &-link {
       width: 100%;
-      height: 100%;
       background-color: rgba($black, .4);
       @include border-radius;
+      height: 100%;
       position: relative;
       box-shadow: 0 0 0 transparent;
       transform: scaleY(1);
       transition: box-shadow .2s, transform .2s;
+      z-index: 2;
 
       &:before {
         content: "";
@@ -556,11 +653,10 @@
       }
 
       &:hover {
+
         @include box-shadow-active;
         transform: scaleY(1.1);
-        @include d(991) {
-          transform: none;
-        }
+
         &:before {
           background-color: rgba($black, .2);
         }
@@ -568,14 +664,8 @@
         span {
           left: 50%;
           bottom: 50%;
-          transform: translate(-50%, -50%) scale(0.9);
-          @include d(991) {
-            left: auto;
-            // bottom: auto;
-            // transform: none;
-          }
+          transform: translate(-50%, 50%) scaleY(0.9);
         }
-
       }
 
       img {
@@ -590,17 +680,20 @@
       span {
         color: $white;
         font-size: 26px;
+        line-height: 1.1em;
         position: absolute;
+        display: table;
         bottom: 24px;
         left: 24px;
         transform: scale(1);
         transition: left .2s, bottom .2s, transform .2s;
+
+        @include d(1199) {
+          font-size: 20px;
+        }
+
         @include d(991) {
           font-size: 18px;
-          transform: translate(-50%, -50%);
-          top: 50%;
-          left: 50%;
-          line-height: 1.2em;
         }
       }
     }
@@ -609,7 +702,9 @@
 
 .colors {
   padding: 60px 0;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -625,11 +720,15 @@
     margin: 0 -15px;
 
     &-item {
-      flex-basis: 0;
-      flex-grow: 1;
+      flex: 1 1 180px;
       width: 100%;
       max-width: 100%;
       padding: 0 15px;
+      margin-bottom: 16px;
+
+      @include d(1199) {
+        flex: 1 1 300px;
+      }
     }
 
     &-link {
@@ -645,6 +744,7 @@
         &:hover {
           @include box-shadow-active;
         }
+
         @include d(1199) {
           height: 62px;
           margin-bottom: 16px;
@@ -662,7 +762,9 @@
 
 .pile-height {
   padding: 60px 0;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     margin-bottom: 95px;
     text-align: center;
@@ -678,31 +780,46 @@
     margin: 0 -15px;
 
     &-item {
-      flex-basis: 0;
-      flex-grow: 1;
-      width: 100%;
-      max-width: 100%;
+      flex: 0 0 25%;
       padding: 0 15px;
-      
+      max-height: 150px;
+      margin-bottom: 16px;
+
+      @include d(1199) {
+        height: 110px;
+      }
+
+      @include d(991) {
+        height: 100px;
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
 
     &-link {
       background-color: $white;
       @include border-radius;
       @include box-shadow;
-      height: 144px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 24px;
       transition: box-shadow .2s;
+
       @include d(1199) {
         height: 100px;
         padding: 16px;
       }
+
       @include d(991) {
         padding: 10px;
       }
+
       &:hover {
         @include box-shadow-active;
 
@@ -727,10 +844,12 @@
     border-radius: 50%;
     position: relative;
     overflow: hidden;
+
     @include d(1199) {
       width: 70px;
       height: 70px;
     }
+
     &:before {
       content: "";
       position: absolute;
@@ -753,7 +872,9 @@
 
 .type-room {
   padding: 60px 0;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -772,6 +893,13 @@
     left: 0;
     width: 40%;
     z-index: 1;
+
+    @include d(991) {
+      position: static;
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 30px;
+    }
 
     .abstract-circle {
       &:first-child {
@@ -805,12 +933,21 @@
     flex-wrap: wrap;
     margin: 0 -15px 0 auto;
 
+    @include d(991) {
+      width: 100%;
+      margin: 0;
+    }
+
     &-item {
       flex-basis: 0;
       flex-grow: 1;
       width: 50%;
       min-width: 50%;
       padding: 0 15px;
+
+      @include d(480) {
+        flex: 1 1 100%;
+      }
     }
 
     &-link {
@@ -821,9 +958,11 @@
       position: relative;
       width: 100%;
       transition: box-shadow .2s;
+
       @include d(1199) {
         height: 112px;
       }
+
       &:before {
         content: "";
         position: absolute;
@@ -855,6 +994,7 @@
         z-index: 2;
         font-weight: 500;
         font-size: 26px;
+
         @include d(1199) {
           font-size: 24px;
         }
@@ -877,9 +1017,12 @@
 .user-gallery {
   margin-top: 110px;
   margin-bottom: 50px;
+
   @include d(991) {
     margin-top: 0;
+    padding: 30px 15px;
   }
+
   &:before {
     content: "";
     background-color: #EAD0CF;
@@ -890,12 +1033,61 @@
     left: 0;
     right: 0;
     z-index: -1;
+    @include d(991) {
+      top: 0;
+      bottom: 0;
+    }
   }
 
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -15px;
+  }
+
+  &__img {
+    display: flex;
+    flex: 0 0 75%;
+    // @include d(991) {
+    //   flex-direction: row;
+    //   flex: 0 0 100%;
+    //   flex-wrap: wrap;
+    // }
+  }
+
+  &-head {
+    flex: 0 0 25%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    // @include d(991) {
+    //   flex-direction: row;
+    //   flex: 0 0 100%;
+    //   align-items: flex-start;
+    //   justify-content: space-between;
+    // }
+    h2 {
+      margin-top: 135px;
+      max-width: 300px;
+      margin-bottom: 45px;
+      @include d(991) {
+        margin-top: 0;
+      }
+    }
+
+    img {
+      margin-top: 85px;
+      height: auto;
+      max-width: 250px;
+
+      @include d(1199) {
+        margin-top: 25px;
+        max-width: 180px;
+      }
+      // @include d(991) {
+      //   margin-top: 0;
+      // }
+    }
   }
 
   &-box {
@@ -905,27 +1097,19 @@
     max-width: 100%;
     padding: 0 15px;
 
-    &:nth-child(3) {
+    // @include d(991) {
+    //   display: flex;
+    //   justify-content: space-between;
+    //   flex-wrap: wrap;
+    // }
+    &:nth-child(2) {
       display: flex;
       flex-direction: column;
       justify-content: center;
-    }
-
-    h2 {
-      margin-top: 135px;
-      max-width: 300px;
-      margin-bottom: 45px;
-
-    }
-
-    &>img {
-      margin-top: 85px;
-      height: auto;
-      max-width: 250px;
-      @include d(1199) {
-        margin-top: 25px;
-        max-width: 180px;
-      }
+      // @include d(991) {
+      //   flex-direction: row;
+        
+      // }
     }
   }
 
@@ -933,12 +1117,21 @@
     @include border-radius;
     overflow: hidden;
     height: 230px;
+
     @include d(1199) {
       height: 180px;
     }
+    // @include d(991) {
+    //   margin: 0 15px;
+    // }
+
     img {
       @include border-radius;
       transform: scale(1.2);
+      min-width: 200px;
+      @include d(991) {
+        max-width: 220px;
+      }
     }
 
     &:not(:last-child) {
@@ -949,9 +1142,11 @@
       position: relative;
       top: -45px;
       left: -20px;
+
       @include d(1199) {
         top: -15px;
       }
+
       img {
         transform: scale(1);
         height: auto;
@@ -962,7 +1157,9 @@
 
 .partners {
   padding: 60px 0;
-
+  @include d(767) {
+    padding: 30px 0;
+  }
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -985,9 +1182,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
+
       @include d(1199) {
         margin: 20px;
       }
+
       img {
         width: auto;
         filter: grayscale(1);
@@ -999,10 +1198,12 @@
 .photo {
   padding-top: 80px;
   padding-bottom: 45px;
+
   @include d(1199) {
     padding-top: 60px;
     padding-bottom: 30px;
   }
+
   h2 {
     text-align: center;
     margin-bottom: 95px;
@@ -1013,13 +1214,33 @@
       margin-bottom: 60px;
       padding: 0 260px;
     }
+
+    @include d(1100) {
+      padding: 0 230px;
+    }
+
+    @include d(991) {
+      padding: 0 150px;
+    }
+
+    @include d(767) {
+      padding: 0 100px;
+    }
+
+    @include d(700) {
+      padding: 0 15px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 0 40px;
+
+    @include d(767) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &-box {
@@ -1028,21 +1249,38 @@
     text-align: center;
     width: 33.333%;
     padding: 0 30px;
+
     @include d(991) {
       padding: 0 15px;
     }
+
+    @include d(767) {
+      margin-bottom: 30px;
+      width: 100%;
+    }
+
     .svg {
       margin: 0 auto 50px;
+
       @include d(1199) {
         margin: 0 auto 30px;
+      }
+
+      @include d(767) {
+        margin: 0 auto 10px;
       }
     }
 
     p {
       font-size: 18px;
       line-height: 1.33em;
+
       @include d(991) {
         font-size: 16px;
+      }
+
+      @include d(767) {
+        padding: 0 60px;
       }
     }
   }
@@ -1051,18 +1289,36 @@
 .messengers {
   padding-top: 45px;
   padding-bottom: 185px;
+
   @include d(1199) {
     padding-top: 30px;
   }
+
+  @include d(991) {
+    padding-bottom: 40px;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
 
     &-item {
-      flex-basis: 0;
-      flex-grow: 1;
       width: 100%;
       max-width: 100%;
       padding: 0 15px;
+      height: 88px;
+      flex: 0 0 25%;
+
+      @include d(991) {
+        margin-bottom: 16px;
+        flex: 1 1 50%;
+        max-width: 50%;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
     }
 
     &-link {
@@ -1070,18 +1326,19 @@
       @include box-shadow;
       background-color: $white;
       padding: 24px;
+      height: 100%;
       display: flex;
       align-items: center;
-      justify-content: safe;
-      // height: 88px;
       transition: box-shadow .2s;
+
       @include d(1199) {
         padding: 16px;
-        height: auto;
       }
+
       @include d(991) {
         padding: 10px;
       }
+
       &:hover {
         @include box-shadow-active;
       }
@@ -1095,24 +1352,41 @@
   }
 
   &-img {
-    border-radius: 50%;
     margin-right: 20px;
+
+    @include d(1199) {
+      margin-right: 10px;
+    }
   }
 }
 
 .gallery {
   &__list {
     display: flex;
+    flex-wrap: wrap;
     position: relative;
     top: -50%;
     transform: translateY(-50%);
 
+    @include d(991) {
+      position: static;
+      transform: translateY(0);
+    }
+
     &-item {
-      flex-basis: 0;
-      flex-grow: 1;
-      width: 100%;
-      max-width: 100%;
+      flex: 0 0 25%;
       padding: 0 15px;
+
+      @include d(991) {
+        flex: 1 1 50%;
+        margin-bottom: 16px;
+        height: auto;
+      }
+
+      @include d(480) {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
 
       img {
         @include border-radius;
@@ -1121,10 +1395,14 @@
         display: flex;
         align-items: center;
         justify-content: safe;
-        height: 230px;
-        @include d(1199) {
-          height: 180px;
-        }
+        height: 100%;
+
+        // @include d(1199) {
+        //   height: 180px;
+        // }
+        // @include d(991) {
+        //   height: auto;
+        // }
       }
     }
   }
