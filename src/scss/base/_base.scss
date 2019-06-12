@@ -21,7 +21,6 @@ body {
 }
 
 .main-wrapper {
-
   @include d(1919) {
     max-width: 1440px;
     margin: 0 auto;
@@ -42,6 +41,9 @@ body {
   @include d(1199) {
     max-width: 960px;
   }
+  // @include d(1199) {
+  //   max-width: 960px;
+  // }
 }
 
 .body_fixed {

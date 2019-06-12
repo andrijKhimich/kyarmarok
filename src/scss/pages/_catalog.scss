@@ -1,0 +1,20 @@
+.catalog {
+  position: relative;
+  &-wrapper {
+    padding-top: 130px;
+    padding-bottom: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+  &__filter {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0 16px;
+  }
+  &__content {
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding: 0 16px;
+  }
+}

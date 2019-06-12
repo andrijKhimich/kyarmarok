@@ -106,7 +106,7 @@
   max-width: 143px;
 }
 
-.catalog {
+.catalog-btn {
   max-width: 376px;
   width: 100%;
   height: 64px;
@@ -119,7 +119,7 @@
     max-width: 290px;
     height: 55px;
   }
-  &-humburger {
+  &__humburger {
     width: 15px;
     height: 12px;
     position: relative;
@@ -143,7 +143,7 @@
       }
     }
   }
-  &-word {
+  &__word {
     color: $white;
     text-transform: uppercase;
     line-height: 1em;

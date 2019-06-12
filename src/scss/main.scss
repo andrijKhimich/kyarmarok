@@ -20,9 +20,11 @@
 @import "components/svg";
 @import "components/header";
 @import "components/footer";
+@import "components/breadcrumbs";
 // @import "components/modal";
 // @import "components/sidebar";
 
 
 // project pages
 @import "pages/index";
+@import "pages/catalog";

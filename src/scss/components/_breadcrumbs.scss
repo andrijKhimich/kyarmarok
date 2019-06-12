@@ -1,0 +1,35 @@
+.breadcrumbs {
+  font-size: 14px;
+  color: rgba($black, .4);
+  padding-top: 24px;
+  &__item {
+    display: inline-block;
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 20px;
+      &:before {
+        content: "";
+        display: block;
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -15px;
+        background-color: inherit;
+        border-radius: 50%;
+        background-color: rgba($black, .4);
+      }
+    }
+  }
+  &__link {
+    transition: color .2s;
+    line-height: 1.14em;
+    &:hover {
+      color: $blue-sky;
+    }
+  }
+  &_active {
+    color: $blue-sky;
+  }
+}
