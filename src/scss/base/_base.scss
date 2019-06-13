@@ -49,6 +49,16 @@ body {
 .body_fixed {
   overflow: hidden;
 }
+.sidebar {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 16px;
+}
+.content {
+  flex: 0 0 75%;
+  max-width: 75%;
+  padding: 0 16px;
+}
 
 a {
   display: inline-block;
@@ -146,6 +156,9 @@ section {
 .bg-pink {
   background-color: #EAD0CF;
 }
+.bg-input {
+  background-color: $bg-input;
+}
 
 .gray-light {
   color: $gray-light;
@@ -202,8 +215,9 @@ section {
   font-size: 16px;
   border: none;
   width: 100%;
-  padding: 12px 16px;
-
+  padding: 0.75em 1em;
+  @include border-radius;
+  outline: 0;
   @include d(1499) {
     font-size: 14px;
   }
@@ -215,7 +229,7 @@ section {
   &::-webkit-input-placeholder {
     font-family: $font-primary;
     font-size: 16px;
-    color: $black;
+    color: rgba($black, .6);
 
     @include d(1499) {
       font-size: 14px;
@@ -229,7 +243,7 @@ section {
   &::-moz-placeholder {
     font-family: $font-primary;
     font-size: 16px;
-    color: $black;
+    color: rgba($black, .6);
 
     @include d(1499) {
       font-size: 14px;
@@ -243,7 +257,7 @@ section {
   &:-ms-input-placeholder {
     font-family: $font-primary;
     font-size: 16px;
-    color: $black;
+    color: rgba($black, .6);
 
     @include d(1499) {
       font-size: 14px;
@@ -257,7 +271,7 @@ section {
   &::placeholder {
     font-family: $font-primary;
     font-size: 16px;
-    color: $black;
+    color: rgba($black, .6);
 
     @include d(1499) {
       font-size: 14px;
@@ -270,13 +284,19 @@ section {
 }
 .custom-select {
   font-size: 14px;
+  line-height: 1.5em;
   border: none;
   width: 100%;
-  padding: 0.750em 1em;
+  padding: 0.750em 3.2em 0.75em 1em;
   border-radius: 7px;
   border: 1px solid $select-border-color;
   text-align: center;
   outline: 0;
+  @include border-radius;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
   @include d(1499) {
     font-size: 12px;
   }
