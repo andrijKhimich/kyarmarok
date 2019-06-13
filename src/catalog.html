@@ -33,7 +33,7 @@
               <svg class="svg svg-sm">
                 <use xlink:href="img/svg-sprite/sprite.svg#search"></use>
               </svg>
-              <input class="bg-gray" type="search" id="headerSearch" placeholder="Почніть вводити назву">
+              <input class="bg-gray custom-input" type="search" id="headerSearch" placeholder="Почніть вводити назву">
             </label>
           </form>
           <a href="tel:+38 067 460 50 53" class="header-phone">38 067 460 50 53</a>
@@ -145,11 +145,39 @@
           </li>
         </ul>
         <div class="catalog-wrapper">
+          <div class="catalog__filter_top">
+            <div class="filter-description">
+              <p>Показано 16 з 48 товарів(всього 4 сторінки)</p>
+            </div>
+            <div class="filter-select">
+              <p>На сторінці</p>
+              <label for="onPage" class="label-select">
+                <select name="on-page" id="onPage" class="custom-select">
+                  <option value="9">9</option>
+                  <option value="12">12</option>
+                  <option value="24">24</option>
+                  <option value="all">всі</option>
+                </select>
+              </label>
+
+              <p>Сортування</p>
+              <label for="sorting" class="label-select">
+                <select name="sorting" id="sorting" class="custom-select">
+                  <option value="priceDown">Від дешевих до дорогих</option>
+                  <option value="priceUp">Від дорогих до дешевих</option>
+                  <option value="rating">По рейтингу</option>
+                  <option value="popularity">Популярністю</option>
+                  <option value="newest">Новинки</option>
+                </select>
+              </label>
+
+            </div>
+          </div>
           <aside class="catalog__filter">
 
           </aside>
           <div class="catalog__content">
-            
+
           </div>
         </div>
       </div>

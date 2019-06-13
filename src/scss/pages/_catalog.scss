@@ -7,12 +7,41 @@
     flex-wrap: wrap;
     margin: 0 -16px;
   }
+  &__filter_top {
+    flex: 1 0 100%;
+    padding: 0 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    p {
+      font-size: 14px;
+      color: $black-light;
+    }
+  }
+  .filter-description {
+    display: flex;
+    align-items: center;
+  }
+  .filter-select {
+    display: flex;
+    align-items: center;
+    p {
+      margin-right: 19px;
+    }
+    .label-select:first-of-type {
+      margin-right: 19px;
+    }
+  }
   &__filter {
+    height: 20px;
+    background: #000;
     flex: 0 0 25%;
     max-width: 25%;
     padding: 0 16px;
   }
   &__content {
+    height: 20px;
+    background: blue;
     flex: 0 0 75%;
     max-width: 75%;
     padding: 0 16px;

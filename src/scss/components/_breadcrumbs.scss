@@ -25,6 +25,7 @@
   &__link {
     transition: color .2s;
     line-height: 1.14em;
+    font-size: 14px;
     &:hover {
       color: $blue-sky;
     }
