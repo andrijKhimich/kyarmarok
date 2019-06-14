@@ -1,10 +1,14 @@
 $(document).ready(function () {
 
-  
+
+  // toggle filters
+  $('.filter__item>span').click(function(){
+    $(this).siblings('.filter__list-sub').slideToggle();
+  });
   // END DOCUMENT READY
 })
 
-
+$('.filter__list-sub').hide();
 
 
 // checkind window sizes
@@ -21,6 +25,9 @@ $(window).resize(function () {
 //     $('.nav-sub').removeClass('nav-sub_active');
 //   }
 // });
+
+
+
 
 
 $('.js-slider').slick({

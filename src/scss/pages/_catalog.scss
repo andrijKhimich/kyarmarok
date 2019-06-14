@@ -41,6 +41,7 @@
   padding-bottom: 32px;
   display: flex;
   justify-content: space-between;
+  padding: 0 24px 32px 24px;
   .custom-input {
     max-width: 128px;
     &:first-child {
@@ -52,9 +53,66 @@
 .filter {
   background-color: $white;
   @include border-radius;
-  padding: 24px;
+  padding-top: 24px;
   &>p {
+    padding-left: 24px;
     font-weight: 500;
     margin-bottom: 8px;
+  }
+  &__item {
+    font-weight: 500;
+    // padding-top: 1em;
+    position: relative;
+    &:first-child {
+      border-top: 1px solid $list-border;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid $list-border;
+    }
+    &:before {
+      content:  url('../img/svg/chevron-down.svg');
+      position: absolute;
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      right: 20px;
+      top: 10px;
+      transform: translateY(50%);
+    }
+    &>span {
+      padding: 1em 1.5em;
+      display: block;
+      transition: background-color .2s;
+      &:hover {
+        cursor: pointer;
+        background-color: $bg-input;
+      }
+    }
+  }
+  &__list-sub {
+    position: relative;
+    background-color: $bg-input;
+    &__item {
+      font-weight: 400;
+      &:first-child {
+        border-top: 1px solid $list-border;
+      }
+      &:not(:last-child) {
+        border-bottom: 1px solid $list-border;
+      }
+      label {
+        display: block;
+        padding: 1em 1.5em;
+      }
+      input[type="checkbox"]:checked {
+        &~.custom-checkbox {
+          background-color: green;
+          &:before {
+            opacity: 1;
+            fill: red;
+          }
+        }
+      }
+    }
   }
 }
