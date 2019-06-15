@@ -57,5 +57,8 @@
   &__img {
     @include border-radius;
     overflow: hidden;
+    @include d(1199) {
+      display: none;
+    }
   }
 }

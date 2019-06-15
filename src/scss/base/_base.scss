@@ -474,6 +474,7 @@ label {
   padding: 0.68em 1.5em;
   position: relative;
   line-height: 1em;
+  outline: 0;
   &_red {
     border: 1px solid $red;
     color: $white;
@@ -501,6 +502,11 @@ label {
         fill: $white;
       }
     }
+  }
+  &_lg {
+    padding: 1em 3.125em; 
+    border-radius: 28px;
+    font-size: 18px;
   }
   @include d(1299) {
     font-size: 14px;
