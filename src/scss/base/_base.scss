@@ -32,15 +32,19 @@ body {
   padding: 0 1em;
   width: 100%;
   margin: 0 auto;
+
   @include d(1499) {
     max-width: 1280px;
   }
+
   @include d(1299) {
     max-width: 1140px;
   }
+
   @include d(1199) {
     max-width: 960px;
   }
+
   // @include d(1199) {
   //   max-width: 960px;
   // }
@@ -49,15 +53,34 @@ body {
 .body_fixed {
   overflow: hidden;
 }
-.sidebar {
-  flex: 0 0 25%;
-  max-width: 25%;
-  padding: 0 1em;
+// sidebar_left_active
+.sidebar__overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($red, .4);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: z-index .2s, opacity .2s;
+  &_active {
+    z-index: 1;
+    opacity: 1;
+  }
 }
+
 .content {
   flex: 0 0 75%;
   max-width: 75%;
   padding: 0 1em;
+
+  @include d(1199) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 a {
@@ -115,7 +138,8 @@ h6 {
 h2 {
   font-size: 32px;
   line-height: 1em;
-  @include d(1199){
+
+  @include d(1199) {
     font-size: 28px;
   }
 }
@@ -137,25 +161,32 @@ section {
 .black {
   color: $black;
 }
+
 .red {
   color: $red;
 }
+
 .telegram {
   background-image: linear-gradient(to right, #41BCE7, #22A6DC);
   border-radius: 50%;
 }
+
 .bg-gray {
   background-color: #f5f5f5;
 }
+
 .bg-gray-light {
   background-color: #f4f3f0;
 }
+
 .bg-yellow {
   background-color: rgba(#ffe2c0, 0.24);
 }
+
 .bg-pink {
   background-color: #EAD0CF;
 }
+
 .bg-input {
   background-color: $bg-input;
 }
@@ -191,9 +222,11 @@ section {
 .bg-gray-black {
   background-image: linear-gradient(to right, $gray-light, $black);
 }
+
 .bg-white-brown {
   background-image: linear-gradient(to right, $white, $brown-light);
 }
+
 .bg-brown-light-dark {
   background-image: linear-gradient(to right, $brown-light, $brown-dark);
 }
@@ -218,6 +251,7 @@ section {
   padding: 0.75em 1em;
   @include border-radius;
   outline: 0;
+
   @include d(1499) {
     font-size: 14px;
   }
@@ -282,6 +316,7 @@ section {
     }
   }
 }
+
 .custom-select {
   font-size: 14px;
   line-height: 1.5em;
@@ -297,6 +332,7 @@ section {
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
+
   @include d(1499) {
     font-size: 12px;
   }
@@ -309,6 +345,7 @@ section {
 .label-select {
   position: relative;
   text-align: center;
+
   &:before {
     content: url(../img/svg/chevron-down.svg);
     width: 10px;
@@ -319,6 +356,7 @@ section {
     transform: translateY(-50%);
     margin-top: -5px;
   }
+
   &:focus {
     outline: 0;
   }
@@ -382,6 +420,7 @@ input[type="search"] {
 textarea {
   resize: none;
 }
+
 input[type="checkbox"] {
   width: 1px;
   height: 1px;
@@ -389,11 +428,13 @@ input[type="checkbox"] {
   border: none;
   opacity: 0;
 }
+
 label {
   &:hover {
     cursor: pointer;
   }
 }
+
 .custom-checkbox {
   width: 12px;
   height: 12px;
@@ -403,10 +444,9 @@ label {
   position: relative;
   margin-right: 8px;
   transition: background-color .2s;
+
   &:before {
-    content:  url('../img/svg/check.svg');
-    // display: inline-block;
-    // fill: red;
+    content: url('../img/svg/check.svg');
     width: 15px;
     height: 15px;
     position: absolute;
@@ -425,25 +465,50 @@ label {
   background-color: #ddd8d2;
   position: absolute;
 }
+
 .button {
-  background-color: $red;
   font-size: 16px;
-  color: $white;
   transition: background-color .2s, color .2s;
   display: inline-block;
   border-radius: 20px;
   padding: 0.68em 1.5em;
-  border: 1px solid $red;
   position: relative;
   line-height: 1em;
-  &:hover {
-    cursor: pointer;
-    background-color: $white;
-    color: $red;
-    svg {
-      fill: $red;
+  &_red {
+    border: 1px solid $red;
+    color: $white;
+    background-color: $red;
+    &:hover {
+      cursor: pointer;
+      background-color: $white;
+      color: $red;
+  
+      svg {
+        fill: $red;
+      }
     }
   }
+  &_white {
+    border: 1px solid $red;
+    color: $red;
+    background-color: $white;
+    &:hover {
+      cursor: pointer;
+      background-color: $red;
+      color: $white;
+  
+      svg {
+        fill: $white;
+      }
+    }
+  }
+  @include d(1299) {
+    font-size: 14px;
+    padding: 0.68em 1em;
+  }
+
+
+
   svg {
     fill: $white;
     transition: fill .2s;

@@ -2,8 +2,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 100%;
+  margin-top: 8px;
   &__item {
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+
+  &__link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,36 +18,27 @@
     height: 40px;
     border-radius: 50%;
     background-color: $white;
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
-  }
-
-  &__link {
+    transition: background-color .2s, color .2s;
     font-size: 14px;
     color: $black-light;
-    text-align: center;
-    display: block;
-    transition: background-color .2s, color .2s;
-
+    transition: color .2s;
+    font-weight: 500;
     svg {
       fill: $black;
       transition: fill .2s;
     }
-
     &:hover {
       background-color: $red;
       color: $white;
-
+      font-weight: 700;
       svg {
         fill: $white;
       }
     }
-
-    &_ctive {
+    &_active {
       background-color: $red;
       color: $white;
-
+      font-weight: 700;
       svg {
         fill: $white;
       }

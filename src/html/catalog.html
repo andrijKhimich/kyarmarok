@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <title>Kyarmarok</title>
+  <title>Kyarmarok | Catalog</title>
   <meta name="description" content="">
   //= links/_head.html
 </head>
@@ -42,7 +42,8 @@
 
             </div>
           </div>
-          <aside class="sidebar">
+          <aside class="sidebar sidebar_left js-sidebar_left">
+            <a href="#" class="sidebar__button_mob">Фільтр</a>
             <div class="filter">
               <p>Ціна</p>
               <div class="range__wrapper">
@@ -126,6 +127,15 @@
                   </ul>
                 </li>
               </ul>
+              <div class="sidebar__result">
+                <p class="sidebar__result-text">Знайдено <span>345</span> товарів</p>
+                <button class="button button_red">Показати товари</button>
+                <button class="button button_white">Скинути фільтри</button>
+              </div>
+            </div>
+            <div class="sidebar__img">
+              <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" alt="card"
+                class="goods-card__img">
             </div>
           </aside>
           <div class="content">
@@ -156,7 +166,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_actite">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_active">1</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
@@ -183,9 +193,10 @@
       </div>
     </main>
     //= common/_footer.html
-
     //= elements/_modal.html
+    <div class="sidebar__overlay">
 
+    </div>
     //= links/_scripts.html
   </div>
 

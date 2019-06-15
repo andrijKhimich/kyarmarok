@@ -3,6 +3,14 @@
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   margin-bottom: 32px;
+  @include d(991) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @include d(575) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .goods-card {
@@ -36,6 +44,9 @@
   }
   &__content {
     padding: 1em 1.5em 1.5em 1.5em;
+    @include d(1299) {
+      padding: 1em;
+    }
   }
 
   &__tittle {

@@ -9,6 +9,22 @@ $(document).ready(function () {
   $('.goods-card__marks-box').click(function(){
     $(this).toggleClass('goods-card__marks-box_active');
   });
+
+  $('.pagination__link').click(function(e){
+    e.preventDefault();
+    $(this).toggleClass('pagination__link_active');
+  });
+
+  $('.sidebar__button_mob').click(function(e){
+    e.preventDefault();
+    $('.js-sidebar_left').toggleClass('sidebar_left_active');
+    $('.sidebar__overlay').toggleClass('sidebar__overlay_active');
+  });
+  $('.sidebar__overlay').click(function(){
+    console.log('dsf');
+    $('.js-sidebar_left').removeClass('sidebar_left_active');
+    $('.sidebar__overlay').removeClass('sidebar__overlay_active');
+  });
   
   // END DOCUMENT READY
 })

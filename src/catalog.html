@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <title>Kyarmarok</title>
+  <title>Kyarmarok | Catalog</title>
   <meta name="description" content="">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +85,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="basket.html">
                 <svg class="svg svg-sm">
                   <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                 </svg>
@@ -173,7 +173,8 @@
 
             </div>
           </div>
-          <aside class="sidebar">
+          <aside class="sidebar sidebar_left js-sidebar_left">
+            <a href="#" class="sidebar__button_mob">Фільтр</a>
             <div class="filter">
               <p>Ціна</p>
               <div class="range__wrapper">
@@ -257,6 +258,15 @@
                   </ul>
                 </li>
               </ul>
+              <div class="sidebar__result">
+                <p class="sidebar__result-text">Знайдено <span>345</span> товарів</p>
+                <button class="button button_red">Показати товари</button>
+                <button class="button button_white">Скинути фільтри</button>
+              </div>
+            </div>
+            <div class="sidebar__img">
+              <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" alt="card"
+                class="goods-card__img">
             </div>
           </aside>
           <div class="content">
@@ -305,7 +315,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -359,7 +369,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -413,7 +423,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -467,7 +477,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -521,7 +531,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -575,7 +585,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -629,7 +639,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -683,7 +693,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -737,7 +747,7 @@
                           <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
                         </svg>
                       </div>
-                      <a href="#" class="button">
+                      <a href="#" class="button button_red">
                         <svg class="svg svg-sm">
                           <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
                         </svg>
@@ -764,7 +774,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_actite">1</a></li>
+                <li class="pagination__item"><a href="#" class="pagination__link pagination__link_active">1</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
                 <li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
@@ -875,11 +885,12 @@
       </div>
     </footer>
     <!-- footer end -->
-
     <!-- Modal elements -->
     
     <!-- end modal -->
+    <div class="sidebar__overlay">
 
+    </div>
     <!-- project scripts -->
     <script src="js/libs.min.js"></script>
     <script src="js/script.js"></script>

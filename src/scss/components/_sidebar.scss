@@ -1,0 +1,61 @@
+.sidebar {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 1em;
+  position: relative;
+  transition: left .2s;
+  &_left {
+    @include d(1199) {
+      position: fixed;
+      padding: 0;
+      top: 20%;
+      left: -45vw;
+      z-index: 10;
+      flex: 0 0 45vw;
+      max-width: 45vw;
+      min-width: 45vw;
+      &_active {
+        left: 0;
+      }
+    }
+  }
+
+  &__button_mob {
+    font-size: 14px;
+    padding: 2em 1em;
+    color: $white;
+    background-color: $red;
+    position: absolute;
+    top: 20px;
+    left: 100%;
+    border: none;
+    display: block;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    transform: scale(-1);
+    text-transform: uppercase;
+    display: none;
+    @include d(1199) {
+      display: block;
+    }
+  }
+  &__result {
+    text-align: center;
+    padding: 2em;
+    &-text {
+      font-size: 18px;
+      font-weight: 500;
+      margin-bottom: 2em;
+      span {
+        color: $red;
+      }
+    }
+    .button:first-of-type {
+      margin-bottom: 0.5em;
+    }
+  }
+  &__img {
+    @include border-radius;
+    overflow: hidden;
+  }
+}
