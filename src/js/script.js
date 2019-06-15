@@ -5,8 +5,16 @@ $(document).ready(function () {
   $('.filter__item>span').click(function(){
     $(this).siblings('.filter__list-sub').slideToggle();
   });
+
+  $('.goods-card__marks-box').click(function(){
+    $(this).toggleClass('goods-card__marks-box_active');
+  });
+  
   // END DOCUMENT READY
 })
+
+
+
 
 $('.filter__list-sub').hide();
 
@@ -15,6 +23,7 @@ $('.filter__list-sub').hide();
 $(window).resize(function () {
 
 });
+
 
 
 // click on body with open desktop dropdown list

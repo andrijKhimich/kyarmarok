@@ -1,0 +1,132 @@
+.goods-card__wrapper {
+  padding: 0 1em;
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  margin-bottom: 32px;
+}
+
+.goods-card {
+  position: relative;
+  background-color: $white;
+  @include box-shadow;
+  @include border-radius;
+  overflow: hidden;
+  transition: box-shadow .2s;
+  &:hover {
+    @include box-shadow-active;
+  }
+  &__discount {
+    width: 48px;
+    height: 48px;
+    background-color: $white;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border-radius: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include box-shadow;
+    p {
+      font-size: 14px;
+      color: $green;
+      font-weight: 500;
+    }
+  }
+  &__content {
+    padding: 1em 1.5em 1.5em 1.5em;
+  }
+
+  &__tittle {
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  &__sizes {
+    margin-bottom: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-tittle {
+      font-size: 14px;
+      color: $red;
+      padding-bottom: 0.5em;
+      flex: 0 0 100%;
+    }
+
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 14px;
+        display: inline-block;
+        color: $black-light;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    color: $black-light;
+    padding-bottom: 0.5em;
+  }
+
+  &__points {
+    font-size: 16px;
+  }
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    &_current {
+      font-size: 22px;
+      display: inline-block;
+      font-weight: 500;
+    }
+    &_old {
+      font-size: 14px;
+      display: inline-block;
+      color: $black-light;
+      text-decoration: line-through;
+    }
+  }
+  &__marks {
+    display: flex;
+    &-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $pink-bg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color .2s;
+      &:hover {
+        cursor: pointer;
+      }
+      &_active {
+        background-color: $pink-bg;
+      }
+      svg {
+        fill: $black;
+      }
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+    .button {
+      justify-self: flex-end;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+}

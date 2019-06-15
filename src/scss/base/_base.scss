@@ -29,7 +29,7 @@ body {
 
 .container {
   max-width: 1344px;
-  padding: 0 16px;
+  padding: 0 1em;
   width: 100%;
   margin: 0 auto;
   @include d(1499) {
@@ -52,12 +52,12 @@ body {
 .sidebar {
   flex: 0 0 25%;
   max-width: 25%;
-  padding: 0 16px;
+  padding: 0 1em;
 }
 .content {
   flex: 0 0 75%;
   max-width: 75%;
-  padding: 0 16px;
+  padding: 0 1em;
 }
 
 a {
@@ -424,4 +424,29 @@ label {
   border-radius: 50%;
   background-color: #ddd8d2;
   position: absolute;
+}
+.button {
+  background-color: $red;
+  font-size: 16px;
+  color: $white;
+  transition: background-color .2s, color .2s;
+  display: inline-block;
+  border-radius: 20px;
+  padding: 0.68em 1.5em;
+  border: 1px solid $red;
+  position: relative;
+  line-height: 1em;
+  &:hover {
+    cursor: pointer;
+    background-color: $white;
+    color: $red;
+    svg {
+      fill: $red;
+    }
+  }
+  svg {
+    fill: $white;
+    transition: fill .2s;
+    margin-right: 4px;
+  }
 }
