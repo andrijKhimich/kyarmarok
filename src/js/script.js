@@ -62,6 +62,13 @@ $(document).ready(function () {
     $('.product-slider__img').slick('slickGoTo', idSlide);
   }
 
+  $('.details').click(function(e){
+    e.preventDefault();
+    // console.log('sdfsf');
+    $($(this).attr('href')).slideToggle();
+    // $(this).parent('div.basket-cart__table').find('table').slideDown();
+  });
+
   // END DOCUMENT READY
 })
 
@@ -84,6 +91,7 @@ function textHeight() {
 
 $('.filter__list-sub').hide();
 
+$('.basket-cart__table').hide();
 
 
 
