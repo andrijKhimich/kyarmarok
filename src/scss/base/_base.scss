@@ -135,7 +135,7 @@ h6 {
   line-height: 1.25em;
 }
 
-h2 {
+.section__tittle {
   font-size: 32px;
   line-height: 1em;
 
@@ -185,6 +185,10 @@ section {
 
 .bg-pink {
   background-color: #EAD0CF;
+}
+
+.bg-pink-light {
+  background-color: rgba($red, .08);
 }
 
 .bg-input {
