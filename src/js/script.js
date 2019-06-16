@@ -1,56 +1,57 @@
 $(document).ready(function () {
+  // checking height for charchteristiks and tabs == one height on desktop
   textHeight();
 
-  // toggle filters
+  // toggle filters (dropdown)
   $('.filter__item>span').click(function () {
     $(this).siblings('.filter__list-sub').slideToggle();
   });
 
+  // add yellow backgraound for checking marks
   $('.goods-card__marks-box').click(function () {
     $(this).toggleClass('goods-card__marks-box_active');
   });
 
+  // add active state for pagination
   $('.pagination__link').click(function (e) {
     e.preventDefault();
     $(this).toggleClass('pagination__link_active');
   });
 
+  // open sidebar whith filters on catalog page
   $('.sidebar__button_mob').click(function (e) {
     e.preventDefault();
     $('.js-sidebar_left').toggleClass('sidebar_left_active');
     $('.sidebar__overlay').toggleClass('sidebar__overlay_active');
   });
 
-
-
+  // close sidebar whoth filters on catalog page(click on red owerlay)
   $('.sidebar__overlay').click(function () {
     $('.js-sidebar_left').removeClass('sidebar_left_active');
     $('.sidebar__overlay').removeClass('sidebar__overlay_active');
   });
 
+  // product tabs description
   $('.product-tabs__list').on('click', '.product-tabs__item:not(.product-tabs__item_active)', function () {
     $(this)
       .addClass('product-tabs__item_active').siblings().removeClass('product-tabs__item_active')
       .closest('div.product-tabs').find('div.product-tabs__content').hide().eq($(this).index()).fadeIn(400);
   });
 
-
-
+  // set id for product small slider
   $('.product-slider_sm-content .slick-slide').click(function () {
     var slideId = $(this).attr('data-slick-index');
     moveSlidersTo(slideId);
   });
 
-
-
-  // slider how works navigation 'prew'
+  // slider product small navigation 'prev'
   $('.js-sm-prev').click(function (e) {
     e.preventDefault();
     var curentSlideId = $('.product-slider_sm-content .slick-current').attr('data-slick-index');
     moveSlidersTo(parseInt(curentSlideId) - 1);
   });
 
-  // slider how works navigation 'next'
+  // slider product small navigation 'next'
   $('.js-sm-next').click(function (e) {
     e.preventDefault();
     var curentSlideId = $('.product-slider_sm-content .slick-current').attr('data-slick-index');
@@ -62,6 +63,8 @@ $(document).ready(function () {
     $('.product-slider__img').slick('slickGoTo', idSlide);
   }
 
+
+  // show/hide table on basket page
   $('.details').click(function(e){
     e.preventDefault();
     // console.log('sdfsf');
@@ -74,9 +77,12 @@ $(document).ready(function () {
 
 // checkind window sizes
 $(window).resize(function () {
+  // checking height for charchteristiks and tabs == auto height on mobile
   textHeight();
 });
 
+
+ // checking height for charchteristiks and tabs one fumction on two screen resolution
 function textHeight() {
   var maxContent = 0;
   $('.js-height').each(function () {
@@ -89,8 +95,12 @@ function textHeight() {
   });
 }
 
+
+// hide filter for dropdown
 $('.filter__list-sub').hide();
 
+
+// hide tabs in catalog page
 $('.basket-cart__table').hide();
 
 
@@ -106,6 +116,8 @@ $('.basket-cart__table').hide();
 //   }
 // });
 
+
+// innit main slider on main page
 $('.js-slider').slick({
   dots: true,
   dotsClass: 'main-slider__pagination',
@@ -119,10 +131,8 @@ $('.js-slider').slick({
   prevArrow: $('.js-prev'),
   nextArrow: $('.js-next'),
 });
-
-
-
-$('.product-slider__img').slick({
+// innit lg slider product page
+$('.js-sl-product-img').slick({
   dots: false,
   infinite: true,
   speed: 500,
@@ -133,8 +143,8 @@ $('.product-slider__img').slick({
   prevArrow: $('.js-sm-prev'),
   nextArrow: $('.js-sm-next'),
 });
-
-$('.product-slider_sm-content').slick({
+// innit small slider product page
+$('.js-sl-sm-img').slick({
   dots: false,
   infinite: true,
   slidesToShow: 4,
@@ -162,8 +172,8 @@ $('.product-slider_sm-content').slick({
     }
   ]
 });
-
-$('.photo-reviews-slider').slick({
+// init photo reviews slider
+$('.js-sl-photo-reviews').slick({
   dots: false,
   infinite: true,
   slidesToShow: 1,

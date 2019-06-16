@@ -20,12 +20,12 @@ body {
   text-rendering: geometricPrecision;
 }
 
-.main-wrapper {
-  @include d(1919) {
-    max-width: 1440px;
-    margin: 0 auto;
-  }
-}
+// .main-wrapper {
+  // @include d(1919) {
+  //   max-width: 1440px;
+  //   margin: 0 auto;
+  // }
+// }
 
 .container {
   max-width: 1344px;
@@ -433,6 +433,17 @@ input[type="checkbox"] {
   opacity: 0;
 }
 
+input[type="radio"] {
+  width: 1px;
+  height: 1px;
+  background: none;
+  border: none;
+  opacity: 0;
+  &:checked~.custom-radio:before {
+      transform: translate(-50%, -50%) scale(1);
+    }
+}
+
 label {
   &:hover {
     cursor: pointer;
@@ -462,12 +473,33 @@ label {
     transition: opacity .2s;
   }
 }
+.custom-radio {
+  width: 20px;
+  height: 20px;
+  border: 2px solid $red;
+  border-radius: 50%;
+  position: relative;
+  display: inline-block;
+  &:before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: $red;
+    border-radius: 50%;
+    transition: transform .2s;
+  }
+}
 
 .abstract-circle {
   display: inline-block;
   border-radius: 50%;
   background-color: #ddd8d2;
   position: absolute;
+
 }
 
 .button {

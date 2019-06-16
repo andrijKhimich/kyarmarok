@@ -5,7 +5,9 @@
     padding-top: 130px;
     padding-bottom: 120px;
     margin: 0 -1em;
-
+    @include d(1499) {
+      margin: 0;
+    }
     @include d(1299) {
       padding: 80px 0;
     }
@@ -22,18 +24,35 @@
   &-content {
     display: flex;
     margin: 0 -1em;
+    @include d(767) {
+      flex-direction: column;
+    }
   }
 
   &-cart__wrapper {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
     padding: 0 1em;
+    @include d(767) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 1;
+    }
   }
 
   &-sidebar__wrapper {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
     padding: 0 1em;
+    @include d(991) {
+      padding-left: 0;
+    }
+    @include d(767) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 1em;
+      margin-bottom: 1em;
+    }
   }
 
   &-cart {
@@ -45,13 +64,24 @@
     &:not(:last-child) {
       margin-bottom: 1em;
     }
+    @include d(991) {
+      flex-direction: column;
+    }
     &__img {
       flex: 0 0 25%;
       max-width: 25%;
       @include border-radius;
       padding-right: 1em;
       align-self: flex-start;
-
+      @include d(991) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 1em;
+      }
+      @include d(767) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
       img {
         object-fit: cover;
         @include border-radius;
@@ -70,17 +100,21 @@
     &__descr {
       flex: 0 0 50%;
       max-width: 50%;
-
+      @include d(767) {
+        margin-bottom: 1em;
+      }
       p {
         font-weight: 500;
       }
-
     }
 
     &__text {
       display: flex;
       flex-wrap: wrap;
       padding-left: 1em;
+      @include d(991) {
+        flex-direction: column;
+      }
     }
 
     &__table {
@@ -112,6 +146,9 @@
     margin-left: auto;
     margin-bottom: 10px;
     position: relative;
+    @include d(767) {
+      margin-bottom: 1em;
+    }
     .basket-close {
       position: absolute;
       top: 50%;
@@ -129,12 +166,25 @@
     p {
       font-size: 24px;
       margin-bottom: 0;
+      @include d(1199) {
+        font-size: 22px;
+      }
+      @include d(991) {
+        font-size: 20px;
+      }
+
     }
 
     &_old {
       p {
         font-size: 16px;
         text-decoration: none;
+        @include d(1199) {
+          font-size: 14px;
+        }
+        @include d(991) {
+          font-size: 14px;
+        }
       }
     }
 
@@ -142,13 +192,59 @@
 
   .product__number {
     margin-bottom: 1em;
+    @include d(1299) {
+      margin-right: 0;
+      margin-left: 0;
+    }
   }
 
   &-sidebar {
-    padding: 1.5em;
+    padding: 2em 2.5em 3em 2.5em;
     @include border-radius;
     background-color: $white;
     @include box-shadow;
+    @include d(1199) {
+      padding: 1em;
+    }
+    @include d(767) {
+      display: flex;
+      flex-direction: column;
+    }
+    &__price {
+      padding: 1.2em 1.5em;
+      background-color: $gray-bg;
+      @include border-radius;
+      margin-bottom: 3em;
+      span {
+        font-size: 16px;
+      }
+      p{
+        font-size: 32px;
+        font-weight: 500;
+        @include d(1299) {
+          font-size: 26px;
+        }
+        @include d(991) {
+          font-size: 20px;
+        }
+      }
+      sup {
+        font-size: 16px;
+      }
+    }
+    .button {
+      width: 100%;
+      padding: 1.2em 1.5em;
+      border-radius: 28px;
+      &:first-of-type {
+        margin-bottom: 1em;
+      }
+      @include d(767) {
+        // padding: 1.2em 2.5em;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
   }
 }
 
@@ -159,7 +255,9 @@
   max-width: 100%;
   align-self: flex-end;
   display: inline-block;
-
+  @include d(991) {
+    align-self: flex-start;
+  }
   svg {
     position: absolute;
     top: 50%;

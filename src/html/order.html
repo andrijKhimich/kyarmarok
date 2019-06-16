@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <title>Kyarmarok | basket</title>
+  <title>Kyarmarok | order</title>
   <meta name="description" content="">
   //= links/_head.html
 </head>
@@ -276,13 +276,73 @@
               </div>
             </div>
             <aside class="basket-sidebar__wrapper">
-              <div class="basket-sidebar">
-                <div class="basket-sidebar__price">
-                  <span>Всього</span>
-                  <p>10000грн/м<sup>2</sup></p>
-                </div>
-                <button class="button button_red">Оформити замовлення</button>
-                <button class="button button_white">Продовжити покупки</button>
+              <div class="order-sidebar">
+                <h4 class="basket-cart__tittle">оформлення замовлення</h4>
+                <form action="" class="order-form">
+                  <h5 class="order-form__head">Контактні дані</h5>
+                  <input type="text" class="custom-input" placeholder="Приізвище та ім'я">
+                  <input type="text" class="custom-input" placeholder="Телефон">
+                  <input type="email" class="custom-input" placeholder="E-mail">
+                  <div class="order-form__delivery">
+                    <h5 class="order-form__head">Спосіб доставки</h5>
+                    <p>Нова Пошта</p>
+                    <label for="radio1" class="order-form__label">
+                      <input type="radio" id="radio1" name="delivery">
+                      <span class="custom-radio"></span>
+                      <p>Доставка у відділення нової пошти</p>
+                      <p class="order-form__price">від 35грн</p>
+                    </label>
+                    <label for="radio2" class="order-form__label">
+                      <input type="radio" id="radio2" name="delivery">
+                      <span class="custom-radio"></span>
+                      <p>Доставка курьєром Нової Пошти за адресою</p>
+                      <p class="order-form__price">від 55грн</p>
+                    </label>
+                    <p>Самовивіз</p>
+                    <label for="radio3" class="order-form__label">
+                      <input type="radio" id="radio3" name="delivery">
+                      <span class="custom-radio"></span>
+                      <p>Самовивіз із магазина</p>
+                      <p class="order-form__price">0грн</p>
+                    </label>
+                  </div>
+                  <input type="text" class="custom-input" placeholder="Область">
+                  <input type="text" class="custom-input" placeholder="Місто">
+                  <input type="email" class="custom-input" placeholder="Відділення">
+                  <div class="order-form__delivery">
+                    <h5 class="order-form__head">Спосіб оплати</h5>
+                    <p>Нова Пошта</p>
+                    <label for="radio4" class="order-form__label">
+                      <input type="radio" id="radio4" name="payout">
+                      <span class="custom-radio"></span>
+                      <p>Предоплата</p>
+                    </label>
+                    <label for="radio5" class="order-form__label">
+                      <input type="radio" id="radio5" name="payout">
+                      <span class="custom-radio"></span>
+                      <p>Накладений платіж</p>
+                    </label>
+                    <label for="radio6" class="order-form__label">
+                      <input type="radio" id="radio6" name="payout">
+                      <span class="custom-radio"></span>
+                      <p>Оплата при ортимані</p>
+                    </label>
+                  </div>
+                  <table class="order-form__table">
+                    <tr>
+                      <td>Сумма:</td>
+                      <td>&#8372; 10000</td>
+                    </tr>
+                    <tr>
+                      <td>Доставка:</td>
+                      <td>&#8372; 10</td>
+                    </tr>
+                    <tr>
+                      <td>Всього:</td>
+                      <td>&#8372; 10010</td>
+                    </tr>
+                  </table>
+                </form>
               </div>
             </aside>
           </div>
