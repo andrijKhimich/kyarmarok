@@ -1,0 +1,96 @@
+.action {
+  &-wrapper {
+    margin: 0 -1em;
+
+    padding-top: 80px;
+    padding-bottom: 110px;
+    @include d(1299) {
+      padding: 80px 0;
+    }
+
+    @include d(1199) {
+      padding: 60px 0;
+    }
+
+    @include d(991) {
+      padding: 40px 0;
+    }
+  }
+  &-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-box {
+    padding: 0 1em;
+    flex: 0 0 50%;
+    max-width: 50%;
+    @include d(1199) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 1em;
+    }
+  }
+
+  &__item {
+    background-color: $white;
+    @include border-radius;
+    @include box-shadow;
+    padding: 24px;
+    height: 100%;
+    display: flex;
+    @include d(600) {
+      flex-direction: column;
+      height: auto;
+      padding: 16px;
+    }
+  }
+  .section__tittle {
+    margin-bottom: 2em;
+    padding: 0 16px;
+    text-transform: uppercase;
+  }
+  &__img {
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+    padding-right: 16px;
+    @include border-radius;
+    img {
+      @include border-radius;
+    }
+    @include d(600) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 16px;
+      padding-right: 0;
+    }
+  }
+  &__text {
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+    @include d(600) {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  &__tittle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &__descr {
+    font-size: 14px;
+    color: rgba($red, .6);
+    margin-bottom: 16px;
+  }
+  &__paragraph {
+    color: $slate;
+    margin-bottom: 24px;
+  }
+  &__link {
+    color: $red;
+    position: relative;
+    margin-bottom: 8px;
+  }
+  
+}
