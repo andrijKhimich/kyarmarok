@@ -166,7 +166,7 @@
 
   &:first-child {
     @include d(991) {
-      margin-right: 15px;
+      margin-right: 0;
     }
   }
 
@@ -175,7 +175,17 @@
       margin-left: 15px;
     }
   }
-
+  h3 {
+    @include d(991) {
+      font-size: 20px;
+    }
+    @include d(991) {
+      font-size: 18px;
+    }
+    @include d(575) {
+      font-size: 16px;
+    }
+  }
   .svg {
     align-self: flex-end;
   }
@@ -500,6 +510,9 @@
     @include d(991) {
       width: 100%;
     }
+    @include d(767) {
+      margin: 0;
+    }
 
     @include d(480) {
       margin-bottom: 20px;
@@ -518,12 +531,13 @@
       @include d(767) {
         flex: 1 1 50%;
         max-width: 50%;
+        padding-right: 0;
       }
 
-      @include d(480) {
-        flex: 1 1 100%;
-        max-width: 100%;
-      }
+      // @include d(480) {
+      //   flex: 1 1 100%;
+      //   max-width: 100%;
+      // }
     }
 
     &-link {
