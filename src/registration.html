@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <title>Kyarmarok | login</title>
+  <title>Kyarmarok | registration</title>
   <meta name="description" content="">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -120,7 +120,7 @@
     
     </header>
     <!-- header rnd -->
-    <main class="login">
+    <main class="registration">
       <div class="container">
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
@@ -144,23 +144,42 @@
             </a>
           </li>
         </ul>
-        <div class="login-wrapper">
-          <div class="login-content">
-            <h4>Увійти</h4>
-            <form action="#" class="login__form">
-              <label for="userLogin" class="error">
-                <input type="text" class="custom-input bg-gray" placeholder="Логін" id="userLogin">
+        <div class="registration-wrapper">
+          <div class="registration-content">
+            <h4>Реєстрація</h4>
+            <form action="#" class="registration__form">
+              <label for="userName" class="error">
+                <input type="text" class="custom-input bg-gray" placeholder="Ім'я" id="userName">
+                <i>Error</i>
+              </label>
+              <label for="userSurname">
+                <input type="text" class="custom-input bg-gray" placeholder="Прізвище" id="userSurname">
+                <i>Error</i>
+              </label>
+              <label for="userPhone">
+                <input type="tel" class="custom-input bg-gray" placeholder="Телефон" id="userPhone">
                 <i>Error</i>
               </label>
               <label for="userPassword">
                 <input type="password" class="custom-input bg-gray" placeholder="Пароль" id="userPassword">
                 <i>Error</i>
               </label>
-              <div class="login__links">
-                <a href="#">Забули пароль?</a>
-                <a href="registration.html">Реєстрація</a>
+              <label for="userEmail">
+                <input type="email" class="custom-input bg-gray" placeholder="e-mail" id="userEmail">
+                <i>Error</i>
+              </label>
+              <label for="userPassword">
+                <input type="password" class="custom-input bg-gray" placeholder="Пароль" id="userPassword">
+                <i>Error</i>
+              </label>
+              <label for="userConfirm">
+                <input type="password" class="custom-input bg-gray" placeholder="Повторіть пароль" id="userConfirm">
+                <i>Error</i>
+              </label>
+              <button type="submit" class="button">Зареєструватись</button>
+              <div class="registration__links">
+                <a href="login.html">У Вас є акаунт? Скористайтеся формою <span>Входу.</span></a>
               </div>
-              <button type="submit" class="button">Увійти</button>
             </form>
           </div>
         </div>

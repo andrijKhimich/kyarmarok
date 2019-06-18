@@ -1,6 +1,5 @@
-.login {
+.registration {
   &-wrapper {
-    // margin: 0 -1em;
     padding: 100px 0;
   }
   &-content {
@@ -9,9 +8,9 @@
     @include border-radius;
     max-width: 640px;
     margin: 0 auto;
-    padding: 64px 110px 97px 110px;
+    padding: 64px 110px 40px 110px;
     @include d(991) {
-      padding: 40px 80px 60px 80px;
+      padding: 40px 80px 40px 80px;
     }
     @include d(767) {
       padding: 20px 40px 20px 40px;
@@ -29,33 +28,34 @@
       display: block;
       margin-bottom: 6px;
       text-align: left;
-      &.error {
-        .custom-input {
-          border: 1px solid $red;
-        }
-        i {
-          font-size: 10px;
-          opacity: 1;
-          color: $red;
-          padding-left: 15px;
-        }
-      }
     }
     i {
       opacity: 0;
       font-style: normal;
     }
+    .error {
+      .custom-input {
+        border: 1px solid $red;
+      }
+      i {
+        font-size: 10px;
+        opacity: 1;
+        color: $red;
+        padding-left: 15px;
+      }
+    }
 
   }
   &__links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    text-align: center;
     margin-bottom: 40px;
     a {
       color: $red;
       @include d(400) {
         font-size: 12px;
+      }
+      span {
+        text-decoration: underline;
       }
     }
   }
@@ -67,6 +67,7 @@
     color: $white;
     border: 1px solid $red;
     transition: background-color .2s, color .2s;
+    margin-bottom: 40px;
     &:hover {
       cursor: pointer;
       background-color: $white;

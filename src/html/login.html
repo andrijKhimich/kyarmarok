@@ -2,7 +2,7 @@
 <html lang="uk">
 
 <head>
-  <title>Kyarmarok | user orders</title>
+  <title>Kyarmarok | login</title>
   <meta name="description" content="">
   //= links/_head.html
 </head>
@@ -17,17 +17,17 @@
           <div class="login-content">
             <h4>Увійти</h4>
             <form action="#" class="login__form">
-              <label for="userLogin">
+              <label for="userLogin" class="error">
                 <input type="text" class="custom-input bg-gray" placeholder="Логін" id="userLogin">
-                <span>Error</span>
+                <i>Error</i>
               </label>
               <label for="userPassword">
                 <input type="password" class="custom-input bg-gray" placeholder="Пароль" id="userPassword">
-                <span class="error">Error</span>
+                <i>Error</i>
               </label>
               <div class="login__links">
                 <a href="#">Забули пароль?</a>
-                <a href="#">Реєстрація</a>
+                <a href="registration.html">Реєстрація</a>
               </div>
               <button type="submit" class="button">Увійти</button>
             </form>
