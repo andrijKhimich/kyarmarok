@@ -1,0 +1,237 @@
+.user-order {
+  position: relative;
+
+  &-wrapper {
+    padding-top: 80px;
+    padding-bottom: 110px;
+    margin: 0 -1em;
+    @include d(1499) {
+      margin: 0;
+    }
+    @include d(1299) {
+      padding: 60px 0;
+    }
+
+    @include d(1199) {
+      padding: 40px 0;
+    }
+    &>h4 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    margin: 0 -1em;
+    @include d(767) {
+      flex-direction: column;
+    }
+  }
+
+  &-cart__wrapper {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding: 0 1em;
+    @include d(767) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 1;
+    }
+  }
+  &__details {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 16px;
+    padding-left: 24px;
+    padding-bottom: 16px;
+    background-color: $gray-bg;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    p {
+      font-size: 14px;
+      span {
+        margin-left: 20px;
+      }
+    }
+  }
+
+
+  &-cart {
+    padding: 0 0 1.5em 0;
+    @include border-radius;
+    background-color: $white;
+    @include box-shadow;
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+    @include d(991) {
+      flex-direction: column;
+    }
+    &__container {
+      padding: 24px;
+      display: flex;
+    }
+    &__img {
+      flex: 0 0 25%;
+      max-width: 25%;
+      @include border-radius;
+      padding-right: 30px;
+      @include d(991) {
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-bottom: 16px;
+      }
+      @include d(767) {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+      img {
+        object-fit: cover;
+        @include border-radius;
+        margin-bottom: 16px;
+      }
+    }
+    &__tittle {
+      padding-top: 16px;
+      flex: 0 0 30%;
+      max-width: 30%;
+      h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+    }
+    &__tottal {
+      flex: 0 0 30%;
+      max-width: 30%;
+      margin-left: auto;
+      margin-right: 0;
+      table {
+        width: 100%;
+        max-width: 250px;
+        tr {
+          &:last-child td:first-child {
+            font-size: 16px;
+          }
+          &:last-child td {
+            padding-top: 16px;
+          }
+
+          td {
+            padding-bottom: 8px;
+            &:first-child {
+              color: rgba($black, .6);
+              font-size: 14px;
+            }
+            &:last-child {
+              color: $black;
+              font-size: 16px;
+              font-weight: 500;
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+    .details {
+      margin-left: 24px;
+    }
+    &__table {
+      margin-top: 16px;
+      border-top: 1px solid $gray-bg;
+      table {
+        margin: 1.5em 1.5em 0 1.5em;
+
+        td {
+          padding: .7em 1em;
+          color: $black;
+          &:first-child {
+            color: rgba($black, .6);
+            width: 40%;
+          }
+        }
+
+        tr:nth-child(2n+1) {
+          background-color: $gray-bg;
+
+
+        }
+      }
+    }
+  }
+  &-sidebar__wrapper {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 1em;
+    @include d(991) {
+      padding-left: 0;
+    }
+    @include d(767) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding-left: 1em;
+      margin-bottom: 1em;
+    }
+  }
+  &-sidebar {
+    padding: 24px 16px;
+    @include border-radius;
+    background-color: $white;
+    @include box-shadow;
+    @include d(1199) {
+      padding: 1em;
+    }
+    @include d(767) {
+      display: flex;
+      flex-direction: column;
+    }
+    h4 {
+      font-size: 22px;
+      text-transform: uppercase;
+    }
+    
+  }
+  &__list {
+    li {
+      @include border-radius;
+      transition: background-color .2s;
+      &:hover {
+        background-color: $red;
+        & a {
+          color: $white;
+        }
+      }
+      a {
+        display: block;
+        padding: 16px 24px;
+        transition: color .2s;
+      }
+    }
+  }
+}
+.user-order-sidebr_active {
+  background-color: $red;
+  a {
+    color: $white;
+  }
+}
+.tottal-price {
+  background-color: $gray-bg;
+  @include border-radius;
+  display: flex;
+  padding: 12px 18px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 250px;
+  margin-bottom: 20px;
+  p {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  span {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
