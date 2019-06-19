@@ -4,6 +4,7 @@
   padding: 0 1em;
   position: relative;
   transition: left .2s;
+
   &_left {
     @include d(1199) {
       position: fixed;
@@ -14,9 +15,21 @@
       flex: 0 0 45vw;
       max-width: 45vw;
       min-width: 45vw;
+
+      @include d(575) {
+        left: -80vw;
+        min-width: 80vw;
+        max-width: 80vw;
+      }
+
       &_active {
         left: 0;
+
+        @include d(575) {
+          left: 0;
+        }
       }
+
     }
   }
 
@@ -35,28 +48,35 @@
     transform: scale(-1);
     text-transform: uppercase;
     display: none;
+
     @include d(1199) {
       display: block;
     }
   }
+
   &__result {
     text-align: center;
     padding: 2em;
+
     &-text {
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 2em;
+
       span {
         color: $red;
       }
     }
+
     .button:first-of-type {
       margin-bottom: 0.5em;
     }
   }
+
   &__img {
     @include border-radius;
     overflow: hidden;
+
     @include d(1199) {
       display: none;
     }
