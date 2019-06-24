@@ -83,10 +83,13 @@ $(document).ready(function () {
     $('.modal').removeClass('modal_active');
   });
 
+  $('.js-catalog').click(function(){
+    $('.catalog__list').slideToggle();
+  });
 
   // END DOCUMENT READY
 })
-
+$('.catalog__list').hide();
 // checkind window sizes
 $(window).resize(function () {
   // checking height for charchteristiks and tabs == auto height on mobile
@@ -120,13 +123,13 @@ $('.basket-cart__table').hide();
 
 
 // click on body with open desktop dropdown list
-// $(document).mouseup(function (e) {
-//   var searchcontainer = $('.js-drop');
+$(document).mouseup(function (e) {
+  var searchcontainer = $('.catalog__list, .js-catalog');
 
-//   if (!searchcontainer.is(e.target) && searchcontainer.has(e.target).length === 0) {
-//     $('.nav-sub').removeClass('nav-sub_active');
-//   }
-// });
+  if (!searchcontainer.is(e.target) && searchcontainer.has(e.target).length === 0) {
+    $('.catalog__list').slideUp();
+  }
+});
 
 
 // innit main slider on main page
