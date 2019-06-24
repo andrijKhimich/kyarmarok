@@ -1,0 +1,76 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, .5);
+  z-index: -1;
+  // filter: blur(10px);
+  opacity: 0;
+  transition: opacity .2s z-index 0;
+  display: none;
+  &_active {
+    display: block;
+    opacity: 1;
+    z-index: 100;
+  }
+}
+.modal {
+  background-color: $white;
+  @include border-radius;
+  padding: 24px 24px 48px 24px;
+  max-width: 690px;
+  width: 100%;
+  height: 100%;
+  max-height: 570px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity .2s;
+  z-index: 101;
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    .svg {
+      width: 26px;
+      height: 26px;
+      fill: rgba($black, .6);
+      transition: fill .2s;
+    }
+    a:hover {
+      .svg {
+        fill: $red;
+      }
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    text-align: center;
+
+    .svg {
+      margin: 0 auto;
+      width: 48px;
+      height: 48px;
+      fill: $green;
+    }
+    p {
+      font-size: 32px;
+      font-weight: 500;
+    }
+  }
+
+  .button {
+    align-self: center;
+  }
+  &_active {
+    opacity: 1;
+  }
+}

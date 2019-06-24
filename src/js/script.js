@@ -72,6 +72,18 @@ $(document).ready(function () {
     // $(this).parent('div.basket-cart__table').find('table').slideDown();
   });
 
+  // modal 
+  $('.js-order').click(function(){
+    $('.overlay').addClass('overlay_active');
+    $('.modal').addClass('modal_active');
+  });
+  $('.js-close-modal').click(function(e){
+    e.preventDefault();
+    $('.overlay').removeClass('overlay_active');
+    $('.modal').removeClass('modal_active');
+  });
+
+
   // END DOCUMENT READY
 })
 
