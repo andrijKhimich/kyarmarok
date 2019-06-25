@@ -72,6 +72,11 @@ $(document).ready(function () {
     // $(this).parent('div.basket-cart__table').find('table').slideDown();
   });
 
+  // $('.header-marks li a span').click(function(){
+  //   // e.preventDefault();
+  //   $(this).toggleClass('active');
+  // });
+
   // modal 
   $('.js-order').click(function(){
     $('.overlay').addClass('overlay_active');

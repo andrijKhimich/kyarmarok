@@ -76,7 +76,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    &.active {
+      background-color: $pink-bg;
+    }
     svg {
       margin-right: 1em;
       fill: $black;
@@ -420,7 +422,9 @@
     overflow: hidden;
     border: 1px solid transparent;
     transition: border .2s, color .2s;
-
+    &.active {
+      border-color: $red;
+    }
     &:not(:last-child) {
       margin-right: 0.5em;
     }
@@ -441,7 +445,9 @@
     padding: 1em 1.5em;
     margin-bottom: 0.5em;
     transition: border .2s, color .2s;
-
+    &.active {
+      border-color: $red;
+    }
     &:not(:last-child) {
       margin-right: 0.5em;
     }
