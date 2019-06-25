@@ -11,8 +11,11 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
+
     @include d(1199) {
-      justify-content: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $red;
     }
   }
 
@@ -20,26 +23,32 @@
     max-width: 344px;
     width: 100%;
     position: relative;
+
     @include d(1199) {
       max-width: 240px;
-      // margin-right: 0;
-      // margin-left: auto;
-      // order: 1;
+
+    }
+
+    @include d(580) {
+      order: 1;
       height: 40px;
       position: absolute;
       right: 0;
       @include border-radius;
+      background-color: #fff;
     }
 
     label {
       position: relative;
       width: 100%;
       display: block;
-      @include d(1199) {
+
+      @include d(580) {
         right: 0;
         height: 100%;
- 
+
       }
+
       svg {
         position: absolute;
         top: 50%;
@@ -52,20 +61,22 @@
         color: gray;
         @include border-radius;
 
-        @include d(1199) {
+        @include d(580) {
           width: 0;
           position: absolute;
           right: 0;
           background-color: $white;
           transition: width .2s;
           height: 40px;
-        
+
         }
+
         &:focus {
           width: 100%;
           background-color: $bg-input;
           @include box-shadow;
         }
+
         &::-webkit-input-placeholder {
           color: gray;
         }
@@ -93,7 +104,9 @@
     padding: 0 10px;
 
     @include d(1199) {
-      display: none;
+      flex: 0 0 50%;
+      min-width: 50%;
+      justify-content: flex-start;
     }
 
     li {
@@ -109,11 +122,9 @@
     align-items: center;
 
     @include d(1199) {
-      // position: absolute;
-      // top: 100%;
-      // z-index: 2;
-      // left: 50%;
-      // transform: translateX(-50%);
+      flex: 0 0 50%;
+      min-width: 50%;
+      justify-content: flex-end;
     }
 
     li {
@@ -155,10 +166,7 @@
     position: relative;
 
     @include d(1199) {
-      // position: absolute;
-      // top: 100%;
-      // z-index: 2;
-      // right: 0;
+      margin: -25px auto 0;
     }
 
     &:before {
@@ -198,9 +206,12 @@
 
 .logo {
   max-width: 143px;
+
   @include d(1199) {
     margin-right: 20px;
+    margin-bottom: 20px;
   }
+
   @include d(480) {
     max-width: 80px;
   }
