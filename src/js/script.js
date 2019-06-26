@@ -76,6 +76,9 @@ $(document).ready(function () {
   //   // e.preventDefault();
   //   $(this).toggleClass('active');
   // });
+  $('.js-humburger').click(function(){
+    $(this).toggleClass('active');
+  });
 
   // modal 
   $('.js-order').click(function(){
