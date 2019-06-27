@@ -226,7 +226,9 @@ section {
 .blue-dark {
   color: $blue-dark;
 }
-
+.bg-white {
+  background-color: $white;
+}
 .bg-gray-black {
   background-image: linear-gradient(to right, $gray-light, $black);
 }

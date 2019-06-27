@@ -1,0 +1,213 @@
+.try-on-card__wrapper {
+  padding: 0 1em;
+  flex: 0 0 25%;
+  max-width: 25%;
+  margin-bottom: 32px;
+  @include d(991) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  @include d(575) {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.try-on-card {
+  position: relative;
+  background-color: $white;
+  @include box-shadow;
+  @include border-radius;
+  overflow: hidden;
+  transition: box-shadow .2s;
+
+  &:hover {
+    @include box-shadow-active;
+  }
+
+  &__header {
+    padding: 1em 1.5em 0 1.5em;
+    display: flex;
+
+    img {
+      @include border-radius;
+      flex: 0 0 72px;
+      max-width: 72px;
+      margin-right: 16px;
+      height: 72px;
+      object-fit: cover;
+    }
+
+    @include d(1299) {
+      padding: 1em;
+    }
+  }
+
+  &__content {
+    padding: 1em 1.5em 1.5em 1.5em;
+
+    @include d(1299) {
+      padding: 1em;
+    }
+  }
+
+  &__tittle {
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+
+  &__sizes {
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &-tittle {
+      font-size: 14px;
+      color: $red;
+      padding-bottom: 0.5em;
+      flex: 0 0 100%;
+    }
+
+    &-box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-size: 14px;
+        display: inline-block;
+        color: $black-light;
+        position: absolute;
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  &__descr {
+    font-size: 14px;
+    color: $black-light;
+    padding-bottom: 0.5em;
+  }
+
+  &__points {
+    font-size: 16px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    &_current {
+      font-size: 22px;
+      display: inline-block;
+      font-weight: 500;
+    }
+
+    &_old {
+      font-size: 14px;
+      display: inline-block;
+      color: $black-light;
+      text-decoration: line-through;
+    }
+  }
+
+  &__marks {
+    display: flex;
+
+    &-box {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid $pink-bg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color .2s;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &_active {
+        background-color: $pink-bg;
+      }
+
+      svg {
+        fill: $black;
+      }
+
+      &:first-child {
+        margin-right: 8px;
+      }
+    }
+
+    .button {
+      justify-self: flex-end;
+      margin-right: 0;
+      margin-left: auto;
+    }
+  }
+
+  &__add {
+    background-color: $pink-bg;
+    @include border-radius;
+    margin-bottom: 32px;
+    min-height: 100%;
+    width: 100%;
+    transition: box-shadow .2s;
+    position: relative;
+    @include box-shadow;
+    &:hover {
+      @include box-shadow-active;
+      
+
+      .svg {
+        fill: $red;
+      }
+
+      p {
+        color: $red;
+      }
+    }
+
+    & .upload {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+
+      input[type="file"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        opacity: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.add {
+  position: absolute;
+  width: 100px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .svg {
+    fill: rgba($black, .8);
+    transition: fill .2s;
+  }
+
+  p {
+    color: rgba($black, .8);
+    transition: color .2s;
+  }
+}
