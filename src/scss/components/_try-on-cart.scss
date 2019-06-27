@@ -3,10 +3,18 @@
   flex: 0 0 25%;
   max-width: 25%;
   margin-bottom: 32px;
+
+  @include d(1199) {
+    flex: 0 0 33.333%;
+    max-width: 33.333%;
+    height: 345px;
+  }
+
   @include d(991) {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   @include d(575) {
     flex: 0 0 100%;
     max-width: 100%;
@@ -129,6 +137,10 @@
       justify-content: center;
       transition: background-color .2s;
 
+      &.active {
+        background-color: $pink-bg;
+      }
+
       &:hover {
         cursor: pointer;
       }
@@ -162,9 +174,10 @@
     transition: box-shadow .2s;
     position: relative;
     @include box-shadow;
+
     &:hover {
       @include box-shadow-active;
-      
+
 
       .svg {
         fill: $red;
@@ -195,7 +208,6 @@
 
 .add {
   position: absolute;
-  width: 100px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

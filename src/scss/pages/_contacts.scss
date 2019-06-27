@@ -143,13 +143,25 @@
         margin-bottom: 16px;
         padding-right: 0;
       }
+      &-content {
+        @include border-radius;
+        position: relative;
+        padding-bottom: 50%;
+        width: 100%;
+        height: 100%;
+        .map-init {
+          position: absolute !important;
+          @include border-radius;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+        }
+      }
       p {
         font-size: 14px;
         color: rgba($black, .6);
         margin-bottom: 8px;
-      }
-      img {
-        @include border-radius;
       }
     }
 
