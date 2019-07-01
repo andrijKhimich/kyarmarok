@@ -33,6 +33,7 @@
       flex: 0 0 50%;
       max-width: 50%;
       order: 1;
+      margin-left: auto;
     }
     @include d(480) {
       flex: 0 0 80%;
@@ -108,7 +109,7 @@
 
     @include d(767) {
       position: fixed;
-      bottom: 20%;
+      top: 150px;
       z-index: 10;
     }
 
@@ -132,7 +133,7 @@
 
     @include d(767) {
       position: fixed;
-      bottom: 20%;
+      top: 150px;
       z-index: 10;
       right: 15px;
     }
@@ -185,6 +186,7 @@
       top: 150px;
       right: 15px;
       z-index: 100;
+      display: none;
     }
 
     &:before {
@@ -213,11 +215,11 @@
       flex-direction: column;
       position: fixed;
       left: 0;
-      width: 100vw;
+      width: 100%;
       background-color: $white;
       z-index: 2;
       padding-top: 60px;
-      height: 100vh;
+      height: 100%;
       // display: none;
       // transform: translateX(-100%);
     }
@@ -242,7 +244,8 @@
     display: block;
   }
   @include d(767) {
-    top: 100px;
+    top: 94px;
+    left: 0;
   }
   span {
     width: 100%;
@@ -317,9 +320,6 @@
   @include d(1199) {
     max-width: 290px;
     height: 55px;
-  }
-
-  @include d(767) {
     position: fixed;
     bottom: 10%;
   }

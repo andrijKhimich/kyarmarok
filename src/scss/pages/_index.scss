@@ -175,17 +175,21 @@
       margin-left: 15px;
     }
   }
+
   h3 {
     @include d(991) {
       font-size: 20px;
     }
+
     @include d(991) {
       font-size: 18px;
     }
+
     @include d(575) {
       font-size: 16px;
     }
   }
+
   .svg {
     align-self: flex-end;
   }
@@ -202,6 +206,7 @@
   @include d(1199) {
     padding: 60px 0;
   }
+
   @include d(767) {
     padding: 30px 0;
   }
@@ -226,12 +231,8 @@
 
   &-img {
     flex: 0 0 25%;
-    // margin-right: 80px;
     position: relative;
 
-    // @include d(1199) {
-    //   margin-right: 40px;
-    // }
 
     @include d(991) {
       max-width: 500px;
@@ -348,10 +349,12 @@
   padding-top: 80px;
   padding-bottom: 60px;
   text-align: center;
+
   @include d(991) {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
   .section__tittle {
     margin-bottom: 95px;
     text-align: center;
@@ -479,9 +482,11 @@
 
 .material {
   padding: 60px 0;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     text-align: center;
     margin-bottom: 95px;
@@ -510,6 +515,7 @@
     @include d(991) {
       width: 100%;
     }
+
     @include d(767) {
       margin: 0;
     }
@@ -600,9 +606,11 @@
 .category {
   padding: 60px 0;
   text-align: center;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     text-align: center;
     margin-bottom: 95px;
@@ -715,9 +723,11 @@
 
 .colors {
   padding: 60px 0;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     text-align: center;
     margin-bottom: 95px;
@@ -775,9 +785,11 @@
 
 .pile-height {
   padding: 60px 0;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     margin-bottom: 95px;
     text-align: center;
@@ -885,9 +897,11 @@
 
 .type-room {
   padding: 60px 0;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     text-align: center;
     margin-bottom: 95px;
@@ -1046,6 +1060,7 @@
     left: 0;
     right: 0;
     z-index: -1;
+
     @include d(991) {
       top: 0;
       bottom: 0;
@@ -1061,11 +1076,13 @@
   &__img {
     display: flex;
     flex: 0 0 75%;
-    // @include d(991) {
-    //   flex-direction: row;
-    //   flex: 0 0 100%;
-    //   flex-wrap: wrap;
-    // }
+    max-width: 75%;
+    
+    @include d(767) {
+      margin: 0 auto;
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
   }
 
   &-head {
@@ -1073,13 +1090,27 @@
     padding: 0 15px;
     display: flex;
     flex-direction: column;
+    @include d(767) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
     .section__tittle {
       margin-top: 135px;
       max-width: 300px;
       margin-bottom: 45px;
+
       @include d(991) {
         margin-top: 0;
       }
+      @include d(767) {
+        min-width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+    .show-all {
+      margin: 0 auto;
     }
 
     img {
@@ -1091,9 +1122,10 @@
         margin-top: 25px;
         max-width: 180px;
       }
-      // @include d(991) {
-      //   margin-top: 0;
-      // }
+
+      @include d(991) {
+        display: none;
+      }
     }
   }
 
@@ -1103,20 +1135,26 @@
     width: 100%;
     max-width: 100%;
     padding: 0 15px;
-
-    // @include d(991) {
-    //   display: flex;
-    //   justify-content: space-between;
-    //   flex-wrap: wrap;
-    // }
+    .slick-slide {
+      margin: 0 8px;
+    }
+    /* the parent */
+    .slick-list {
+      margin: 0 -8px;
+    }
     &:nth-child(2) {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // @include d(991) {
-      //   flex-direction: row;
-        
-      // }
+    }
+
+    @include d(991) {
+      &:not(:last-child) {
+        display: none;
+      }
+
+      display: flex;
+      flex-direction: row;
     }
   }
 
@@ -1128,16 +1166,28 @@
     @include d(1199) {
       height: 180px;
     }
-    // @include d(991) {
-    //   margin: 0 15px;
-    // }
+
+    @include d(991) {
+      padding: 0 15px;
+      height: auto;
+      // overflow: hidden;
+      // margin-bottom: 0;
+    }
+    @include d(580) {
+      height: auto;
+    }
 
     img {
       @include border-radius;
       transform: scale(1.2);
       min-width: 200px;
+
       @include d(991) {
         max-width: 220px;
+        width: 100%;
+      }
+      @include d(767) {
+        max-width: 100%;
       }
     }
 
@@ -1164,9 +1214,11 @@
 
 .partners {
   padding: 60px 0;
+
   @include d(767) {
     padding: 30px 0;
   }
+
   .section__tittle {
     text-align: center;
     margin-bottom: 95px;
@@ -1411,6 +1463,16 @@
         //   height: auto;
         // }
       }
+    }
+  }
+}
+
+.user-gallery-box-slider {
+  .user-gallery-item:last-child {
+    display: none;
+
+    @include d(991) {
+      display: block;
     }
   }
 }
