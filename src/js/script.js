@@ -31,6 +31,20 @@ $(document).ready(function () {
     $('.sidebar__overlay').removeClass('sidebar__overlay_active');
   });
 
+
+  // open sidebar whith filters on catalog page
+  $('.sidebar__button_mob').click(function (e) {
+    e.preventDefault();
+    $('.js-sidebar_right').toggleClass('sidebar_right_acive');
+    $('.wrapper__overlay').toggleClass('wrapper__overlay_active');
+  });
+
+  // close sidebar whoth filters on catalog page(click on red owerlay)
+  $('.wrapper__overlay').click(function () {
+    $('.js-sidebar_right').removeClass('sidebar_right_acive');
+    $('.wrapper__overlay').removeClass('wrapper__overlay_active');
+  });
+
   // product tabs description
   $('.product-tabs__list').on('click', '.product-tabs__item:not(.product-tabs__item_active)', function () {
     $(this)
@@ -65,7 +79,7 @@ $(document).ready(function () {
 
 
   // show/hide table on basket page
-  $('.details').click(function(e){
+  $('.details').click(function (e) {
     e.preventDefault();
     // console.log('sdfsf');
     $($(this).attr('href')).slideToggle();
@@ -76,22 +90,22 @@ $(document).ready(function () {
   //   // e.preventDefault();
   //   $(this).toggleClass('active');
   // });
-  $('.js-humburger').click(function(){
+  $('.js-humburger').click(function () {
     $(this).toggleClass('active');
   });
 
   // modal 
-  $('.js-order').click(function(){
+  $('.js-order').click(function () {
     $('.overlay').addClass('overlay_active');
     $('.modal').addClass('modal_active');
   });
-  $('.js-close-modal').click(function(e){
+  $('.js-close-modal').click(function (e) {
     e.preventDefault();
     $('.overlay').removeClass('overlay_active');
     $('.modal').removeClass('modal_active');
   });
 
-  $('.js-catalog').click(function(){
+  $('.js-catalog').click(function () {
     $('.catalog__list').slideToggle();
   });
 
@@ -105,7 +119,7 @@ $(window).resize(function () {
 });
 
 
- // checking height for charchteristiks and tabs one fumction on two screen resolution
+// checking height for charchteristiks and tabs one fumction on two screen resolution
 function textHeight() {
   var maxContent = 0;
   $('.js-height').each(function () {

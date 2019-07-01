@@ -1,7 +1,7 @@
  //get company address for company profile page
  function initMap() {
    var map = new google.maps.Map(document.querySelector('#address'), {
-     zoom: 12,
+     zoom: 14,
      disableDefaultUI: true,
      center: {
        lat: -34.397,
