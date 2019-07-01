@@ -20,12 +20,9 @@ body {
   text-rendering: geometricPrecision;
 }
 
-// .main-wrapper {
-  // @include d(1919) {
-  //   max-width: 1440px;
-  //   margin: 0 auto;
-  // }
-// }
+.main-wrapper {
+  min-width: 320px;
+}
 
 .container {
   max-width: 1344px;
