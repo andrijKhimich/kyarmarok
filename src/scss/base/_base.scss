@@ -18,11 +18,12 @@ body {
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   text-rendering: geometricPrecision;
+  // overflow: hidden;
 }
 
-.main-wrapper {
-  min-width: 320px;
-}
+// .main-wrapper {
+//   min-width: 320px;
+// }
 
 .container {
   max-width: 1344px;

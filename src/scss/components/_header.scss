@@ -35,6 +35,7 @@
       order: 1;
       margin-left: auto;
     }
+
     @include d(480) {
       flex: 0 0 80%;
       max-width: 80%;
@@ -109,8 +110,12 @@
 
     @include d(767) {
       position: fixed;
-      top: 150px;
+
+      top: 16px;
+      justify-content: center;
       z-index: 10;
+      left: 50%;
+      transform: translateX(-50%);
     }
 
     li {
@@ -133,9 +138,11 @@
 
     @include d(767) {
       position: fixed;
-      top: 150px;
+      bottom: 86px;
+      left: 50%;
+      justify-content: center;
+      transform: translateX(-50%);
       z-index: 10;
-      right: 15px;
     }
 
     li {
@@ -214,12 +221,14 @@
     @include d(1199) {
       flex-direction: column;
       position: fixed;
+      top: 0;
       left: 0;
       width: 100%;
       background-color: $white;
       z-index: 2;
-      padding-top: 60px;
-      height: 100%;
+      padding-top: 80px;
+      height: auto;
+      min-height: 100%;
       // display: none;
       // transform: translateX(-100%);
     }
@@ -243,10 +252,12 @@
   @include d(1199) {
     display: block;
   }
+
   @include d(767) {
     top: 94px;
     left: 0;
   }
+
   span {
     width: 100%;
     height: 2px;
@@ -297,6 +308,7 @@
     margin-right: 20px;
     margin-bottom: 20px;
   }
+
   @include d(480) {
     margin-right: 0;
     max-width: 130px;
@@ -321,7 +333,11 @@
     max-width: 290px;
     height: 55px;
     position: fixed;
-    bottom: 10%;
+    bottom: 16px;
+  }
+
+  @include d(767) {
+    max-width: 260px;
   }
 
   &__humburger {
@@ -408,7 +424,7 @@
 
     li {
       @include d(1199) {
-        padding: 20px 0;
+        padding: 10px 0;
       }
 
       a {
