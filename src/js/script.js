@@ -7,11 +7,11 @@ $(document).ready(function () {
     mobileOnlySlider();
   }
 
-  if (window.innerWidth < 1199) {
-    toggleMobNavigation();
-  } else {
-    // $('.header-navigation').css('overflow', 'hidden');
-  }
+  // if (window.innerWidth < 1199) {
+  //   toggleMobNavigation();
+  // } else {
+  //   // $('.header-navigation').css('overflow', 'hidden');
+  // }
 
 
   // toggle filters (dropdown)

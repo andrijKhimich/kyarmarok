@@ -142,6 +142,7 @@
         max-width: 100%;
         margin-bottom: 16px;
         padding-right: 0;
+        height: auto;
       }
       &-content {
         @include border-radius;
@@ -174,6 +175,7 @@
         flex: 0 0 100%;
         max-width: 100%;
         padding-left: 0;
+        height: auto;
       }
       p {
         font-size: 14px;
@@ -184,5 +186,19 @@
         @include border-radius;
       }
     }
+  }
+}
+
+.map__link {
+  @include border-radius;
+  height: 100%;
+  border: 1px solid $red;
+  width: 100%;
+  @include d(575) {
+    height: auto;
+  }
+  img {
+    @include border-radius;
+    object-fit: cover;
   }
 }

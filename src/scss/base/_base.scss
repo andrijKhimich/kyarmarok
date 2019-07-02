@@ -71,7 +71,7 @@ body {
     display: block;
   }
   &_active {
-    z-index: 1;
+    z-index: 10;
     opacity: 1;
   }
 }
@@ -468,8 +468,8 @@ label {
 
   &:before {
     content: url('../img/svg/check.svg');
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     position: absolute;
     opacity: 0;
     top: 50%;
