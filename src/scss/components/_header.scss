@@ -110,12 +110,18 @@
 
     @include d(767) {
       position: fixed;
-
       top: 16px;
       justify-content: center;
       z-index: 10;
-      left: 50%;
+      left: -40%;
       transform: translateX(-50%);
+      transition: left .4s;
+    }
+    
+    &.active {
+      @include d(767) {
+        left: 50%;
+      }
     }
 
     li {
@@ -137,12 +143,19 @@
     }
 
     @include d(767) {
-      position: fixed;
-      bottom: 86px;
-      left: 50%;
+      position: absolute;
+      bottom: 36px;
+      left: -40%;
       justify-content: center;
       transform: translateX(-50%);
       z-index: 10;
+      transition: left .4s;
+    }
+
+    &.active {
+      @include d(767) {
+        left: 50%;
+      }
     }
 
     li {
@@ -226,13 +239,19 @@
       width: 100%;
       background-color: $white;
       z-index: 2;
-      padding-top: 80px;
+      padding-top: 100px;
       height: auto;
       min-height: 100%;
       // display: none;
-      // transform: translateX(-100%);
+      transform: translateX(-100%);
+      transition: transform .4s;
+    }
+
+    &.active {
+      transform: translateY(0);
     }
   }
+
 }
 
 .humburger {
@@ -334,6 +353,7 @@
     height: 55px;
     position: fixed;
     bottom: 16px;
+    z-index: 11;
   }
 
   @include d(767) {
@@ -387,6 +407,9 @@
   z-index: 10;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  @include d(1199) {
+    margin-bottom: 20px;
+  }
 
   li {
     a {

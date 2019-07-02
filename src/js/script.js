@@ -7,6 +7,12 @@ $(document).ready(function () {
     mobileOnlySlider();
   }
 
+  if (window.innerWidth < 1199) {
+    toggleMobNavigation();
+  } else {
+    // $('.header-navigation').css('overflow', 'hidden');
+  }
+
 
   // toggle filters (dropdown)
   $('.filter__item>span').click(function () {
@@ -89,8 +95,10 @@ $(document).ready(function () {
     e.preventDefault();
     $($(this).attr('href')).slideToggle();
   });
+
+
   $('.js-humburger').click(function () {
-    $(this).toggleClass('active');
+    toggleMobNavigation();
   });
 
   // modal 
@@ -263,6 +271,26 @@ $('.js-sl-photo-reviews').slick({
   prevArrow: $('.js-photo-prev'),
   nextArrow: $('.js-photo-next'),
 });
+
+function toggleMobNavigation(){
+  $('.humburger').toggleClass('active');
+  $('.header-navigation').toggleClass('active');
+  $('.header-social').toggleClass('active');
+  $('.header-marks').toggleClass('active');
+  $('body').toggleClass('no-scroll');
+
+  $('.navigation ul li a').click(function(){
+    $('.humburger').removeClass('active');
+    $('.header-navigation').removeClass('active');
+    $('.header-social').removeClass('active');
+    $('.header-marks').removeClass('active');
+    $('body').removeClass('no-scroll');
+  });
+
+  $('.js-catalog').click(function(){
+    $('.header-navigation').css('overflow-y', 'scroll');
+  });
+}
 
 // Load SVG-sprite for all browsers
 svg4everybody({});

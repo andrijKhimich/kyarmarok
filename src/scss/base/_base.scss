@@ -20,7 +20,9 @@ body {
   text-rendering: geometricPrecision;
   // overflow: hidden;
 }
-
+.no-scroll {
+  overflow: hidden;
+}
 // .main-wrapper {
 //   min-width: 320px;
 // }
