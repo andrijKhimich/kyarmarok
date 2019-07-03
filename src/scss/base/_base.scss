@@ -430,7 +430,9 @@ input[type="search"] {
 textarea {
   resize: none;
 }
-
+table {
+  border-spacing: 0;
+}
 input[type="checkbox"] {
   width: 1px;
   height: 1px;
