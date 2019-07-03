@@ -15,7 +15,6 @@
     @include d(1199) {
       justify-content: space-between;
       flex-wrap: wrap;
-      border-bottom: 1px solid $red;
     }
   }
 
@@ -109,11 +108,11 @@
     }
 
     @include d(767) {
-      position: fixed;
+      position: absolute;
       top: 16px;
       justify-content: center;
       z-index: 10;
-      left: -40%;
+      left: -45%;
       transform: translateX(-50%);
       transition: left .4s;
     }
@@ -145,7 +144,7 @@
     @include d(767) {
       position: absolute;
       bottom: 36px;
-      left: -40%;
+      left: -45%;
       justify-content: center;
       transform: translateX(-50%);
       z-index: 10;
@@ -408,6 +407,9 @@
   border-bottom-right-radius: 10px;
   @include d(1199) {
     margin-bottom: 20px;
+  }
+  @include d(767) {
+    top: 55px;
   }
 
   li {
