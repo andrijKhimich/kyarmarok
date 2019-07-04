@@ -1170,7 +1170,7 @@
 
     @include d(991) {
       padding: 0 15px;
-      height: auto;
+      // height: auto;
       // overflow: hidden;
       // margin-bottom: 0;
     }
@@ -1467,13 +1467,9 @@
     }
   }
 }
-
 .user-gallery-box-slider {
   position: relative;
   width: 100%;
-  .slick-list, .slick-track div {
-    height: 100%;
-  }
   .user-gallery-item:last-child {
     display: none;
 
