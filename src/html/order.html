@@ -18,7 +18,7 @@
             <div class="basket-cart__wrapper">
               <div class="basket-cart">
                 <div class="basket-cart__img">
-                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" alt="card">
+                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" src="img/images/catalog/card1.jpg"  alt="card">
                 </div>
                 <div class="basket-cart__content">
                   <div class="basket-cart__text">
@@ -61,7 +61,7 @@
                     </a>
                   </div>
                   <div class="basket-cart__table" id="table1">
-                    <table cellspacing="0">
+                    <table>
                       <tr>
                         <td>Колір:</td>
                         <td>Назва кольру</td>
@@ -104,7 +104,7 @@
               </div>
               <div class="basket-cart">
                 <div class="basket-cart__img">
-                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" alt="card">
+                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" src="img/images/catalog/card1.jpg" alt="card">
                 </div>
                 <div class="basket-cart__content">
                   <div class="basket-cart__text">
@@ -147,7 +147,7 @@
                     </a>
                   </div>
                   <div class="basket-cart__table" id="table2">
-                    <table cellspacing="0">
+                    <table>
                       <tr>
                         <td>Колір:</td>
                         <td>Назва кольру</td>
@@ -190,7 +190,7 @@
               </div>
               <div class="basket-cart">
                 <div class="basket-cart__img">
-                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" alt="card">
+                  <img srcset="img/images/catalog/card1.jpg 1x, img/images/catalog/card1-2x.jpg 2x" src="img/images/catalog/card1.jpg" alt="card">
                 </div>
                 <div class="basket-cart__content">
                   <div class="basket-cart__text">
@@ -233,7 +233,7 @@
                     </a>
                   </div>
                   <div class="basket-cart__table" id="table3">
-                    <table cellspacing="0">
+                    <table>
                       <tr>
                         <td>Колір:</td>
                         <td>Назва кольру</td>
@@ -278,7 +278,7 @@
             <aside class="basket-sidebar__wrapper">
               <div class="order-sidebar">
                 <h4 class="basket-cart__tittle">оформлення замовлення</h4>
-                <form action="" class="order-form">
+                <form class="order-form">
                   <h5 class="order-form__head">Контактні дані</h5>
                   <input type="text" class="custom-input" placeholder="Приізвище та ім'я">
                   <input type="text" class="custom-input" placeholder="Телефон">
@@ -289,21 +289,21 @@
                     <label for="radio1" class="order-form__label">
                       <input type="radio" id="radio1" name="delivery">
                       <span class="custom-radio"></span>
-                      <p>Доставка у відділення нової пошти</p>
-                      <p class="order-form__price">від 35грн</p>
+                      <span class="order__text">Доставка у відділення нової пошти</span>
+                      <span class="order-form__price">від 35грн</span>
                     </label>
                     <label for="radio2" class="order-form__label">
                       <input type="radio" id="radio2" name="delivery">
                       <span class="custom-radio"></span>
-                      <p>Доставка курьєром Нової Пошти за адресою</p>
-                      <p class="order-form__price">від 55грн</p>
+                      <span class="order__text">Доставка курьєром Нової пошта за адресою</span>
+                      <span class="order-form__price">від 55грн</span>
                     </label>
                     <p>Самовивіз</p>
                     <label for="radio3" class="order-form__label">
                       <input type="radio" id="radio3" name="delivery">
                       <span class="custom-radio"></span>
-                      <p>Самовивіз із магазина</p>
-                      <p class="order-form__price">0грн</p>
+                      <span class="order__text">Самовивіз із магазину</span>
+                      <span class="order-form__price">0</span>
                     </label>
                   </div>
                   <input type="text" class="custom-input" placeholder="Область">
@@ -315,17 +315,17 @@
                     <label for="radio4" class="order-form__label">
                       <input type="radio" id="radio4" name="payout">
                       <span class="custom-radio"></span>
-                      <p>Предоплата</p>
+                      <span class="order__text">Предоплата</span>
                     </label>
                     <label for="radio5" class="order-form__label">
                       <input type="radio" id="radio5" name="payout">
                       <span class="custom-radio"></span>
-                      <p>Накладений платіж</p>
+                      <span class="order__text">Накладений платіж</span>
                     </label>
                     <label for="radio6" class="order-form__label">
                       <input type="radio" id="radio6" name="payout">
                       <span class="custom-radio"></span>
-                      <p>Оплата при ортимані</p>
+                      <span class="order__text">Оплата при ортимані</span>
                     </label>
                   </div>
                   <table class="order-form__table">
