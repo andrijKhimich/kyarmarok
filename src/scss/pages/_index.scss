@@ -1135,6 +1135,7 @@
     width: 100%;
     max-width: 100%;
     padding: 0 15px;
+    position: relative;
     .slick-slide {
       margin: 0 8px;
     }
@@ -1468,11 +1469,76 @@
 }
 
 .user-gallery-box-slider {
+  position: relative;
+  width: 100%;
+  .slick-list, .slick-track div {
+    height: 100%;
+  }
   .user-gallery-item:last-child {
     display: none;
 
     @include d(991) {
       display: block;
+    }
+  }
+}
+.user {
+  &-slider {
+    position: relative;
+    @include border-radius;
+    flex: 0 0 75%;
+    max-width: 75%;
+    max-height: 480px;
+
+    @include d(1199) {
+
+      max-height: 400px;
+    }
+
+    @include d(991) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+
+    &__navigation {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+      z-index: 1;
+      left: 0;
+      justify-content: space-between;
+      padding: 0 30px;
+      display: none;
+      @include d(991) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.user-slider__btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  background-color: rgba($gray-bg, .8);
+  transition: background-color .2s;
+
+  .svg {
+    fill: $black;
+    transition: fill .2s;
+  }
+
+  &:hover {
+    background-color: $gray-bg;
+
+    .svg {
+      fill: $red;
     }
   }
 }

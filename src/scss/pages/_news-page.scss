@@ -26,7 +26,7 @@
     background-color: $white;
     @include border-radius;
     @include box-shadow;
-    padding: 32px 36px;
+    padding: 32px 36px 22px 36px;
     margin-bottom: 2em;
 
     &>a {
@@ -48,6 +48,7 @@
     padding-top: 1.5em;
     display: flex;
     align-items: flex-start;
+
     @include d(991) {
       flex-wrap: wrap;
     }
@@ -58,12 +59,14 @@
     flex: 0 0 33.33333%;
     max-width: 33.33333%;
     padding-right: 30px;
+
     @include d(991) {
       flex: 0 0 100%;
       max-width: 100%;
       padding-right: 0;
       margin-bottom: 1em;
     }
+
     img {
       @include border-radius;
 
@@ -73,10 +76,12 @@
   &__text {
     flex: 0 0 66.666667%;
     max-width: 66.666667%;
+
     @include d(991) {
       flex: 0 0 100%;
       max-width: 100%;
     }
+
     span {
       font-size: 14px;
       color: rgba($black, .6);
@@ -109,24 +114,37 @@
     padding-top: 32px;
     display: flex;
 
-    li {
-      display: flex;
-      align-items: center;
-      color: rgba($black, .6);
+    p {
       font-size: 14px;
       margin-right: 20px;
+      color: rgba($black, .6);
+      margin-bottom: 0;
+      margin-bottom: 10px;
+    }
 
-      a {
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      li {
         display: flex;
         align-items: center;
+        color: rgba($black, .6);
+        font-size: 14px;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        a {
+          display: flex;
+          align-items: center;
 
-        .svg {
-          margin-right: 10px;
-          fill: rgba($black, .6);
-          position: relative;
-          top: -2px;
+          .svg {
+            margin-right: 10px;
+            fill: rgba($black, .6);
+            position: relative;
+            top: -2px;
+          }
         }
       }
     }
+
   }
 }

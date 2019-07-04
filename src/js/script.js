@@ -142,13 +142,13 @@ $('.catalog__list').hide();
 function mobileOnlySlider() {
   $('.user-gallery-box-slider').slick({
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 10000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    arrows: false,
     infinite: true,
-    draggable: true,
-    touchThreshold: 100,
+    arrows: true,
+    prevArrow: $('.js-user-prev'),
+    nextArrow: $('.js-user-next'),
     responsive: [{
         breakpoint: 767,
         settings: {
