@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <title>Kyarmarok | user orders</title>
+  <meta name="description" content="">
+  //= links/_head.html
+</head>
+
+<body>
+  <div class="main-wrapper">
+    //= common/_header.html
+    <main class="user-profile">
+      <div class="container">
+        //= elements/_breadcrumbs.html
+        <div class="user-profile-wrapper">
+          <h4>Мій профіль</h4>
+          <div class="user-profile-content">
+            <div class="user-profile-cart__wrapper">
+              <form class="user-profile-form">
+                <h5>Персональна інформація</h5>
+                <label for="userName" class="error">
+                  <input type="text" class="custom-input bg-gray" placeholder="Ім'я" id="userName">
+                  <i>Error</i>
+                </label>
+                <label for="userSurname">
+                  <input type="text" class="custom-input bg-gray" placeholder="Прізвище" id="userSurname">
+                  <i>Error</i>
+                </label>
+                <label for="userPhone">
+                  <input type="tel" class="custom-input bg-gray" placeholder="Телефон" id="userPhone">
+                  <i>Error</i>
+                </label>
+                <label for="userEmail">
+                  <input type="email" class="custom-input bg-gray" placeholder="e-mail" id="userEmail">
+                  <i>Error</i>
+                </label>
+                <h5>Безпека</h5>
+                <label for="userPasswordOld">
+                  <input type="password" class="custom-input bg-gray" placeholder="Старий пароль" id="userPasswordOld">
+                  <svg class="svg-form">
+                    <use xlink:href="img/svg-sprite/sprite.svg#eye"></use>
+                  </svg>
+                  <i>Error</i>
+                </label>
+                <label for="userPasswordNew" class="error">
+                  <input type="password" class="custom-input bg-gray" placeholder="Новий пароль" id="userPasswordNew">
+                  <svg class="svg-form">
+                    <use xlink:href="img/svg-sprite/sprite.svg#eyeSlash"></use>
+                  </svg>
+                  <i>Error</i>
+                </label>
+                <label for="userConfirmNew">
+                  <input type="password" class="custom-input bg-gray" placeholder="Повторіть новий пароль" id="userConfirmNew">
+                  <svg class="svg-form">
+                    <use xlink:href="img/svg-sprite/sprite.svg#eye"></use>
+                  </svg>
+                </label>
+                <button type="submit" class="button">Зберегти</button>
+              </form>
+            </div>
+            <aside class="user-order-sidebar__wrapper js-sidebar_right sidebar_right">
+              <a href="#" class="sidebar__button_mob">Моє меню</a>
+              <div class="user-order-sidebar">
+                <ul class="user-order__list">
+                  <li class="user-order-sidebr_active"><a href="#">Мій профіль</a></li>
+                  <li><a href="#">Мої замовлення</a></li>
+                  <li><a href="#">Вийти</a></li>
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+    //= common/_footer.html
+    //= elements/_modal.html
+    <div class="wrapper__overlay">
+
+    </div>
+    //= links/_scripts.html
+  </div>
+
+
+  <!-- start main page content -->
+
+
+  <!-- end main page content -->
+
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+.user-profile {
+  position: relative;
+
+  &-wrapper {
+    padding-top: 80px;
+    padding-bottom: 265px;
+    margin: 0 -1em;
+
+    @include d(1499) {
+      margin: 0;
+      padding-bottom: 160px;
+    }
+
+    @include d(1299) {
+      padding: 60px 0 120px 0;
+    }
+
+    @include d(1199) {
+      padding: 40px 0 80px 0;
+    }
+    @include d(767) {
+      padding: 40px 0;
+    }
+
+    &>h4 {
+      font-size: 24px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+  }
+
+  &-content {
+    display: flex;
+    margin: 0 -1em;
+
+    @include d(767) {
+      flex-direction: column;
+    }
+  }
+
+  &-cart__wrapper {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding: 0 1em;
+
+    @include d(1199) {
+      flex: 0 0 100%;
+      max-width: 100%;
+      order: 1;
+    }
+  }
+
+
+  &-form {
+    padding: 56px 112px 40px 112px;
+    @include border-radius;
+    background-color: $white;
+    @include box-shadow;
+    text-align: center;
+    @include d(1499) {
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    @include d(1199) {
+      padding: 40px 60px;
+    }
+    h5 {
+      font-size: 18px;
+      line-height: 1.33em;
+      margin-bottom: 16px;
+      text-align: left;
+      &:not(first-child) {
+        margin-top: 32px;
+      }
+    }
+
+    label {
+      position: relative;
+      display: block;
+
+      .svg-form {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        display: inline-block;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  .button {
+    background-color: $red;
+    border: none;
+    padding: 12px 47px;
+    border-radius: 10px;
+    color: $white;
+    border: 1px solid $red;
+    transition: background-color .2s, color .2s;
+    margin-bottom: 40px;
+    margin-top: 32px;
+    margin-bottom: 0;
+
+    &:hover {
+      background-color: $white;
+      color: $red;
+      cursor: pointer;
+    }
+  }
+}

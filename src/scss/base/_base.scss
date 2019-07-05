@@ -326,7 +326,20 @@ section {
     }
   }
 }
+label i {
+  opacity: 0;
+  font-style: normal;
+}
+label.error i {
+  font-size: 10px;
+  opacity: 1;
+  color: #be1d24;
+  padding-left: 15px;
 
+}
+label.error .custom-input {
+  border: 1px solid $red;
+}
 .custom-select {
   font-size: 14px;
   line-height: 1.5em;

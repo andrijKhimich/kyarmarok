@@ -120,7 +120,8 @@ $(document).ready(function () {
   });
 
   // modal 
-  $('.js-order').click(function () {
+  $('.js-order').click(function (e) {
+    e.preventDefault();
     $('.overlay').addClass('overlay_active');
     $('.modal').addClass('modal_active');
   });
