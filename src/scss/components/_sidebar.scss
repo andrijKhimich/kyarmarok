@@ -7,9 +7,9 @@
 
   &_left {
     @include d(1199) {
-      position: fixed;
+      position: absolute;
       padding: 0;
-      top: 20%;
+      top: 100px;
       left: -45vw;
       z-index: 11;
       flex: 0 0 45vw;

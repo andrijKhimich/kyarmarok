@@ -40,12 +40,14 @@ $(document).ready(function () {
     e.preventDefault();
     $('.js-sidebar_left').toggleClass('sidebar_left_active');
     $('.sidebar__overlay').toggleClass('sidebar__overlay_active');
+
   });
 
   // close sidebar whoth filters on catalog page(click on red owerlay)
   $('.sidebar__overlay').click(function () {
     $('.js-sidebar_left').removeClass('sidebar_left_active');
     $('.sidebar__overlay').removeClass('sidebar__overlay_active');
+    // $('body').removeClass('no-scroll');
   });
 
 
@@ -54,12 +56,14 @@ $(document).ready(function () {
     e.preventDefault();
     $('.js-sidebar_right').toggleClass('sidebar_right_acive');
     $('.wrapper__overlay').toggleClass('wrapper__overlay_active');
+    // $('body').toggleClass('no-scroll');
   });
 
   // close sidebar whoth filters on catalog page(click on red owerlay)
   $('.wrapper__overlay').click(function () {
     $('.js-sidebar_right').removeClass('sidebar_right_acive');
     $('.wrapper__overlay').removeClass('wrapper__overlay_active');
+    
   });
 
   // product tabs description
