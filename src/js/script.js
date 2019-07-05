@@ -40,7 +40,10 @@ $(document).ready(function () {
     e.preventDefault();
     $('.js-sidebar_left').toggleClass('sidebar_left_active');
     $('.sidebar__overlay').toggleClass('sidebar__overlay_active');
-
+    $('.header-navigation').removeClass('active');
+    $('.js-humburger').removeClass('active');
+    $('.header-social').removeClass('active');
+    $('.header-marks').removeClass('active');
   });
 
   // close sidebar whoth filters on catalog page(click on red owerlay)
@@ -57,6 +60,10 @@ $(document).ready(function () {
     $('.js-sidebar_right').toggleClass('sidebar_right_acive');
     $('.wrapper__overlay').toggleClass('wrapper__overlay_active');
     // $('body').toggleClass('no-scroll');
+    $('.header-navigation').removeClass('active');
+    $('.js-humburger').removeClass('active');
+    $('.header-social').removeClass('active');
+    $('.header-marks').removeClass('active');
   });
 
   // close sidebar whoth filters on catalog page(click on red owerlay)
@@ -108,6 +115,8 @@ $(document).ready(function () {
 
   $('.js-humburger').click(function () {
     toggleMobNavigation();
+    $('.wrapper__overlay').removeClass('wrapper__overlay_active');
+    $('.sidebar_right').removeClass('.sidebar_right_acive');
   });
 
   // modal 
