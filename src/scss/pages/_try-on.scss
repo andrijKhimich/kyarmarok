@@ -107,5 +107,10 @@
     -webkit-transition: background-color .2s,color .2s;
     -o-transition: background-color .2s,color .2s;
     transition: background-color .2s,color .2s;
+    &:hover {
+      background-color: $white;
+      color: $red;
+      cursor: pointer;
+    }
   }
 }
