@@ -50,7 +50,8 @@ $(document).ready(function () {
   $('.sidebar__overlay').click(function () {
     $('.js-sidebar_left').removeClass('sidebar_left_active');
     $('.sidebar__overlay').removeClass('sidebar__overlay_active');
-    // $('body').removeClass('no-scroll');
+    // $('body').removeClass('noscroll');
+    $('body').removeClass('no-scroll');
   });
 
 
@@ -59,7 +60,7 @@ $(document).ready(function () {
     e.preventDefault();
     $('.js-sidebar_right').toggleClass('sidebar_right_acive');
     $('.wrapper__overlay').toggleClass('wrapper__overlay_active');
-    // $('body').toggleClass('no-scroll');
+    $('body').toggleClass('no-scroll');
     $('.header-navigation').removeClass('active');
     $('.js-humburger').removeClass('active');
     $('.header-social').removeClass('active');

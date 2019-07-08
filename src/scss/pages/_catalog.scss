@@ -81,6 +81,10 @@
   @include d(1299) {
     padding-top: 1em;
   }
+  @include d(1199){
+    overflow-y: auto;
+    height: 600px;
+  }
   &>p {
     padding-left: 24px;
     font-weight: 500;
