@@ -4,7 +4,9 @@
   align-items: center;
   width: 100%;
   margin-top: 8px;
+  flex-wrap: wrap;
   &__item {
+    margin-bottom: 10px;
     &:not(:last-child) {
       margin-right: 8px;
     }
