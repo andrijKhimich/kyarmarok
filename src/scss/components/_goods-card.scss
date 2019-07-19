@@ -123,6 +123,7 @@
       transition: background-color .2s;
       &:hover {
         cursor: pointer;
+        background-color: $pink-bg;
       }
       &_active {
         background-color: $pink-bg;
