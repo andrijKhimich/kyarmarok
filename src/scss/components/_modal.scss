@@ -74,3 +74,37 @@
     opacity: 1;
   }
 }
+
+.form {
+  h2 {
+    margin-bottom: 30px;
+  }
+  label {
+    position: relative;
+    padding-bottom: 10px;
+    display: block;
+    text-align: left;
+    .custom-input {
+      background-color: $gray-bg;
+      border: 1px solid $gray-light;
+    }
+    span {
+      font-size: 10px;
+      padding-left: 20px;
+      color: $gray-light;
+      opacity: 0;
+      transition: opacity .2s;
+    }
+  }
+  textarea {
+    background-color: $gray-bg;
+    border: 1px solid $gray-light;
+    margin-bottom: 10px;
+  }
+  .error {
+    span {
+      color: $red;
+      opacity: 1;
+    }
+  }
+}

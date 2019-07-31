@@ -219,8 +219,8 @@ section {
   color: $red-dark;
 }
 
-.blue-light {
-  color: $blue-light;
+.green {
+  color: #00ca00;
 }
 
 .blue-dark {
@@ -242,15 +242,15 @@ section {
 }
 
 .bg-yellow-red-dark {
-  background-image: linear-gradient(to right, $yellow-light, $red-dark);
+  background-image: linear-gradient(to right,#eccc17,#cc0d12);
 }
 
-.bg-blue-light-dark {
-  background-image: linear-gradient(to right, $blue-light, $blue-dark);
+.bg-green-dark-blue {
+  background-image: linear-gradient(to right,#00ca00,#0bbbd9,#0d1a9b);
 }
 
 .bg-multy {
-  background-image: linear-gradient(to right, #f23838, #f3b027 26%, #e13131 69%, #ebcd22);
+  background-image: linear-gradient(to right, #01b9db, #00c2c5, #0fc89f, #6bc871, #a9c344, #c8b532, #e2a432, #f89141, #f17d4e, #e66b5a, #d55d64, #c0526b);
 }
 
 

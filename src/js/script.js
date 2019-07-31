@@ -130,6 +130,24 @@ $(document).ready(function () {
     e.preventDefault();
     $('.overlay').removeClass('overlay_active');
     $('.modal').removeClass('modal_active');
+    $('.modal-form').removeClass('modal_active');
+  });
+
+  $('.contact-btn').click(function (e) {
+    e.preventDefault();
+    $('.overlay').addClass('overlay_active');
+    $('.modal-form').addClass('modal_active');
+  });
+  $('.js-close-modal').click(function (e) {
+    e.preventDefault();
+    $('.overlay').removeClass('overlay_active');
+    $('.modal').removeClass('modal_active');
+    $('.modal-form').removeClass('modal_active');
+  });
+  $('.overlay').click(function(){
+    $('.overlay').removeClass('overlay_active');
+    $('.modal').removeClass('modal_active');
+    $('.modal-form').removeClass('modal_active');
   });
 
   $('.js-catalog').click(function () {
