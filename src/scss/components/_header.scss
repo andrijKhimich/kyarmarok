@@ -22,6 +22,7 @@
     max-width: 344px;
     width: 100%;
     position: relative;
+
     @include d(1299) {
       max-width: 240px;
     }
@@ -79,19 +80,25 @@
       }
     }
   }
+
   &-lang {
     display: flex;
     align-items: center;
+
     @include d(1199) {
       margin-right: 60px;
     }
+
     @include d(767) {
       display: none;
     }
+
     li {
       position: relative;
+
       &:first-child {
         margin-right: 10px;
+
         &:before {
           content: "";
           position: absolute;
@@ -103,16 +110,19 @@
           background-color: $red;
         }
       }
+
       a {
         text-transform: uppercase;
         font-size: 14px;
         color: $bg-gray-dark;
+
         &.active {
           color: $red;
         }
       }
     }
   }
+
   &-phone {
     padding: 0 10px;
 
@@ -282,7 +292,19 @@
   &-navigation {
     display: flex;
     align-items: center;
+    background-color: $white;
+    max-width: 1314px;
+    // padding: 0 1em;
+    width: 100%;
+    margin: 0 auto;
 
+    @include d(1499) {
+      max-width: 1250px;
+    }
+
+    @include d(1299) {
+      max-width: 1110px;
+    }
     @include d(1199) {
       flex-direction: column;
       position: fixed;
@@ -303,6 +325,13 @@
     }
   }
 
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
 }
 
 .humburger {
