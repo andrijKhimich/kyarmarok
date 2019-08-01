@@ -125,29 +125,34 @@ $(document).ready(function () {
     e.preventDefault();
     $('.overlay').addClass('overlay_active');
     $('.modal').addClass('modal_active');
+    $('body').addClass('no-scroll');
   });
   $('.js-close-modal').click(function (e) {
     e.preventDefault();
     $('.overlay').removeClass('overlay_active');
     $('.modal').removeClass('modal_active');
     $('.modal-form').removeClass('modal_active');
+    $('body').removeClass('no-scroll');
   });
 
   $('.contact-btn').click(function (e) {
     e.preventDefault();
     $('.overlay').addClass('overlay_active');
     $('.modal-form').addClass('modal_active');
+    $('body').addClass('no-scroll');
   });
   $('.js-close-modal').click(function (e) {
     e.preventDefault();
     $('.overlay').removeClass('overlay_active');
     $('.modal').removeClass('modal_active');
     $('.modal-form').removeClass('modal_active');
+    $('body').removeClass('no-scroll');
   });
   $('.overlay').click(function(){
     $('.overlay').removeClass('overlay_active');
     $('.modal').removeClass('modal_active');
     $('.modal-form').removeClass('modal_active');
+    $('body').removeClass('no-scroll');
   });
 
   $('.js-catalog').click(function () {
