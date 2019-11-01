@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <title>Kyarmarok</title>
+  <meta name="description" content="">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/main.css">
+  <!-- <link rel="apple-touch-icon" href="img/favicon/apple-icon.png"/>
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png"/>
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-icon-114x114.png"/>
+  <link rel="apple-touch-icon" sizes="144x144" href="img/favicon/apple-icon-144x144.png"/> -->
+  
+  <!-- <link rel="shortcut icon" href="/img/favicon/favicon.ico"> -->
+  <!-- <link rel="shortcut icon" type="image/png" href="img/favicon/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png"> -->
+</head>
+
+<body>
+  <div class="main-wrapper">
+    <!-- header start -->
+    <header class="header">
+      <div class="container">
+        <div class="header-top">
+          <a href="index.html" class="logo">
+            <img srcset="img/png/logo-1x.png 1x, img/png/logo-2x.png 2x" src="img/png/logo-1x.png" alt="logo">
+          </a>
+          <form action="#" class="header-form">
+            <label for="headerSearch">
+              <svg class="svg svg-sm">
+                <use xlink:href="img/svg-sprite/sprite.svg#search"></use>
+              </svg>
+              <input class="bg-gray custom-input" type="search" id="headerSearch" placeholder="Почніть вводити назву">
+            </label>
+          </form>
+          <a href="tel:+380674605053" class="header-phone">38 067 460 50 53</a>
+          <ul class="header-lang">
+            <li>
+              <a href="#" class="active">ua</a>
+            </li>
+            <li>
+              <a href="#">ru</a>
+            </li>
+          </ul>
+          <ul class="header-social">
+            <li>
+              <a href="#" target="_blank">
+                <svg class="svg svg-soc">
+                  <use xlink:href="img/svg-sprite/sprite.svg#facebookCircle"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <svg class="svg svg-soc">
+                  <use xlink:href="img/svg-sprite/sprite.svg#youtubeCircle"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img class="svg svg-soc" src="img/svg/instagram-ui.svg" alt="instagram">
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <svg class="svg svg-soc">
+                  <use xlink:href="img/svg-sprite/sprite.svg#pinterestCircle"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="header-marks">
+            <li>
+              <a href="#" title="Улюблені килими">
+                <svg class="svg svg-sm">
+                  <use xlink:href="img/svg-sprite/sprite.svg#bookmark"></use>
+                </svg>
+                <span class="active">19</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" title="Віртуальна примірка">
+                <svg class="svg svg-sm">
+                  <use xlink:href="img/svg-sprite/sprite.svg#camera"></use>
+                </svg>
+                <span>0</span>
+              </a>
+            </li>
+            <li>
+              <a href="product.html" title="Кошик">
+                <svg class="svg svg-sm">
+                  <use xlink:href="img/svg-sprite/sprite.svg#basket"></use>
+                </svg>
+                <span>0</span>
+              </a>
+            </li>
+          </ul>
+          <a href="login.html" class="header-enter">Увійти</a>
+          <div class="humburger js-humburger">
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+          </div>
+        </div>
+        <div class="header-fixed__wrapper" id="headerStick">
+          <div class="header-navigation">
+            <div class="catalog-btn js-catalog">
+              <div class="catalog-btn__humburger">
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+                <span>&nbsp;</span>
+              </div>
+              <span class="catalog-btn__word">Каталог</span>
+              <ul class="catalog__list">
+                <li><a href="#">Artsilk</a></li>
+                <li><a href="#">BCF</a></li>
+                <li><a href="#">Акрил</a></li>
+                <li><a href="#">Безворсові</a></li>
+                <li><a href="#">Ванна кімната</a></li>
+                <li><a href="#">Гобілени</a></li>
+                <li><a href="#">Імітація вовни</a></li>
+                <li><a href="#">Штучний шовк</a></li>
+                <li><a href="#">Коври високої щільності</a></li>
+                <li><a href="#">Коври на латексній основі</a></li>
+                <li><a href="#">Коври з ручною стрижкою</a></li>
+                <li><a href="#">Персидські коври</a></li>
+                <li><a href="#">Хіт-сет</a></li>
+                <li><a href="#">Шаггі</a></li>
+                <li><a href="#">Бавовна</a></li>
+              </ul>
+            </div>
+            <nav class="navigation">
+              <ul>
+                <li><a href="#" class="nav_active">Новинки</a></li>
+                <li><a href="action.html">Акції</a></li>
+                <li><a href="#">Розпродаж</a></li>
+                <li><a href="online.html">Онлайн примірка</a></li>
+                <li><a href="news.html">Новини</a></li>
+                <li><a href="delivery.html">Доставка/Оплата</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+    
+      </div>
+    
+    </header>
+    <!-- header rnd -->
+    <main class="main">
+      <div class="container">
+        <section class="section main-banner">
+          <div class="main-slider">
+            <div class="main-slider__navigation">
+              <a href="#" class="main-slider__btn js-prev">
+                <svg class="svg svg-sm">
+                  <use xlink:href="img/svg-sprite/sprite.svg#chevron-left"></use>
+                </svg>
+              </a>
+              <a href="#" class="main-slider__btn js-next">
+                <svg class="svg svg-sm">
+                  <use xlink:href="img/svg-sprite/sprite.svg#chevron-right"></use>
+                </svg>
+              </a>
+            </div>
+            <!-- <ul class="main-slider__pagination slide-title'">
+              <li class="pager"></li>
+              <li class="pager"></li>
+              <li class="pager"></li>
+            </ul> -->
+            <div class="js-slider">
+              <div class="main-slider__item">
+                <picture>
+                  <source
+                    srcset="img/images/main/slider/slider-1-sm.jpg 1x, img/images/main/slider/slider-1-sm-2x.jpg 2x"
+                    media="max-width: 1024px">
+                  <img srcset="img/images/main/slider/slider-1.jpg 1x, img/images/main/slider/slider-1-2x.jpg 2x"
+                  src="img/images/main/slider/slider-1.jpg"
+                    alt="slider1">
+                </picture>
+              </div>
+              <div class="main-slider__item">
+                <picture>
+                  <source
+                    srcset="img/images/main/slider/slider-1-sm.jpg 1x, img/images/main/slider/slider-1-sm-2x.jpg 2x"
+                    media="max-width: 1024px">
+                  <img srcset="img/images/main/slider/slider-1.jpg 1x, img/images/main/slider/slider-1-2x.jpg 2x"
+                  src="img/images/main/slider/slider-1.jpg"
+                    alt="slider1">
+                </picture>
+              </div>
+              <div class="main-slider__item">
+                <picture>
+                  <source
+                    srcset="img/images/main/slider/slider-1-sm.jpg 1x, img/images/main/slider/slider-1-sm-2x.jpg 2x"
+                    media="max-width: 1024px">
+                  <img srcset="img/images/main/slider/slider-1.jpg 1x, img/images/main/slider/slider-1-2x.jpg 2x"
+                  src="img/images/main/slider/slider-1.jpg"
+                    alt="slider1">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <div class="link-box__wrapper">
+            <a href="#" class="link-box">
+              <h3>Наші <br> магазини</h3>
+              <svg class="svg">
+                <use xlink:href="img/svg-sprite/sprite.svg#location"></use>
+              </svg>
+            </a>
+            <a href="#" class="link-box">
+              <h3>Онлайн <br> примірка</h3>
+              <svg class="svg">
+                <use xlink:href="img/svg-sprite/sprite.svg#camera"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <section class="section shape">
+          <h1 class="section__tittle">Форма килиму</h1>
+          <div class="shape__content">
+            <div class="shape-img">
+              <span class="abstract-circle"></span>
+              <span class="abstract-circle"></span>
+              <span class="abstract-circle"></span>
+              <picture>
+                <source srcset="img/png/main/shape.png 1x, img/png/main/shape-2x.png 2x" media="max-width: 1024px">
+                <img srcset="img/png/main/shape.png 1x, img/png/main/shape-2x.png 2x" src="img/png/main/shape.png" alt="shape">
+              </picture>
+            </div>
+            <ul class="shape__list">
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Прямокутник</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-rectangle"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Квадрат</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-square"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Коло</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-circle"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Овал</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-oval"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Доріжка</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-road"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="shape__list-item">
+                <a href="#" class="shape__list-link">
+                  <span>Фігурна</span>
+                  <svg class="svg svg-sm">
+                    <use xlink:href="img/svg-sprite/sprite.svg#shape-figured"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+          </div>
+        </section>
+        <section class="section type">
+          <h2 class="section__tittle">Тип килиму</h2>
+          <div class="type__content">
+            <ul class="type__list">
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Однотоний</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Пастельний</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Мультиколор</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Абстракція</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Рельєфний</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>З блиском</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Gold-Silver</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="type__list-item">
+                <a href="#" class="type__list-link">
+                  <span>Квіти/Природа</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="show-all">Показати всі</a>
+        </section>
+        <section class="section material">
+          <h2 class="section__tittle">Матеріал</h2>
+          <div class="material__content">
+            <ul class="material__list">
+              <li class="material__list-item"><a href="#" class="material__list-link">Акрил</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Поліпропілен</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Поліестр</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Латекс</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Віскоза</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Полівіскоза</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Шерсть</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Бавовна</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Бамбук</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Джут</a></li>
+              <li class="material__list-item"><a href="#" class="material__list-link">Шкіра</a></li>
+            </ul>
+            <div class="material-img">
+              <span class="abstract-circle"></span>
+              <span class="abstract-circle"></span>
+              <picture>
+                <source srcset="img/png/main/wool.png 1x, img/png/main/wool-2x.png 2x" media="max-width: 1024px">
+                <img srcset="img/png/main/wool.png 1x, img/png/main/wool-2x.png 2x" src="img/png/main/wool.png" alt="wool">
+              </picture>
+            </div>
+          </div>
+        </section>
+        <section class="section category">
+          <h2 class="section__tittle">Категорії</h2>
+          <div class="category__content">
+            <ul class="category__list">
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Artsilk</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>BCF</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Hand made India</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Акрилік</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Безворсовий <br> (рагошки)</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Гобілен</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Імітація шерсті</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+              <li class="category__list-item">
+                <a href="#" class="category__list-link">
+                  <span>Штучний шовк</span>
+                  <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <a href="#" class="show-all">Показати всі</a>
+        </section>
+        <section class="section colors">
+          <h2 class="section__tittle">Колір</h2>
+          <div class="colors__content">
+            <ul class="colors__list">
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-gray-black">&nbsp;</div>
+                  <p>Від <span class="gray-light">світло-сірого </span>до <span>чорного</span></p>
+                </a>
+              </li>
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-white-brown">&nbsp;</div>
+                  <p>Вд <span>Білого </span>до <span class="brown-light">Бежевого</span></p>
+                </a>
+              </li>
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-brown-light-dark">&nbsp;</div>
+                  <p>Від <span class="brown-light ">Бежевого </span>до <span class="brown-dark">темно-коричневого</span>
+                  </p>
+                </a>
+              </li>
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-yellow-red-dark">&nbsp;</div>
+                  <p>Від <span class="yellow-light">світло-жовтого </span>до <span class="red-dark">Бордового</span></p>
+                </a>
+              </li>
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-green-dark-blue">&nbsp;</div>
+                  <p>Від <span class="green">Зеленого </span>до <span class="blue-dark">Темно-синього</span></p>
+                </a>
+              </li>
+              <li class="colors__list-item">
+                <a href="#" class="colors__list-link">
+                  <div class="bg-multy">&nbsp;</div>
+                  <p>Різнокольоровий</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="section pile-height">
+          <h2 class="section__tittle">Висота ворсу</h2>
+          <div class="pile-height__content">
+            <ul class="pile-height__list">
+              <li class="pile-height__list-item">
+                <a href="#" class="pile-height__list-link">
+                  <div class="pile-content">
+                    <p>Безворсові</p>
+                    <p class="red">від 0,7 до 1,3см</p>
+                  </div>
+                  <div class="pile-img">
+                    <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                  </div>
+                </a>
+              </li>
+              <li class="pile-height__list-item">
+                <a href="#" class="pile-height__list-link">
+                  <div class="pile-content">
+                    <p>Низький ворс</p>
+                    <p class="red">від 0,7 до 1,3см</p>
+                  </div>
+                  <div class="pile-img">
+                    <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                  </div>
+                </a>
+              </li>
+              <li class="pile-height__list-item">
+                <a href="#" class="pile-height__list-link">
+                  <div class="pile-content">
+                    <p>Середній ворс</p>
+                    <p class="red">від 0,7 до 1,3см</p>
+                  </div>
+                  <div class="pile-img">
+                    <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                  </div>
+                </a>
+              </li>
+              <li class="pile-height__list-item">
+                <a href="#" class="pile-height__list-link">
+                  <div class="pile-content">
+                    <p>Високий ворс</p>
+                    <p class="red">від 0,7 до 1,3см</p>
+                  </div>
+                  <div class="pile-img">
+                    <img srcset="img/images/main/type/type1.jpg 1x, img/images/main/type/type1-2x.jpg 2x" src="img/images/main/type/type1.jpg" alt="type">
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <section class="section type-room">
+        <h2 class="section__tittle">Тип кімнати</h2>
+        <div class="type-room__content">
+          <div class="container">
+            <div class="type-room__img">
+              <span class="abstract-circle"></span>
+              <span class="abstract-circle"></span>
+              <span class="abstract-circle"></span>
+              <img srcset="img/png/main/room.png 1x, img/png/main/room-2x.png 2x" src="img/png/main/room.png" alt="room">
+            </div>
+            <ul class="type-room__list">
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Ванна</span>
+                  <picture>
+                    <source srcset="img/images/main/rooms/bath-sm.jpg 1x, img/images/main/rooms/bath-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/bath.jpg 1x, img/images/main/rooms/bath-2x.jpg 2x" src="img/images/main/rooms/bath.jpg" alt="bath">
+                  </picture>
+                </a>
+              </li>
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Спальня</span>
+                  <picture>
+                    <source srcset="img/images/main/rooms/bedroom-sm.jpg 1x, img/images/main/rooms/bedroom-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/bedroom.jpg 1x, img/images/main/rooms/bedroom-2x.jpg 2x" src="img/images/main/rooms/bedroom.jpg"
+                      alt="bedroom">
+                  </picture>
+                </a>
+              </li>
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Вітальня</span>
+                  <picture>
+                    <source srcset="img/images/main/rooms/living-sm.jpg 1x, img/images/main/rooms/living-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/living.jpg 1x, img/images/main/rooms/living-2x.jpg 2x" src="img/images/main/rooms/living.jpg"
+                      alt="slider1">
+                  </picture>
+                </a>
+              </li>
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Дитяча</span>
+                  <picture>
+                    <source
+                      srcset="img/images/main/rooms/children-sm.jpg 1x, img/images/main/rooms/children-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/children.jpg 1x, img/images/main/rooms/children-2x.jpg 2x" src="img/images/main/rooms/children.jpg"
+                      alt="children">
+                  </picture>
+                </a>
+              </li>
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Передпокій</span>
+                  <picture>
+                    <source srcset="img/images/main/rooms/hallway-sm.jpg 1x, img/images/main/rooms/hallway-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/hallway.jpg 1x, img/images/main/rooms/hallway-2x.jpg 2x" src="img/images/main/rooms/hallway.jpg"
+                      alt="slider1">
+                  </picture>
+                </a>
+              </li>
+              <li class="type-room__list-item">
+                <a href="#" class="type-room__list-link">
+                  <span>Кухня</span>
+                  <picture>
+                    <source srcset="img/images/main/rooms/kitchen-sm.jpg 1x, img/images/main/rooms/kitchen-sm-2x.jpg 2x"
+                      media="max-width: 1024px">
+                    <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x" src="img/images/main/rooms/kitchen.jpg"
+                      alt="slider1">
+                  </picture>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="section user-gallery">
+        <div class="container">
+          <div class="user-gallery__wrapper">
+            <div class="user-gallery-head">
+              <h2 class="section__tittle">Галерея наших покупців</h2>
+              <a href="#" class="show-all">Показати всі</a>
+              <img srcset="img/png/main/cotton1.png 1x, img/png/main/cotton1-2x.png 2x" src="img/png/main/cotton1.png" alt="cotton">
+            </div>
+            <div class="user-gallery__img">
+              <div class="user-gallery-box">
+                <div class="user-gallery-item user-gallery-item_top">
+                  <img srcset="img/png/main/cotton2.png 1x, img/png/main/cotton2-2x.png 2x" src="img/png/main/cotton2.png" alt="cotton">
+                </div>
+                <div class="user-gallery-item">
+                  <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x" src="img/images/main/rooms/kitchen.jpg"
+                    alt="slider1">
+                </div>
+                <div class="user-gallery-item">
+                  <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x" src="img/images/main/rooms/kitchen.jpg"
+                    alt="slider1">
+                </div>
+              </div>
+              <div class="user-gallery-box">
+                <div class="user-gallery-item">
+                  <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x" src="img/images/main/rooms/kitchen.jpg"
+                    alt="slider1">
+                </div>
+                <div class="user-gallery-item">
+                  <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x" src="img/images/main/rooms/kitchen.jpg"
+                    alt="slider1">
+                </div>
+              </div>
+              <div class="user-gallery-box">
+                <div class="user-slider__navigation">
+                  <a href="#" class="user-slider__btn js-user-prev">
+                    <svg class="svg svg-sm">
+                      <use xlink:href="img/svg-sprite/sprite.svg#chevron-left"></use>
+                    </svg>
+                  </a>
+                  <a href="#" class="user-slider__btn js-user-next">
+                    <svg class="svg svg-sm">
+                      <use xlink:href="img/svg-sprite/sprite.svg#chevron-right"></use>
+                    </svg>
+                  </a>
+                </div>
+                <div class="user-gallery-box-slider">
+                  <div class="user-gallery-item">
+                    <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x"
+                      alt="slider1">
+                  </div>
+                  <div class="user-gallery-item">
+                    <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x"
+                      alt="slider1">
+                  </div>
+                  <div class="user-gallery-item">
+                    <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x"
+                      alt="slider1">
+                  </div>
+                  <div class="user-gallery-item">
+                    <img srcset="img/images/main/rooms/kitchen.jpg 1x, img/images/main/rooms/kitchen-2x.jpg 2x"
+                      alt="slider1">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <section class="section partners">
+          <div class="partners__content">
+            <h2 class="section__tittle">Наші партнери</h2>
+            <ul class="partners__list">
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/atlantik.png 1x, img/png/main/partners/atlantik-2x.png 2x" src="img/png/main/partners/atlantik.png"
+                  alt="atlantic">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/giza.png 1x, img/png/main/partners/giza-2x.png 2x" src="img/png/main/partners/giza.png" alt="giza">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/empera.png 1x, img/png/main/partners/empera-2x.png 2x" src="img/png/main/partners/empera.png" alt="empera">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/three.png 1x, img/png/main/partners/three-2x.png 2x" src="img/png/main/partners/three.png" alt="three">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/kaplan.png 1x, img/png/main/partners/kaplan-2x.png 2x" src="img/png/main/partners/kaplan.png" alt="kaplan">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/kasmir.png 1x, img/png/main/partners/kasmir-2x.png 2x" src="img/png/main/partners/kasmir.png" alt="kasmir">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/nikotex.png 1x, img/png/main/partners/nikotex-2x.png 2x" src="img/png/main/partners/nikotex.png"
+                  alt="nikotex">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/yasin.png 1x, img/png/main/partners/yasin-2x.png 2x" src="img/png/main/partners/yasin.png" alt="yasin">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/lano.png 1x, img/png/main/partners/lano-2x.png 2x" src="img/png/main/partners/lano.png" alt="lano">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/che.png 1x, img/png/main/partners/che-2x.png 2x" src="img/png/main/partners/che.png" alt="che">
+              </li>
+              <li class="partners__list-item">
+                <img srcset="img/png/main/partners/javi.png 1x, img/png/main/partners/javi-2x.png 2x" src="img/png/main/partners/javi.png" alt="javi">
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <section class="section bg-yellow">
+        <div class="container">
+          <section class="photo">
+            <h2 class="section__tittle">Підберемо коври по світлинах вашого інтер'єру</h2>
+            <div class="photo__content">
+              <div class="photo-box">
+                <svg class="svg svg-lg">
+                  <use xlink:href="img/svg-sprite/sprite.svg#cameraLg"></use>
+                </svg>
+                <p>Сфотографуйте свій інтер'єр</p>
+              </div>
+              <div class="photo-box">
+                <svg class="svg svg-lg">
+                  <use xlink:href="img/svg-sprite/sprite.svg#chat"></use>
+                </svg>
+                <p>Відправте світлину на однин із месеннджерів або на e-mail</p>
+              </div>
+              <div class="photo-box">
+                <svg class="svg svg-lg">
+                  <use xlink:href="img/svg-sprite/sprite.svg#care"></use>
+                </svg>
+                <p>Отримайте кращі варіанти на протязі 24-х годин від наших дизайнерів</p>
+              </div>
+            </div>
+          </section>
+          <section class="section messengers">
+            <ul class="messengers__list">
+              <li class="messengers__list-item">
+                <a href="#" class="messengers__list-link">
+                  <div class="messengers-img">
+                    <svg class="svg svg-md">
+                      <use xlink:href="img/svg-sprite/sprite.svg#viber"></use>
+                    </svg>
+                  </div>
+                  <div class="messengers-content">
+                    <p>Viber</p>
+                    <span>38 067 460 50 53</span>
+                  </div>
+                </a>
+              </li>
+              <li class="messengers__list-item">
+                <a href="#" class="messengers__list-link">
+                  <div class="messengers-img">
+                    <svg class="svg svg-md telegram">
+                      <use xlink:href="img/svg-sprite/sprite.svg#telegram"></use>
+                    </svg>
+                  </div>
+                  <div class="messengers-content">
+                    <p>Telegram</p>
+                    <span>38 067 460 50 53</span>
+                  </div>
+                </a>
+              </li>
+              <li class="messengers__list-item">
+                <a href="#" class="messengers__list-link">
+                  <div class="messengers-img">
+                    <svg class="svg svg-md">
+                      <use xlink:href="img/svg-sprite/sprite.svg#whatsup"></use>
+                    </svg>
+                  </div>
+                  <div class="messengers-content">
+                    <p>Whatsap</p>
+                    <span>38 067 460 50 53</span>
+                  </div>
+                </a>
+              </li>
+              <li class="messengers__list-item">
+                <a href="mailto:shop@k-yarmarok.com" class="messengers__list-link">
+                  <div class="messengers-img">
+                    <svg class="svg svg-md">
+                      <use xlink:href="img/svg-sprite/sprite.svg#mail"></use>
+                    </svg>
+                  </div>
+                  <div class="messengers-content">
+                    <p>e-mail</p>
+                    <span>shop@k-yarmarok.com</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </section>
+        </div>
+        <section class="section gallery bg-gray-light">
+          <div class="container">
+            <ul class="gallery__list">
+              <li class="gallery__list-item">
+                <img srcset="img/images/main/gallery/gallery1.jpg 1x, img/images/main/gallery/gallery1-2x.jpg 2x" src="img/images/main/gallery/gallery1.jpg"
+                  alt="gallery">
+              </li>
+              <li class="gallery__list-item">
+                <img srcset="img/images/main/gallery/gallery1.jpg 1x, img/images/main/gallery/gallery1-2x.jpg 2x" src="img/images/main/gallery/gallery1.jpg"
+                  alt="gallery">
+              </li>
+              <li class="gallery__list-item">
+                <img srcset="img/images/main/gallery/gallery1.jpg 1x, img/images/main/gallery/gallery1-2x.jpg 2x" src="img/images/main/gallery/gallery1.jpg"
+                  alt="gallery">
+              </li>
+              <li class="gallery__list-item">
+                <img srcset="img/images/main/gallery/gallery1.jpg 1x, img/images/main/gallery/gallery1-2x.jpg 2x" src="img/images/main/gallery/gallery1.jpg"
+                  alt="gallery">
+              </li>
+            </ul>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- footer start -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer-top">
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                Інформація
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Про нас
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Доставка/Оплата
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Контакти
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Повернення товарів
+                </a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                Детальніше
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Виробники
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Подарункові сертифікати
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Акції
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Новини
+                </a>
+              </li>
+            </ul>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                Мій кабінет
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Мій кабінет
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Історія замовлень
+                </a>
+              </li>
+              <li class="footer__list-item">
+                <a href="" class="footer__list-link">
+                  Заклади
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-bottom">
+            <p>&copy;2019 всі права захищено</p>
+            <a href="#">Політика конфіденційності</a>
+            <a href="#">Умови користування</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Modal elements -->
+    <div class="modal modal-sucsses">
+      <div class="modal__buttons">
+        <a href="#" class="js-close-modal">
+          <svg class="svg svg-sm">
+            <use xlink:href="img/svg-sprite/sprite.svg#closeModal">
+            </use>
+          </svg>
+        </a>
+      </div>
+      <div class="modal__content">
+        <svg class="svg svg-lg">
+          <use xlink:href="img/svg-sprite/sprite.svg#checkCircle">
+          </use>
+        </svg>
+        <p>Замовлення успушне</p>
+      </div>
+      <button class="button button_white button_lg">Продовжити покупки</button>
+    </div>
+    
+    <div class="overlay">
+    
+    </div>
+    <div class="modal modal-form">
+      <div class="modal__buttons">
+        <a href="#" class="js-close-modal">
+          <svg class="svg svg-sm">
+            <use xlink:href="img/svg-sprite/sprite.svg#closeModal">
+            </use>
+          </svg>
+        </a>
+      </div>
+      <div class="modal__content">
+        <form action="#" class="form">
+          <h2>Напишіть нам</h2>
+          <label for="userName">
+            <input type="text" id="userName" placeholder="Ім'я*" class="custom-input" name="name" id="name">
+            <span>Це поле обов'язкове для заповнення!</span>
+          </label>
+          <label for="userEmail">
+            <input type="text" id="userEmail" placeholder="Телефон*" class="custom-input" name="email" id="email">
+            <span>Це поле обов'язкове для заповнення!</span>
+          </label>
+          <textarea name="text" id="text" rows="8" class="custom-input" placeholder="Повідомлення..."></textarea>
+          </label>
+          <input type="hidden" name="hidden" value="subscribe">
+          <button class="button button_white" type="submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <!-- end modal -->
+    <div class="contact-btn">
+      <p>Напишіть нам</p>
+      <svg class="svg">
+        <use xlink:href="img/svg-sprite/sprite.svg#mail2"></use>
+      </svg>
+    </div>
+    <!-- project scripts -->
+    <script src="js/libs.min.js"></script>
+    <script src="js/script.js"></script>
+  </div>
+
+
+  <!-- start main page content -->
+
+
+  <!-- end main page content -->
+
+</body>
+
+</html>

@@ -1,4 +1,4 @@
 /node_modules
 /src/libs
-/dist
+# /dist
 package-lock.json
