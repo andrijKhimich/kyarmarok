@@ -9,10 +9,13 @@
   opacity: 0;
   transition: opacity .2s z-index 0;
   display: none;
+  pointer-events: none;
+
   &_active {
     display: block;
     opacity: 1;
     z-index: 100;
+    pointer-events: auto;
   }
 }
 
@@ -20,7 +23,9 @@
   display: block;
   opacity: 1;
   z-index: 100;
+  pointer-events: auto;
 }
+
 .modal {
   background-color: $white;
   @include border-radius;
@@ -39,15 +44,19 @@
   opacity: 0;
   transition: opacity .2s;
   z-index: -1;
+  pointer-events: none;
+
   &__buttons {
     display: flex;
     justify-content: flex-end;
+
     .svg {
       width: 26px;
       height: 26px;
       fill: rgba($black, .6);
       transition: fill .2s;
     }
+
     a:hover {
       .svg {
         fill: $red;
@@ -65,6 +74,7 @@
       height: 48px;
       fill: $green;
     }
+
     p {
       font-size: 32px;
       font-weight: 500;
@@ -75,9 +85,11 @@
   .button {
     align-self: center;
   }
+
   &_active {
     opacity: 1;
     z-index: 101;
+    pointer-events: auto;
   }
 }
 
@@ -85,15 +97,18 @@
   h2 {
     margin-bottom: 30px;
   }
+
   label {
     position: relative;
     padding-bottom: 10px;
     display: block;
     text-align: left;
+
     .custom-input {
       background-color: $gray-bg;
       border: 1px solid $gray-light;
     }
+
     span {
       font-size: 10px;
       padding-left: 20px;
@@ -102,11 +117,13 @@
       transition: opacity .2s;
     }
   }
+
   textarea {
     background-color: $gray-bg;
     border: 1px solid $gray-light;
     margin-bottom: 10px;
   }
+
   .error {
     span {
       color: $red;
