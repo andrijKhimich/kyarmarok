@@ -123,6 +123,14 @@
   &-slider_sm {
     position: relative;
 
+    .slick-list {
+      width: 100%;
+    }
+
+    .slick-arrow.slick-hidden {
+      display: flex;
+    }
+
     .slick-current .product-slider_sm__item {
       border: 1px solid $red;
     }
