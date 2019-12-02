@@ -30,10 +30,10 @@ $(document).ready(function () {
   });
 
   // add active state for pagination
-  $('.pagination__link').click(function (e) {
-    e.preventDefault();
-    $(this).toggleClass('pagination__link_active');
-  });
+  // $('.pagination__link').click(function (e) {
+  //   e.preventDefault();
+  //   $(this).toggleClass('pagination__link_active');
+  // });
 
   // open sidebar whith filters on catalog page
   $('.sidebar__button_mob').click(function (e) {
