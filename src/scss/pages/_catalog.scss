@@ -144,3 +144,14 @@
     }
   }
 }
+.custom-size {
+  padding: 1em 1.5em;
+  display: none;
+  &>p {
+    margin-bottom: 8px;
+  }
+  .range__wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
