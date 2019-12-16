@@ -1,8 +1,6 @@
 $(document).ready(function () {
   // checking height for charchteristiks and tabs == one height on desktop
   textHeight();
-
-
   if (window.innerWidth < 991) {
     mobileOnlySlider();
     $('.js-catalog').click(function () {
@@ -11,12 +9,6 @@ $(document).ready(function () {
       $('.header-marks').toggleClass('hidden');
     });
   }
-
-  // if (window.innerWidth < 1199) {
-  //   toggleMobNavigation();
-  // } else {
-  //   // $('.header-navigation').css('overflow', 'hidden');
-  // }
 
 
   // toggle filters (dropdown)
@@ -37,12 +29,6 @@ $(document).ready(function () {
   $('.goods-card__marks-box').click(function () {
     $(this).toggleClass('goods-card__marks-box_active');
   });
-
-  // add active state for pagination
-  // $('.pagination__link').click(function (e) {
-  //   e.preventDefault();
-  //   $(this).toggleClass('pagination__link_active');
-  // });
 
   // open sidebar whith filters on catalog page
   $('.sidebar__button_mob').click(function (e) {
@@ -136,13 +122,6 @@ $(document).ready(function () {
     $('.modal-sucsses').addClass('modal_active');
     $('body').addClass('no-scroll');
   });
-  // $('.js-close-modal').click(function (e) {
-  //   e.preventDefault();
-  //   $('.overlay').removeClass('overlay_active');
-  //   $('.modal-sucsses').removeClass('modal_active');
-  //   $('.modal-form').removeClass('modal_active');
-  //   $('body').removeClass('no-scroll');
-  // });
 
   $('.contact-btn').click(function (e) {
     e.preventDefault();
@@ -187,7 +166,6 @@ $(document).ready(function () {
       }
     });
   });
-
 })
 $('.catalog__list').hide();
 
@@ -219,8 +197,6 @@ function mobileOnlySlider() {
   });
 }
 
-
-
 // checking height for charchteristiks and tabs one fumction on two screen resolution
 function textHeight() {
   var maxContent = 0;
@@ -241,11 +217,6 @@ $('.filter__list-sub').hide();
 
 // hide tabs in catalog page
 $('.basket-cart__table').hide();
-
-
-
-
-
 // click on body with open desktop dropdown list
 $(document).mouseup(function (e) {
   var searchcontainer = $('.catalog__list, .js-catalog');
@@ -257,7 +228,6 @@ $(document).mouseup(function (e) {
     $('.header-marks').removeClass('hidden');
   }
 });
-
 
 // innit main slider on main page
 $('.js-slider').slick({
