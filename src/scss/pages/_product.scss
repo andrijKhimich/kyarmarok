@@ -605,7 +605,7 @@
   background-color: $white;
   @include box-shadow;
   padding: 1.5em;
-
+  height: 100%;
   .product__tittle {
     margin-bottom: 2em;
     font-size: 24px;
@@ -635,7 +635,7 @@
   background-color: $white;
   @include box-shadow;
   padding: 1.5em;
-
+  height: 100%;
   &__list {
     margin-bottom: 4em;
     display: flex;
