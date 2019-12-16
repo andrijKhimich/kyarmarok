@@ -3,10 +3,12 @@
   flex: 0 0 33.333333%;
   max-width: 33.333333%;
   margin-bottom: 32px;
+
   @include d(991) {
     flex: 0 0 50%;
     max-width: 50%;
   }
+
   @include d(575) {
     flex: 0 0 100%;
     max-width: 100%;
@@ -20,8 +22,12 @@
   @include border-radius;
   overflow: hidden;
   transition: box-shadow .2s;
+
   &:hover {
     @include box-shadow-active;
+  }
+  &__img {
+    position: relative;
   }
   &__discount {
     width: 48px;
@@ -36,14 +42,17 @@
     align-items: center;
     justify-content: center;
     @include box-shadow;
+    z-index: 1;
     p {
       font-size: 14px;
       color: $green;
       font-weight: 500;
     }
   }
+
   &__content {
     padding: 1em 1.5em 1.5em 1.5em;
+
     @include d(1299) {
       padding: 1em;
     }
@@ -60,6 +69,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     &-tittle {
       font-size: 14px;
       color: $red;
@@ -93,16 +103,19 @@
   &__points {
     font-size: 16px;
   }
+
   &__price {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 40px;
+
     &_current {
       font-size: 22px;
       display: inline-block;
       font-weight: 500;
     }
+
     &_old {
       font-size: 14px;
       display: inline-block;
@@ -110,31 +123,35 @@
       text-decoration: line-through;
     }
   }
+
   &__marks {
     display: flex;
+
     &-box {
       width: 40px;
       height: 40px;
+      margin-right: 8px;
       border-radius: 50%;
       border: 1px solid $pink-bg;
       display: flex;
       align-items: center;
       justify-content: center;
       transition: background-color .2s;
+
       &:hover {
         cursor: pointer;
         background-color: $pink-bg;
       }
+
       &_active {
         background-color: $pink-bg;
       }
+
       svg {
         fill: $black;
       }
-      &:first-child {
-        margin-right: 8px;
-      }
     }
+
     .button {
       justify-self: flex-end;
       margin-right: 0;

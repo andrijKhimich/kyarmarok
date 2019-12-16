@@ -25,9 +25,11 @@ body {
   overflow: hidden;
 }
 
-// .main-wrapper {
-//   min-width: 320px;
-// }
+.main-wrapper {
+  min-width: 320px;
+  max-width: 2000px;
+  margin: 0 auto;
+}
 
 .container {
   max-width: 1344px;
@@ -550,13 +552,17 @@ input[type="radio"] {
 .button {
   font-size: 16px;
   transition: background-color .2s, color .2s;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
   border-radius: 20px;
   padding: 0.68em 1.5em;
   position: relative;
-  line-height: 1em;
   outline: 0;
-
+  white-space: nowrap;
+  height: 40px;
+  border: 1px solid transparent;
   &_red {
     border: 1px solid $red;
     color: $white;
@@ -590,14 +596,14 @@ input[type="radio"] {
   }
 
   &_lg {
-    padding: 1em 3.125em;
+    padding: 0 3.125em;
     border-radius: 28px;
     font-size: 18px;
   }
 
   @include d(1299) {
     font-size: 14px;
-    padding: 0.68em 1em;
+    padding: 0 1em;
   }
 
 

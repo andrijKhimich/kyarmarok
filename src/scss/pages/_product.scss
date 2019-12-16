@@ -484,9 +484,9 @@
     transition: border .2s, color .2s;
     cursor: pointer;
 
-    &.active {
-      border-color: $red;
-    }
+    // &.active {
+    //   border-color: $red;
+    // }
 
     &:not(:last-child) {
       margin-right: 0.5em;
@@ -521,9 +521,9 @@
     transition: border .2s, color .2s;
     cursor: pointer;
 
-    &.active {
-      border-color: $red;
-    }
+    // &.active {
+    //   border-color: $red;
+    // }
 
     &:not(:last-child) {
       margin-right: 0.5em;
@@ -548,9 +548,9 @@
     transition: border .2s, color .2s;
     cursor: pointer;
 
-    &.active {
-      border-color: $red;
-    }
+    // &.active {
+    //   border-color: $red;
+    // }
 
     &:not(:last-child) {
       margin-right: 0.5em;
@@ -564,7 +564,7 @@
   }
 
   &_active {
-    border: 1px solid $red;
+    // border: 1px solid $red;
     color: $black;
   }
 }

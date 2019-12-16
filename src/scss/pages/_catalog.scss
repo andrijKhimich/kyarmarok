@@ -39,11 +39,19 @@
   .filter-select {
     display: flex;
     align-items: center;
+    @include d(480) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
     &>p {
       margin-right: 19px;
     }
     .label-select:first-of-type {
       margin-right: 19px;
+      @include d(480) {
+        margin-right: 0;
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -83,7 +91,6 @@
   }
   @include d(1199){
     overflow-y: auto;
-    height: 600px;
   }
   &>p {
     padding-left: 24px;

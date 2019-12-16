@@ -5,14 +5,32 @@
   width: 100%;
   margin-top: 8px;
   flex-wrap: wrap;
-  &__item {
+
+  &__item,
+  & li {
     margin-bottom: 10px;
+
     &:not(:last-child) {
       margin-right: 8px;
     }
+
+    &.active {
+      span,
+      a {
+        background-color: $red;
+        color: $white;
+        font-weight: 700;
+      }
+
+      svg {
+        fill: $white;
+      }
+    }
   }
 
-  &__link {
+  &__link,
+  & a,
+  & span {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,22 +43,17 @@
     color: $black-light;
     transition: color .2s;
     font-weight: 500;
+
     svg {
       fill: $black;
       transition: fill .2s;
     }
+
     &:hover {
       background-color: $red;
       color: $white;
       font-weight: 700;
-      svg {
-        fill: $white;
-      }
-    }
-    &_active {
-      background-color: $red;
-      color: $white;
-      font-weight: 700;
+
       svg {
         fill: $white;
       }
