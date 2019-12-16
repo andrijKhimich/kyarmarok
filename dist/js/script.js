@@ -197,11 +197,12 @@ function mobileOnlySlider() {
   });
 }
 
-// checking height for charchteristiks and tabs one fumction on two screen resolution
+// checking height for charchteristiks and tabs one function on two screen resolution
 function textHeight() {
   var maxContent = 0;
   $('.js-height').each(function () {
     if ($(this).height() > maxContent) {
+      console.log($(this).height());
       maxContent = $(this).height();
       $('.js-height').height(maxContent);
     } else if ($(window).width() <= 1199) {
