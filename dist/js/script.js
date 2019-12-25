@@ -1,4 +1,11 @@
 $(document).ready(function () {
+
+  $('[data-fancybox="gallery"]').fancybox({
+    // Options will go here
+    smallBtn: true,
+    infobar: false,
+    toolbar: false
+  });
   // checking height for charchteristiks and tabs == one height on desktop
   textHeight();
   if (window.innerWidth < 991) {
@@ -202,7 +209,6 @@ function textHeight() {
   var maxContent = 0;
   $('.js-height').each(function () {
     if ($(this).height() > maxContent) {
-      console.log($(this).height());
       maxContent = $(this).height();
       $('.js-height').height(maxContent);
     } else if ($(window).width() <= 1199) {
