@@ -473,6 +473,7 @@
   }
 
   &-colors {
+
     display: inline-block;
     width: 64px;
     height: 64px;
@@ -536,10 +537,9 @@
   }
 
   &-size {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: 100%;
-    max-width: 144px;
+    justify-content: center;
     @include border-radius;
     border: solid 1px rgba(0, 0, 0, 0.1);
     color: $gray-light;
@@ -548,9 +548,9 @@
     transition: border .2s, color .2s;
     cursor: pointer;
 
-    // &.active {
-    //   border-color: $red;
-    // }
+    &.active {
+      border-color: $red;
+    }
 
     &:not(:last-child) {
       margin-right: 0.5em;
@@ -606,6 +606,7 @@
   @include box-shadow;
   padding: 1.5em;
   height: 100%;
+
   .product__tittle {
     margin-bottom: 2em;
     font-size: 24px;
@@ -636,6 +637,7 @@
   @include box-shadow;
   padding: 1.5em;
   height: 100%;
+
   &__list {
     margin-bottom: 4em;
     display: flex;
