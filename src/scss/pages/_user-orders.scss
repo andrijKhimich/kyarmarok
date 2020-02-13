@@ -188,7 +188,7 @@
             &:last-child {
               color: $black;
               font-size: 16px;
-              font-weight: 500;
+              font-weight: 600;
               text-align: right;
               @include d(767) {
                 font-size: 14px;
@@ -322,12 +322,12 @@
 
   p {
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
   }
 
   span {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 600;
   }
 }
 

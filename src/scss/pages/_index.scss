@@ -328,7 +328,7 @@
       &:hover {
         @include box-shadow-active;
         color: $red;
-        font-weight: 500;
+        font-weight: 600;
       }
 
       .svg {
@@ -1019,7 +1019,7 @@
         transform: translate(-50%, -50%);
         color: $white;
         z-index: 2;
-        font-weight: 500;
+        font-weight: 600;
         font-size: 26px;
 
         @include d(1199) {
