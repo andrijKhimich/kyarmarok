@@ -2,7 +2,7 @@
   position: relative;
 
   &-wrapper {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 110px;
     margin: 0 -1em;
 
@@ -11,7 +11,7 @@
     }
 
     @include d(1299) {
-      padding: 60px 0;
+      padding: 40px 0;
     }
 
     @include d(1199) {
