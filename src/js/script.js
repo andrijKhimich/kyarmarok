@@ -2,6 +2,9 @@ $(document).ready(function () {
   $('a.product-slider__img-item').zoom({
     // url: 'img/images/catalog/card1.jpg'
   });
+  $('.goods-card__img').zoom({
+    // url: 'img/images/catalog/card1.jpg'
+  });
 
  
 
