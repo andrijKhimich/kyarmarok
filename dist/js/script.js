@@ -24,12 +24,16 @@ $(document).ready(function () {
       $('.header-marks').toggleClass('hidden');
     });
   }
-
+  $('.product__gallery-btn').click(function (e) {
+    e.preventDefault();
+  });
+  $('.goods-card__marks .button').click(function (e) {
+    e.preventDefault();
+  });
 
   // toggle filters (dropdown)
   $('.filter__item>span').click(function () {
     $(this).siblings('.filter__list-sub').slideToggle();
-
   });
 
   $('#customSize').click(function () {
@@ -60,7 +64,7 @@ $(document).ready(function () {
   $('.sidebar__overlay').click(function () {
     $('.js-sidebar_left').removeClass('sidebar_left_active');
     $('.sidebar__overlay').removeClass('sidebar__overlay_active');
-    // $('body').removeClass('noscroll');
+    $('body').removeClass('noscroll');
     $('body').removeClass('no-scroll');
   });
 
