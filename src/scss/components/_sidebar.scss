@@ -9,7 +9,7 @@
     @include d(1199) {
       position: fixed;
       padding: 0;
-      top: 100px;
+      top: 0;
       left: -45vw;
       z-index: 11;
       flex: 0 0 45vw;
@@ -24,7 +24,8 @@
 
       &_active {
         left: 0;
-
+        overflow-y: scroll;
+        height: 100%;
         @include d(575) {
           left: 0;
         }
@@ -39,7 +40,7 @@
     color: $white;
     background-color: $red;
     position: absolute;
-    top: 60px;
+    top: 160px;
     left: 100%;
     border: none;
     display: block;
