@@ -511,7 +511,7 @@ input[type="radio"] {
     height: 10px;
     position: absolute;
     opacity: 0;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: -3px;
@@ -618,4 +618,16 @@ input[type="radio"] {
 .header-fixed__wrapper {
   width: 100%;
   background-color: #fff;
+}
+.button-close {
+  position:absolute;
+  top: 10px;
+  right: 15px;
+  transform: rotate(-45deg);
+  width: 20px;
+  height: 20px;
+  display: none;
+  @include d(1199){
+    display: inline-block;
+  }
 }

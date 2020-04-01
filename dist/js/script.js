@@ -70,6 +70,12 @@ $(document).ready(function () {
     $('body').removeClass('noscroll');
     $('body').removeClass('no-scroll');
   });
+  $('.button-close').click(function () {
+    $('.js-sidebar_left').removeClass('sidebar_left_active');
+    $('.sidebar__overlay').removeClass('sidebar__overlay_active');
+    $('body').removeClass('noscroll');
+    $('body').removeClass('no-scroll');
+  });
 
 
   // open sidebar whith filters on catalog page
