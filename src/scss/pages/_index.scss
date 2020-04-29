@@ -473,7 +473,7 @@
   transition: color .2s, background-color .2s;
   max-width: 144px;
   text-align: center;
-
+  cursor: pointer;
   &:hover {
     color: $white;
     background-color: $red;
