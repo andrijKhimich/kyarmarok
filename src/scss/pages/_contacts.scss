@@ -104,6 +104,7 @@
       }
       img {
         @include border-radius;
+        object-fit: cover;
       }
     }
 
