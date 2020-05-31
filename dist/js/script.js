@@ -48,9 +48,9 @@ $(document).ready(function () {
   });
 
   // add yellow backgraound for checking marks
-  $('.goods-card__marks-box').click(function () {
-    $(this).toggleClass('goods-card__marks-box_active');
-  });
+  // $('.goods-card__marks-box').click(function () {
+  //   $(this).toggleClass('goods-card__marks-box_active');
+  // });
 
   // open sidebar whith filters on catalog page
   $('.sidebar__button_mob').click(function (e) {
